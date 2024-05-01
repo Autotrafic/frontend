@@ -46,11 +46,13 @@ const SmartFormContainer = styled.div`
 `;
 
 function App() {
-  const { registerLog } = useContext(UserContext);
+  const { userInfo, registerLog } = useContext(UserContext);
+
+  console.log("sending", userInfo.sessionId, userInfo.userId);
 
   useEffect(() => {
     (async () => {
-      await registerLog("Enters into the page");
+      await registerLog("Accede a la página: Transferencia de vehículo");
     })();
   }, []);
 
@@ -64,7 +66,7 @@ function App() {
           </LeftSide>
           <RightSide>
             <SmartFormContainer>
-              <SmartForm />
+              <SmartForm sessionId={userInfo.sessionId} userId={userInfo.userId} />
             </SmartFormContainer>
             <Drop />
           </RightSide>
