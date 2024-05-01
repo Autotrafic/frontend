@@ -4,9 +4,7 @@ const Dotenv = require("dotenv-webpack");
 const deps = require("./package.json").dependencies;
 module.exports = (_, argv) => ({
   output: {
-    publicPath: argv.mode === "development"
-    ? "http://localhost:5200/"
-    : "https://frontend-1byj.onrender.com",
+    publicPath: "https://frontend-1byj.onrender.com"
   },
 
   resolve: {
