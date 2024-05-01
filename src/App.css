@@ -1,0 +1,33 @@
+:root {
+  --black: #111111;
+  --primary-color: #4154f1;
+  --secondary-color: #8080ff;
+  --primary-grey: #787878;
+  --secondary-grey: rgba(230, 230, 230, 0.4); /* Note the correction for opacity */
+  --placeholder-grey: rgb(118, 118, 118);
+  --light-grey: #ccc;
+  --primary-green: #30c03a;
+}
+
+* {
+  font-family: "Montserrat";
+  box-sizing: border-box;
+  line-height: normal;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  font-size: 16px;
+}
+
+#react-app-root {
+  font-family: "Montserrat";
+  box-sizing: border-box;
+  line-height: normal;
+  padding: 20px;
+}
+
+body {
+  margin: 0;
+}
