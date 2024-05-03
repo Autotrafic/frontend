@@ -58,7 +58,7 @@ module.exports = (_, argv) => ({
       name: "autotraficFrontend",
       filename: "remoteEntry.js",
       remotes: {
-        smartForm: "smartForm@http://localhost:5100/remoteEntry.js",
+        smartForm: "smartForm@https://smart-form-rqmr.onrender.com/remoteEntry.js",
       },
       exposes: {},
       shared: {
