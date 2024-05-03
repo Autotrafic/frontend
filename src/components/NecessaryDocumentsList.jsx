@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-regular-svg-icons";
 import { colors } from "../utils/styles";
+import Title from "./Title";
 
 const bigPhoneScreenMedia = "476px";
 
@@ -13,40 +14,11 @@ export default function NecessaryDocumentsList() {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 120px;
-    margin-bottom: 50px;
     padding: 0 20px;
 
     @media (max-width: ${bigPhoneScreenMedia}) {
-      margin-top: 60px;
       gap: 20px;
     }
-  `;
-
-  const TitleContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-
-    @media (max-width: ${bigPhoneScreenMedia}) {
-      align-items: start;
-      font-size: 15px;
-      align-items: center;
-    }
-  `;
-  const Title = styled.h2`
-    margin: 0;
-    @media (max-width: ${bigPhoneScreenMedia}) {
-      text-align: center;
-    }
-  `;
-
-  const Line = styled.div`
-    width: 40%;
-    height: 3px;
-    background-color: ${colors.primaryColor};
-    border-radius: 5px;
   `;
 
   const DocumentsListContainer = styled.div`
@@ -75,17 +47,11 @@ export default function NecessaryDocumentsList() {
 
   return (
     <Container>
-      <TitleContainer>
-        <Title>DOCUMENTACIÓN NECESARIA</Title>
-        <Line />
-      </TitleContainer>
+      <Title middleLine>Documentación necesaria</Title>
       <DocumentsListContainer>
         <DocumentsListItem>
           <CheckIcon icon={faCircleCheck} />
-          <ListText>
-            Documento de identidad del comprador y del vendedor (DNI / NIF /
-            NIE)
-          </ListText>
+          <ListText>Documento de identidad del comprador y del vendedor (DNI / NIF / NIE)</ListText>
         </DocumentsListItem>
         <DocumentsListItem>
           <CheckIcon icon={faCircleCheck} />

@@ -1,15 +1,8 @@
 import styled from "styled-components";
 import { colors } from "../utils/styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faEnvelope,
-  faPhone,
-  faComments,
-} from "@fortawesome/free-solid-svg-icons";
-import {
-  faSquareInstagram,
-  faSquareWhatsapp,
-} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faPhone, faComments } from "@fortawesome/free-solid-svg-icons";
+import { faSquareInstagram, faSquareWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import LegalCheckbox from "./reusable/LegalCheckbox";
 
 const columnWidth = "480px";
@@ -24,13 +17,11 @@ export default function ContactForm() {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 120px;
     background-color: #f3f3f3;
     padding: 60px 0 100px 0;
 
     @media (max-width: ${bigPhoneScreenMedia}) {
       padding: 30px 20px;
-      margin-top: 50px;
       gap: 25px;
     }
   `;
@@ -41,6 +32,7 @@ export default function ContactForm() {
     gap: 10px;
   `;
   const Title = styled.h2`
+    font-weight: 600;
     margin: 0;
   `;
 
@@ -307,10 +299,7 @@ export default function ContactForm() {
               </a>
 
               <ContactTitle>Correo electrónico</ContactTitle>
-              <a
-                href="mailto:contacto@autotrafic.es"
-                style={{ textDecoration: "none" }}
-              >
+              <a href="mailto:contacto@autotrafic.es" style={{ textDecoration: "none" }}>
                 <ContactText>contacto@autotrafic.es</ContactText>
               </a>
             </SubContactContainerIndividual>
@@ -334,10 +323,7 @@ export default function ContactForm() {
                 <a href="https://wa.me/643219297" target="_blank">
                   <WhatsappIcon icon={faSquareWhatsapp} />
                 </a>
-                <a
-                  href="https://www.instagram.com/autotrafic.gestoria/"
-                  target="_blank"
-                >
+                <a href="https://www.instagram.com/autotrafic.gestoria/" target="_blank">
                   <InstagramIcon
                     icon={faSquareInstagram}
                     style={{

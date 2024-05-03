@@ -1,64 +1,34 @@
 import "./App.css";
 import styled from "styled-components";
-import Drop from "./components/Drop";
 import OrderSteps from "./components/OrderSteps";
 import NecessaryDocumentsList from "./components/NecessaryDocumentsList";
 import FrequentAskedQuestions from "./components/FrequentAskedQuestions";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 import { Navbar } from "./components/Navbar/navbar";
-import TransferContentDesktop from "./components/TransferContentDesktop";
-import TransferContentMobile from "./components/TransferContentMobile";
 import { useContext, useEffect } from "react";
 import { UserContext, UserProvider } from "./context/user";
-import SmartForm from "smartForm/SmartForm";
-import ProsMobile from "./components/ProsMobile";
 import TransferMobile from "./components/TransferMobile";
 import TransferDesktop from "./components/TransferDesktop";
+import Prices from "./components/Prices";
 
 const Wrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
   padding-top: 70px;
+  margin-bottom: 4.5em;
 `;
 
-const Container = styled.div`
-  width: 100%;
-  max-width: 1300px;
-  padding: 3em 1.5em;
+const Sections = styled.div`
   display: flex;
-  gap: 10vw;
+  flex-direction: column;
+  gap: 4em;
+  margin-bottom: 4em;
 
-  @media (max-width: 1000px) {
-    flex-direction: column;
-    padding: 0.5em 1.2em;
+  @media (max-width: 600px) {
+    margin-top: 6em;
   }
-`;
-
-const LeftSide = styled.div`
-  flex: 4;
-
-  @media (max-width: 1000px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-`;
-
-const RightSide = styled.div`
-  position: relative;
-  width: 100%;
-  flex: 3;
-`;
-
-const SmartFormContainer = styled.div`
-  padding: 5px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2), 2px 0 5px rgba(0, 0, 0, 0.2),
-    -4px 0 5px rgba(0, 0, 0, 0.2);
 `;
 
 function App() {
@@ -82,10 +52,14 @@ function App() {
           <TransferDesktop userInfo={userInfo} />
         )}
       </Wrapper>
-      <OrderSteps />
-      <NecessaryDocumentsList />
-      <FrequentAskedQuestions />
-      <ContactForm />
+      <Sections>
+        <Prices />
+        <FrequentAskedQuestions />
+        <NecessaryDocumentsList />
+        <OrderSteps />
+        <ContactForm />
+      </Sections>
+
       <Footer />
     </>
   );

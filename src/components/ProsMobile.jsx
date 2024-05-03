@@ -3,12 +3,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 
 const Container = styled.div`
-margin-top: 2.5em;
+  margin-top: 2.5em;
   display: flex;
   flex-direction: column;
   gap: 2em;
   width: 85%;
-  margin-bottom: 3em;
+  max-width: 300px;
 `;
 
 const ProItem = styled.div`
@@ -39,7 +39,7 @@ export default function ProsMobile() {
     <Container>
       {pros.map((pro) => (
         <ProItem>
-          <Icon icon={pro.icon} size="xl"/>
+          <Icon icon={pro.icon} size="xl" />
           <Text>{pro.text}</Text>
         </ProItem>
       ))}

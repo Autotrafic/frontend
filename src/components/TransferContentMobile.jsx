@@ -28,7 +28,7 @@ const BoxesContainer = styled.div`
 `;
 
 const WhatsContactContainer = styled.div`
-margin-bottom: 2em;
+margin-bottom: 1em;
 `;
 
 const WhatsText = styled.p`

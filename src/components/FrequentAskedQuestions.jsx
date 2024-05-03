@@ -5,6 +5,7 @@ import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import "./faqAccordionStyled.css";
 import { FAQ } from "../utils/constants";
+import Title from "./Title";
 
 const bigPhoneScreenMedia = "476px";
 
@@ -16,45 +17,18 @@ export default function FrequentAskedQuestions() {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 120px;
-    margin-bottom: 50px;
     padding: 0 20px;
 
     @media (max-width: ${bigPhoneScreenMedia}) {
-      margin-top: 40px;
       margin-bottom: 0;
       gap: 15px;
       width: 100%;
     }
   `;
-  const TitleContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  `;
-  const Title = styled.h2`
-    margin: 0;
-
-    @media (max-width: ${bigPhoneScreenMedia}) {
-      font-size: 21px;
-      text-align: center;
-    }
-  `;
-
-  const Line = styled.div`
-    width: 40%;
-    height: 3px;
-    background-color: ${colors.primaryColor};
-    border-radius: 5px;
-  `;
 
   const FaqContainer = styled.div`
-    max-width: 70%;
-
-    @media (max-width: ${bigPhoneScreenMedia}) {
-      max-width: 330px;
-    }
+    max-width: 1000px;
+    width: 100%;
   `;
 
   const [isClicked, setIsClicked] = useState(false);
@@ -68,10 +42,7 @@ export default function FrequentAskedQuestions() {
   };
   return (
     <Container>
-      <TitleContainer>
-        <Title>PREGUNTAS FRECUENTES</Title>
-        <Line />
-      </TitleContainer>
+      <Title middleLine>Preguntas frecuentes</Title>
       <FaqContainer>
         <div className="accordion">
           {FAQ.map((item, index) => (

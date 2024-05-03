@@ -1,11 +1,8 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCreditCard,
-  faFileArrowDown,
-  faFileShield,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCreditCard, faFileArrowDown, faFileShield, faKeyboard } from "@fortawesome/free-solid-svg-icons";
 import { colors } from "../utils/styles";
+import Title from "./Title";
 
 const bigPhoneScreenMedia = "476px";
 
@@ -17,36 +14,12 @@ export default function OrderSteps() {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 120px;
-    margin-bottom: 50px;
     padding: 0 20px;
 
     @media (max-width: ${bigPhoneScreenMedia}) {
-      margin-top: 40px;
       margin-bottom: 0;
       gap: 20px;
     }
-  `;
-
-  const TitleContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  `;
-  const Title = styled.h2`
-    margin: 0;
-
-    @media (max-width: ${bigPhoneScreenMedia}) {
-      text-align: center;
-    }
-  `;
-
-  const Line = styled.div`
-    width: 40%;
-    height: 3px;
-    background-color: ${colors.primaryColor};
-    border-radius: 5px;
   `;
 
   const StepContainer = styled.div`
@@ -65,7 +38,7 @@ export default function OrderSteps() {
     gap: 30px;
 
     @media (max-width: ${bigPhoneScreenMedia}) {
-      gap: 20px;
+      gap: 2.5em;
     }
   `;
 
@@ -109,20 +82,16 @@ export default function OrderSteps() {
 
   return (
     <Container>
-      <TitleContainer>
-        <Title>PASOS PARA REALIZAR EL TRÁMITE</Title>
-        <Line />
-      </TitleContainer>
+        <Title middleLine>Pasos para realizar el trámite</Title>
 
       <StepsGroupContainer>
         <StepContainer>
-          <StepIcon icon={faFileArrowDown} />
+          <StepIcon icon={faKeyboard} rotation={90} />
           <StepNumber>01</StepNumber>
           <TextContainer>
             <StepTitle>Facilítanos tus datos</StepTitle>
             <StepText>
-              Introduce los datos del vehículo para conocer el precio de la
-              transferencia.
+              Introduce los datos del vehículo para conocer el precio de la transferencia.
             </StepText>
           </TextContainer>
         </StepContainer>
@@ -133,23 +102,33 @@ export default function OrderSteps() {
           <TextContainer>
             <StepTitle>Paga online</StepTitle>
             <StepText>
-              Una vez calcules el precio de la transferencia, paga online de
-              forma sencilla y segura. Recibirás un correo de confirmación con
-              la información de tu pedido.
+              Paga online de forma sencilla y segura. Recibirás un correo de confirmación con la
+              información de tu pedido.
+            </StepText>
+          </TextContainer>
+        </StepContainer>
+
+        <StepContainer>
+          <StepIcon icon={faFileArrowDown} />
+          <StepNumber>03</StepNumber>
+          <TextContainer>
+            <StepTitle>Adjunta la documentación</StepTitle>
+            <StepText>
+              Toma fotos al momento, o adjunta fotos que ya tengas de la documentación que
+              necesitamos.
             </StepText>
           </TextContainer>
         </StepContainer>
 
         <StepContainer>
           <StepIcon icon={faFileShield} />
-          <StepNumber>03</StepNumber>
+          <StepNumber>04</StepNumber>
           <TextContainer>
             <StepTitle>Recibe el provisional</StepTitle>
             <StepText>
-              Adjunta las fotos de los documentos del vehículo, y el trámite
-              quedará hecho. Posteriormente recibirás el permiso provisional,
-              con el que ya podrás circular a su nombre. El nuevo permiso de
-              circulación llegará a tu domicilio en 1/2 semanas.
+              Posteriormente recibirás el permiso provisional, con el que el comprador ya podrá
+              circular. El nuevo permiso de circulación llegará al domicilio indicado en 1/2
+              semanas.
             </StepText>
           </TextContainer>
         </StepContainer>
