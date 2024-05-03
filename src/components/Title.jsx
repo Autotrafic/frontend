@@ -13,6 +13,10 @@ const Text = styled.h1`
   font-size: 25px !important;
   font-weight: 600 !important;
   margin: 0;
+
+  @media (max-width: 1000px) {
+    text-align: center;
+  }
 `;
 
 const Line = styled.div`
@@ -20,6 +24,10 @@ const Line = styled.div`
   height: 3px;
   background-color: ${colors.primaryColor};
   border-radius: 5px;
+
+  @media (max-width: 1000px) {
+    align-self: center;
+  }
 `;
 
 function Title({ children, lineWidth }) {

@@ -25,10 +25,22 @@ const Container = styled.div`
   padding: 3em 1.5em;
   display: flex;
   gap: 10vw;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    padding: 0.5em 1.2em;
+  }
 `;
 
 const LeftSide = styled.div`
   flex: 4;
+
+  @media (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const RightSide = styled.div`
@@ -47,8 +59,6 @@ const SmartFormContainer = styled.div`
 
 function App() {
   const { userInfo, registerLog } = useContext(UserContext);
-
-  console.log("sending", userInfo.sessionId, userInfo.userId);
 
   useEffect(() => {
     (async () => {
