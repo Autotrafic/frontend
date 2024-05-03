@@ -10,10 +10,12 @@ const defaultOptions = {
   },
 };
 
-const dropStyles = { position: "absolute", top:-100, right: -100, zIndex: -1 };
+function Drop({ isMobile }) {
+  const dropStyles = { position: "absolute", top: -30, right: isMobile ?  -160 : -100, zIndex: -1 };
 
-function Drop() {
-  return <Lottie options={defaultOptions} height={670} width={675} style={dropStyles} />;
+  return (
+    <Lottie options={defaultOptions} height={isMobile ? 930 : 670} width={isMobile ? 650 : 675} style={dropStyles} />
+  );
 }
 
 export default Drop;

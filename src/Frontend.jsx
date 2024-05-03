@@ -7,10 +7,14 @@ import FrequentAskedQuestions from "./components/FrequentAskedQuestions";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 import { Navbar } from "./components/Navbar/navbar";
-import TransferLeftSide from "./components/TransferLeftSide";
+import TransferContentDesktop from "./components/TransferContentDesktop";
+import TransferContentMobile from "./components/TransferContentMobile";
 import { useContext, useEffect } from "react";
 import { UserContext, UserProvider } from "./context/user";
 import SmartForm from "smartForm/SmartForm";
+import ProsMobile from "./components/ProsMobile";
+import TransferMobile from "./components/TransferMobile";
+import TransferDesktop from "./components/TransferDesktop";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -60,6 +64,8 @@ const SmartFormContainer = styled.div`
 function App() {
   const { userInfo, registerLog } = useContext(UserContext);
 
+  const isMobile = window.innerWidth < 1000;
+
   useEffect(() => {
     (async () => {
       await registerLog("Accede a la página: Transferencia de vehículo");
@@ -70,17 +76,11 @@ function App() {
     <>
       <Navbar />
       <Wrapper>
-        <Container>
-          <LeftSide>
-            <TransferLeftSide />
-          </LeftSide>
-          <RightSide>
-            <SmartFormContainer>
-              <SmartForm sessionId={userInfo.sessionId} userId={userInfo.userId} />
-            </SmartFormContainer>
-            <Drop />
-          </RightSide>
-        </Container>
+        {isMobile ? (
+          <TransferMobile userInfo={userInfo} />
+        ) : (
+          <TransferDesktop userInfo={userInfo} />
+        )}
       </Wrapper>
       <OrderSteps />
       <NecessaryDocumentsList />

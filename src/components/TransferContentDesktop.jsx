@@ -124,7 +124,7 @@ const BoxesContainer = styled.div`
   justify-content: space-around;
 `;
 
-export default function TransferLeftSide() {
+export default function TransferContentDesktop() {
   const isMobile = window.innerWidth < 1000;
 
   return (
@@ -135,19 +135,18 @@ export default function TransferLeftSide() {
           Nunca había sido tan fácil tramitar la transferencia de un vehículo. Realiza el cambio de
           nombre de cualquier vehículo en 5 minutos.
         </ExplanationText>
-        {!isMobile && (
-          <AdvantagesListContainer>
-            <AdvantageListItem>
-              ✅<ListText>Proceso rápido y sencillo</ListText>
-            </AdvantageListItem>
-            <AdvantageListItem>
-              ✅<ListText>Envío gratis del nuevo permiso de circulación</ListText>
-            </AdvantageListItem>
-            <AdvantageListItem>
-              ✅<ListText>Provisional en minutos</ListText>
-            </AdvantageListItem>
-          </AdvantagesListContainer>
-        )}
+
+        <AdvantagesListContainer>
+          <AdvantageListItem>
+            ✅<ListText>Proceso rápido y sencillo</ListText>
+          </AdvantageListItem>
+          <AdvantageListItem>
+            ✅<ListText>Envío gratis del nuevo permiso de circulación</ListText>
+          </AdvantageListItem>
+          <AdvantageListItem>
+            ✅<ListText>Provisional en minutos</ListText>
+          </AdvantageListItem>
+        </AdvantagesListContainer>
 
         <BoxesContainer>
           <GoogleReviewsBox />

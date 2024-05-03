@@ -15,6 +15,10 @@
   line-height: normal;
 }
 
+#app {
+  overflow-x: hidden;
+}
+
 input[type="text"],
 input[type="number"],
 textarea {
