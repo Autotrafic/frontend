@@ -28,7 +28,7 @@ const BoxesContainer = styled.div`
 `;
 
 const WhatsContactContainer = styled.div`
-margin-bottom: 1em;
+  margin-bottom: 1em;
 `;
 
 const WhatsText = styled.p`
@@ -62,8 +62,8 @@ export default function TransferContentMobile() {
       <TransferContainer>
         <Title>Cambio de nombre de vehículo online</Title>
         <ExplanationText>
-          Nunca había sido tan fácil tramitar la transferencia de un vehículo. Realiza el cambio de
-          nombre de cualquier vehículo en 5 minutos.
+          Nunca había sido tan fácil tramitar la transferencia de un vehículo.
+          Realiza el cambio de nombre de cualquier vehículo en 5 minutos.
         </ExplanationText>
 
         <BoxesContainer>

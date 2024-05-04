@@ -28,7 +28,20 @@ export default function FrequentAskedQuestions() {
 
   const FaqContainer = styled.div`
     max-width: 1000px;
-    width: 100%;
+    width: 65%;
+
+    @media (max-width: 1035px) {
+      width: 75%;
+    }
+    @media (max-width: 900px) {
+      width: 85%;
+    }
+    @media (max-width: 790px) {
+      width: 90%;
+    }
+    @media (max-width: 750px) {
+      width: 100%;
+    }
   `;
 
   const [isClicked, setIsClicked] = useState(false);
@@ -52,18 +65,33 @@ export default function FrequentAskedQuestions() {
               onClick={() => toggleFaq(index)}
             >
               <div className="title">
-                <h1 className={`item-question ${isClicked === index ? "show-item-question" : ""}`}>
+                <h1
+                  className={`item-question ${
+                    isClicked === index ? "show-item-question" : ""
+                  }`}
+                >
                   {item.question}
                 </h1>
                 {isClicked === index ? (
-                  <FontAwesomeIcon icon={faMinus} style={{ color: "#ffffff" }} />
+                  <FontAwesomeIcon
+                    icon={faMinus}
+                    style={{ color: "#ffffff" }}
+                  />
                 ) : (
                   <FontAwesomeIcon icon={faPlus} />
                 )}
               </div>
 
-              <div className={`content ${isClicked === index ? "show-content" : ""}`}>
-                <p className={`item-answer ${isClicked === index ? "show-item-answer" : ""}`}>
+              <div
+                className={`content ${
+                  isClicked === index ? "show-content" : ""
+                }`}
+              >
+                <p
+                  className={`item-answer ${
+                    isClicked === index ? "show-item-answer" : ""
+                  }`}
+                >
                   {item.answer}
                 </p>
               </div>

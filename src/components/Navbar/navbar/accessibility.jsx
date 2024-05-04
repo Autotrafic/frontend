@@ -8,9 +8,9 @@ export function Accessibility({ setOpen }) {
 
   return (
     <div className="accessibilityContainer">
-      <button className="accessButton" onClick={handleClick}>
+      {/*  <button className="accessButton" onClick={handleClick}>
         Área Cliente
-      </button>
+      </button> */}
     </div>
   );
 }

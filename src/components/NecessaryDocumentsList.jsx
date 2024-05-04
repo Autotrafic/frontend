@@ -14,7 +14,12 @@ export default function NecessaryDocumentsList() {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 20px;
+    padding: 0 50px;
+    align-self: center;
+
+    @media (max-width: 620px) {
+      max-width: 480px;
+    }
 
     @media (max-width: ${bigPhoneScreenMedia}) {
       gap: 20px;

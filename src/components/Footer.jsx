@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import { colors } from "../utils/styles"
+import { colors } from "../utils/styles";
 import autotraficLogo from "../assets/logo-horizontal.png";
 import colegioLogo from "../assets/colegio-logo.png";
 import whatsappIcon from "../assets/whatsapp-icon.svg";
 
+const tabletScreenMedia = "1000px";
 const bigPhoneScreenMedia = "476px";
 
 export default function Footer() {
@@ -13,6 +14,17 @@ export default function Footer() {
     grid-gap: 100px;
     background-color: #232323;
     padding: 80px 100px;
+
+    @media (max-width: ${tabletScreenMedia}) {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      flex-wrap: wrap;
+      gap: 60px;
+      padding: 40px 20px;
+      display: flex;
+      width: 100%;
+    }
 
     @media (max-width: ${bigPhoneScreenMedia}) {
       display: flex;
@@ -108,6 +120,12 @@ export default function Footer() {
     width: 60px;
     border-radius: 5px;
 
+    @media (max-width: ${tabletScreenMedia}) {
+      width: 55px;
+      border-radius: 4px;
+    }
+
+
     @media (max-width: 475px) {
       width: 45px;
       border-radius: 2px;
@@ -127,8 +145,9 @@ export default function Footer() {
   return (
     <FooterContainer>
       <GridComponent>
-        <AutotraficLogo src={autotraficLogo} alt="autotraficLogo" />
-
+        <a href="https://autotrafic.es/" style={{ textDecoration: "none" }}>
+          <AutotraficLogo src={autotraficLogo} alt="autotraficLogo" />
+        </a>
         <ContactTextGroup>
           <ContactTitle>Teléfono</ContactTitle>
           <a href="callto:+34674219155" style={{ textDecoration: "none" }}>

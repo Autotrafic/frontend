@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCreditCard, faFileArrowDown, faFileShield, faKeyboard } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCreditCard,
+  faFileArrowDown,
+  faFileShield,
+  faKeyboard,
+} from "@fortawesome/free-solid-svg-icons";
 import { colors } from "../utils/styles";
 import Title from "./Title";
 
@@ -27,6 +32,10 @@ export default function OrderSteps() {
     justify-content: center;
     align-items: center;
 
+    @media (max-width: 620px) {
+      max-width: 380px;
+    }
+
     @media (max-width: ${bigPhoneScreenMedia}) {
       max-width: 320px;
     }
@@ -48,6 +57,10 @@ export default function OrderSteps() {
     height: 60px;
     margin-right: 45px;
 
+    @media (max-width: 620px) {
+      display: none;
+    }
+
     @media (max-width: ${bigPhoneScreenMedia}) {
       display: none;
     }
@@ -66,23 +79,35 @@ export default function OrderSteps() {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    @media (max-width: ${bigPhoneScreenMedia}) {
+      gap: 5px;
+    }
   `;
 
   const StepTitle = styled.p`
     color: ${colors.primaryColor};
     font-weight: bold;
     margin: 0;
+
+    @media (max-width: ${bigPhoneScreenMedia}) {
+      font-size: 15px;
+    }
   `;
 
   const StepText = styled.p`
     color: ${colors.primaryGrey};
     font-size: 13px;
     margin: 0;
+
+    @media (max-width: ${bigPhoneScreenMedia}) {
+      font-size: 12px;
+    }
   `;
 
   return (
     <Container>
-        <Title middleLine>Pasos para realizar el trámite</Title>
+      <Title middleLine>Pasos para realizar el trámite</Title>
 
       <StepsGroupContainer>
         <StepContainer>
@@ -91,7 +116,8 @@ export default function OrderSteps() {
           <TextContainer>
             <StepTitle>Facilítanos tus datos</StepTitle>
             <StepText>
-              Introduce los datos del vehículo para conocer el precio de la transferencia.
+              Introduce los datos del vehículo para conocer el precio de la
+              transferencia.
             </StepText>
           </TextContainer>
         </StepContainer>
@@ -102,8 +128,8 @@ export default function OrderSteps() {
           <TextContainer>
             <StepTitle>Paga online</StepTitle>
             <StepText>
-              Paga online de forma sencilla y segura. Recibirás un correo de confirmación con la
-              información de tu pedido.
+              Paga online de forma sencilla y segura. Recibirás un correo de
+              confirmación con la información de tu pedido.
             </StepText>
           </TextContainer>
         </StepContainer>
@@ -114,8 +140,8 @@ export default function OrderSteps() {
           <TextContainer>
             <StepTitle>Adjunta la documentación</StepTitle>
             <StepText>
-              Toma fotos al momento, o adjunta fotos que ya tengas de la documentación que
-              necesitamos.
+              Toma fotos al momento, o adjunta fotos que ya tengas de la
+              documentación que necesitamos.
             </StepText>
           </TextContainer>
         </StepContainer>
@@ -126,9 +152,9 @@ export default function OrderSteps() {
           <TextContainer>
             <StepTitle>Recibe el provisional</StepTitle>
             <StepText>
-              Posteriormente recibirás el permiso provisional, con el que el comprador ya podrá
-              circular. El nuevo permiso de circulación llegará al domicilio indicado en 1/2
-              semanas.
+              Posteriormente recibirás el permiso provisional, con el que el
+              comprador ya podrá circular. El nuevo permiso de circulación
+              llegará al domicilio indicado en 1/2 semanas.
             </StepText>
           </TextContainer>
         </StepContainer>

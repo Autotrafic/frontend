@@ -1,13 +1,21 @@
 import styled from "styled-components";
 import { colors } from "../utils/styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone, faComments } from "@fortawesome/free-solid-svg-icons";
-import { faSquareInstagram, faSquareWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import {
+  faEnvelope,
+  faPhone,
+  faComments,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faSquareInstagram,
+  faSquareWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
 import LegalCheckbox from "./reusable/LegalCheckbox";
 
 const columnWidth = "480px";
 
 const bigPhoneScreenMedia = "476px";
+const tabletScreenMedia = "1000px";
 
 export default function ContactForm() {
   const Container = styled.div`
@@ -19,6 +27,7 @@ export default function ContactForm() {
     justify-content: center;
     background-color: #f3f3f3;
     padding: 60px 0 100px 0;
+    margin-bottom: 0;
 
     @media (max-width: ${bigPhoneScreenMedia}) {
       padding: 30px 20px;
@@ -47,6 +56,10 @@ export default function ContactForm() {
     display: flex;
     gap: 10px;
 
+    @media (max-width: ${tabletScreenMedia}) {
+      flex-direction: column;
+    }
+
     @media (max-width: ${bigPhoneScreenMedia}) {
       flex-direction: column;
       align-items: center;
@@ -59,10 +72,14 @@ export default function ContactForm() {
     justify-content: space-between;
     width: ${columnWidth};
 
+    @media (max-width: ${tabletScreenMedia}) {
+      gap: 10px;
+    }
     @media (max-width: ${bigPhoneScreenMedia}) {
       width: 320px;
       gap: 10px;
     }
+   
   `;
 
   const SubContactContainer = styled.div`
@@ -299,7 +316,10 @@ export default function ContactForm() {
               </a>
 
               <ContactTitle>Correo electrónico</ContactTitle>
-              <a href="mailto:contacto@autotrafic.es" style={{ textDecoration: "none" }}>
+              <a
+                href="mailto:contacto@autotrafic.es"
+                style={{ textDecoration: "none" }}
+              >
                 <ContactText>contacto@autotrafic.es</ContactText>
               </a>
             </SubContactContainerIndividual>
@@ -323,7 +343,10 @@ export default function ContactForm() {
                 <a href="https://wa.me/643219297" target="_blank">
                   <WhatsappIcon icon={faSquareWhatsapp} />
                 </a>
-                <a href="https://www.instagram.com/autotrafic.gestoria/" target="_blank">
+                <a
+                  href="https://www.instagram.com/autotrafic.gestoria/"
+                  target="_blank"
+                >
                   <InstagramIcon
                     icon={faSquareInstagram}
                     style={{

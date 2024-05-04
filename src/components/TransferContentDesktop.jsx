@@ -132,8 +132,8 @@ export default function TransferContentDesktop() {
       <TransferContainer>
         <Title>Cambio de nombre de vehículo online</Title>
         <ExplanationText>
-          Nunca había sido tan fácil tramitar la transferencia de un vehículo. Realiza el cambio de
-          nombre de cualquier vehículo en 5 minutos.
+          Nunca había sido tan fácil tramitar la transferencia de un vehículo.
+          Realiza el cambio de nombre de cualquier vehículo en 5 minutos.
         </ExplanationText>
 
         <AdvantagesListContainer>
@@ -157,22 +157,37 @@ export default function TransferContentDesktop() {
       <AnyQuestionContainer>
         <Title lineWidth={"15%"}>¿Alguna duda?</Title>
         <ExplanationText>
-          Si tienes alguna duda durante el proceso, no dudes en contactar con nosotros. Uno de
-          nuestros gestores estará encantado de ayudarte.
+          Si tienes alguna duda durante el proceso, no dudes en contactar con
+          nosotros. Uno de nuestros gestores estará encantado de ayudarte.
         </ExplanationText>
         <ContactButtonsContainer>
-          <ContactButtonWhatsapp>
-            <ContactIcon icon={faWhatsapp} />
-            <ContactButtonText>Whatsapp</ContactButtonText>
-          </ContactButtonWhatsapp>
-          <ContactButton>
-            <ContactIcon icon={faPhone} />
-            <ContactButtonText>Teléfono</ContactButtonText>
-          </ContactButton>
-          <ContactButton>
-            <ContactIcon icon={faEnvelope} />
-            <ContactButtonText>Email</ContactButtonText>
-          </ContactButton>
+          <a
+            href="https://wa.me/643219297"
+            target="_blank"
+            style={{ textDecoration: "none" }}
+          >
+            <ContactButtonWhatsapp>
+              <ContactIcon icon={faWhatsapp} />
+              <ContactButtonText>Whatsapp</ContactButtonText>
+            </ContactButtonWhatsapp>
+          </a>
+
+          <a href="callto:+34674219155" style={{ textDecoration: "none" }}>
+            <ContactButton>
+              <ContactIcon icon={faPhone} />
+              <ContactButtonText>Teléfono</ContactButtonText>
+            </ContactButton>
+          </a>
+
+          <a
+            href="mailto:contacto@autotrafic.es"
+            style={{ textDecoration: "none" }}
+          >
+            <ContactButton>
+              <ContactIcon icon={faEnvelope} />
+              <ContactButtonText>Email</ContactButtonText>
+            </ContactButton>
+          </a>
         </ContactButtonsContainer>
       </AnyQuestionContainer>
     </>
