@@ -73,10 +73,16 @@ export default function TransferContentMobile() {
 
         <WhatsContactContainer>
           <WhatsText>Habla con nosotros. Respondemos al instante.</WhatsText>
-          <WhatsLink>
-            <WhatsIcon icon={faWhatsapp} size="lg" />
-            Atención al cliente
-          </WhatsLink>
+          <a
+            href="https://wa.me/643219297"
+            target="_blank"
+            style={{ textDecoration: "none" }}
+          >
+            <WhatsLink>
+              <WhatsIcon icon={faWhatsapp} size="lg" />
+              Atención al cliente
+            </WhatsLink>
+          </a>
         </WhatsContactContainer>
       </TransferContainer>
     </>
