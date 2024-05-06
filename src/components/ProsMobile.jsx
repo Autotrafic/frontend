@@ -8,7 +8,11 @@ const Container = styled.div`
   flex-direction: column;
   gap: 2em;
   width: 85%;
-  max-width: 300px;
+  max-width: 500px;
+
+  @media (max-width: 400px) {
+    width: 95%;
+  }
 `;
 
 const ProItem = styled.div`
@@ -25,14 +29,20 @@ const Icon = styled(FontAwesomeIcon)`
 const Text = styled.span`
   font-weight: 500;
   color: #fff;
+
+  @media (max-width: 415px) {
+    font-size: 14px;
+  }
+
+
 `;
 
 export default function ProsMobile() {
   const pros = [
-    { icon: faBolt, text: "Proceso rápido y sencillo" },
-    { icon: faRightLeft, text: "Garantía de devolución" },
-    { icon: faTruckFast, text: "Envío gratis" },
-    { icon: faHeadset, text: "Atención 24/7" },
+    { icon: faBolt, text: "PROCESO RÁPIDO Y SENCILLO" },
+    { icon: faRightLeft, text: "GARANTÍA DE DEVOLUCIÓN" },
+    { icon: faTruckFast, text: "ENVÍO GRATIS" },
+    { icon: faHeadset, text: "ATENCIÓN 24/7" },
   ];
 
   return (

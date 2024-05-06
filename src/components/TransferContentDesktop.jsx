@@ -58,6 +58,10 @@ const ContactIcon = styled(FontAwesomeIcon)`
   transition: 0.3s;
 `;
 
+const ContactLink = styled.a`
+flex: 1;
+`;
+
 const ContactButtonText = styled.p`
   font-size: 14px;
   color: ${colors.primaryColor};
@@ -67,7 +71,7 @@ const ContactButtonText = styled.p`
 `;
 
 const ContactButtonWhatsapp = styled.div`
-  flex: 1;
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -125,7 +129,6 @@ const BoxesContainer = styled.div`
 `;
 
 export default function TransferContentDesktop() {
-  const isMobile = window.innerWidth < 1000;
 
   return (
     <>
@@ -161,7 +164,7 @@ export default function TransferContentDesktop() {
           nosotros. Uno de nuestros gestores estará encantado de ayudarte.
         </ExplanationText>
         <ContactButtonsContainer>
-          <a
+          <ContactLink
             href="https://wa.me/643219297"
             target="_blank"
             style={{ textDecoration: "none" }}
@@ -170,16 +173,16 @@ export default function TransferContentDesktop() {
               <ContactIcon icon={faWhatsapp} />
               <ContactButtonText>Whatsapp</ContactButtonText>
             </ContactButtonWhatsapp>
-          </a>
+          </ContactLink>
 
-          <a href="callto:+34674219155" style={{ textDecoration: "none" }}>
+          <ContactLink href="callto:+34674219155" style={{ textDecoration: "none" }}>
             <ContactButton>
               <ContactIcon icon={faPhone} />
               <ContactButtonText>Teléfono</ContactButtonText>
             </ContactButton>
-          </a>
+          </ContactLink>
 
-          <a
+          <ContactLink
             href="mailto:contacto@autotrafic.es"
             style={{ textDecoration: "none" }}
           >
@@ -187,7 +190,7 @@ export default function TransferContentDesktop() {
               <ContactIcon icon={faEnvelope} />
               <ContactButtonText>Email</ContactButtonText>
             </ContactButton>
-          </a>
+          </ContactLink>
         </ContactButtonsContainer>
       </AnyQuestionContainer>
     </>

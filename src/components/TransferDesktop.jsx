@@ -50,7 +50,7 @@ export default function TransferDesktop({ userInfo }) {
       </LeftSide>
       <RightSide>
         <SmartFormContainer>
-          <SmartForm sessionId={userInfo.sessionId} userId={userInfo.userId} />
+          <SmartForm sessionId={userInfo.sessionId} />
         </SmartFormContainer>
         <Drop />
       </RightSide>

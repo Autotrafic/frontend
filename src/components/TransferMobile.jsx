@@ -54,7 +54,7 @@ export default function TransferMobile({ userInfo }) {
       </LeftSide>
       <RightSide>
         <SmartFormContainer>
-          <SmartForm sessionId={userInfo.sessionId} userId={userInfo.userId} />
+          <SmartForm sessionId={userInfo.sessionId} />
         </SmartFormContainer>
         <Drop isMobile={true} />
         <ProsMobile />

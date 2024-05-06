@@ -33,7 +33,7 @@ export const FAQ = [
 
 export const NAVBAR_ROUTES = [
   { title: "Inicio", route: "https://autotrafic.es/" },
-  { title: "Trámites", route: "/" },
+  { title: "Transferencia de vehículo", route: "/" },
   { title: "Noticias", route: "https://autotrafic.es/noticias/" },
   { title: "Contacto", route: "https://autotrafic.es/contacto/" },
 ];
