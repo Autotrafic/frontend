@@ -1,4 +1,5 @@
 import React, { createContext, useState, useEffect } from "react";
+import IPData from "ipdata";
 import { fetchRegisterLog } from "../services/logs";
 
 const UserContext = createContext();
