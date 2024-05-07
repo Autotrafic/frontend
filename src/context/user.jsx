@@ -16,7 +16,10 @@ const UserProvider = ({ children }) => {
   useEffect(() => {
     (async () => {
       const receivedIpDetails = await ipdata.lookup();
-      if (receivedIpDetails) setIpDetails(receivedIpDetails);
+      if (receivedIpDetails) {
+        await registerLog("Accede a la página: Transferencia de vehículo");
+        setIpDetails(receivedIpDetails);
+      }
     })();
   }, []);
 

@@ -36,12 +36,6 @@ function App() {
 
   const isMobile = window.innerWidth < 1000;
 
-  useEffect(() => {
-    (async () => {
-      await registerLog("Accede a la página: Transferencia de vehículo");
-    })();
-  }, []);
-
   return (
     <>
       <Navbar />
