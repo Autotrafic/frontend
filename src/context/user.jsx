@@ -4,6 +4,8 @@ import { fetchRegisterLog } from "../services/logs";
 
 const UserContext = createContext();
 
+const IPDATA_KEY = "6769dbaf0ff97602e3a9b4b33d7fc901f1e4d192711ee9da36db8e18";
+
 const UserProvider = ({ children }) => {
   const generateId = () => "id" + Math.random().toString(16).slice(2);
   const ipdata = new IPData(IPDATA_KEY);
