@@ -23,6 +23,14 @@ const UserProvider = ({ children }) => {
     })();
   }, []);
 
+  useEffect(() => {
+    (async () => {
+      if (ipDetails?.region) {
+        await registerLog("Accede a la página: Transferencia de vehículo");
+      }
+    })();
+  }, [ipDetails?.region]);
+
   const registerLog = async (message) => {
     if (userInfo.sessionId && ipDetails?.region)
       await fetchRegisterLog(message, userInfo.sessionId, ipDetails?.region);
