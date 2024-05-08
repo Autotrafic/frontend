@@ -1,16 +1,13 @@
-import "./App.css";
+import { useContext } from "react";
 import styled from "styled-components";
-import OrderSteps from "./components/OrderSteps";
-import NecessaryDocumentsList from "./components/NecessaryDocumentsList";
-import FrequentAskedQuestions from "./components/FrequentAskedQuestions";
-import ContactForm from "./components/ContactForm";
-import Footer from "./components/Footer";
-import { Navbar } from "./components/Navbar/navbar";
-import { useContext, useEffect } from "react";
-import { UserContext, UserProvider } from "./context/user";
+import { UserContext } from "../../context/user";
 import TransferMobile from "./components/TransferMobile";
 import TransferDesktop from "./components/TransferDesktop";
 import Prices from "./components/Prices";
+import FrequentAskedQuestions from "../../components/FrequentAskedQuestions";
+import NecessaryDocumentsList from "../../components/NecessaryDocumentsList";
+import OrderSteps from "./components/OrderSteps";
+import ContactForm from "../../components/ContactForm";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -31,14 +28,13 @@ const Sections = styled.div`
   }
 `;
 
-function App() {
-  const { userInfo, registerLog } = useContext(UserContext);
+export default function TransferencePage() {
+  const { userInfo } = useContext(UserContext);
 
   const isMobile = window.innerWidth < 1000;
 
   return (
     <>
-      <Navbar />
       <Wrapper>
         {isMobile ? (
           <TransferMobile userInfo={userInfo} />
@@ -53,18 +49,6 @@ function App() {
         <OrderSteps />
         <ContactForm />
       </Sections>
-
-      <Footer />
     </>
   );
 }
-
-function Frontend() {
-  return (
-    <UserProvider>
-      <App />
-    </UserProvider>
-  );
-}
-
-export default Frontend;

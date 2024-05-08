@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import Title from "./Title";
-import { colors } from "../utils/styles";
+import Title from "../../../components/reusable/Title";
+import { colors } from "../../../utils/styles";
 
 const Container = styled.div`
   width: 100%;

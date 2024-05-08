@@ -6,8 +6,8 @@ import {
   faFileShield,
   faKeyboard,
 } from "@fortawesome/free-solid-svg-icons";
-import { colors } from "../utils/styles";
-import Title from "./Title";
+import { colors } from "../../../utils/styles";
+import Title from "../../../components/reusable/Title";
 
 const bigPhoneScreenMedia = "476px";
 
@@ -116,8 +116,7 @@ export default function OrderSteps() {
           <TextContainer>
             <StepTitle>Facilítanos tus datos</StepTitle>
             <StepText>
-              Introduce los datos del vehículo para conocer el precio de la
-              transferencia.
+              Introduce los datos del vehículo para conocer el precio de la transferencia.
             </StepText>
           </TextContainer>
         </StepContainer>
@@ -128,8 +127,8 @@ export default function OrderSteps() {
           <TextContainer>
             <StepTitle>Paga online</StepTitle>
             <StepText>
-              Paga online de forma sencilla y segura. Recibirás un correo de
-              confirmación con la información de tu pedido.
+              Paga online de forma sencilla y segura. Recibirás un correo de confirmación con la
+              información de tu pedido.
             </StepText>
           </TextContainer>
         </StepContainer>
@@ -140,8 +139,8 @@ export default function OrderSteps() {
           <TextContainer>
             <StepTitle>Adjunta la documentación</StepTitle>
             <StepText>
-              Toma fotos al momento, o adjunta fotos que ya tengas de la
-              documentación que necesitamos.
+              Toma fotos al momento, o adjunta fotos que ya tengas de la documentación que
+              necesitamos.
             </StepText>
           </TextContainer>
         </StepContainer>
@@ -152,9 +151,9 @@ export default function OrderSteps() {
           <TextContainer>
             <StepTitle>Recibe el provisional</StepTitle>
             <StepText>
-              Posteriormente recibirás el permiso provisional, con el que el
-              comprador ya podrá circular. El nuevo permiso de circulación
-              llegará al domicilio indicado en 1/2 semanas.
+              Posteriormente recibirás el permiso provisional, con el que el comprador ya podrá
+              circular. El nuevo permiso de circulación llegará al domicilio indicado en 1/2
+              semanas.
             </StepText>
           </TextContainer>
         </StepContainer>

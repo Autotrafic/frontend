@@ -1,12 +1,9 @@
 import styled from "styled-components";
-import Title from "./Title";
+import Title from "../../../components/reusable/Title";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { colors } from "../utils/styles";
-import GoogleReviewsBox from "./reusable/GoogleReviewsBox";
-import dgtLogo from "../assets/dgt.svg";
+import GoogleReviewsBox from "../../../components/reusable/GoogleReviewsBox";
+import dgtLogo from "../../../assets/dgt.svg";
 
 const TransferContainer = styled.div`
   display: flex;
@@ -62,8 +59,8 @@ export default function TransferContentMobile() {
       <TransferContainer>
         <Title>Cambio de nombre de vehículo online</Title>
         <ExplanationText>
-          Nunca había sido tan fácil tramitar la transferencia de un vehículo.
-          Realiza el cambio de nombre de cualquier vehículo en 5 minutos.
+          Nunca había sido tan fácil tramitar la transferencia de un vehículo. Realiza el cambio de
+          nombre de cualquier vehículo en 5 minutos.
         </ExplanationText>
 
         <BoxesContainer>
@@ -73,11 +70,7 @@ export default function TransferContentMobile() {
 
         <WhatsContactContainer>
           <WhatsText>Habla con nosotros. Respondemos al instante.</WhatsText>
-          <a
-            href="https://wa.me/643219297"
-            target="_blank"
-            style={{ textDecoration: "none" }}
-          >
+          <a href="https://wa.me/643219297" target="_blank" style={{ textDecoration: "none" }}>
             <WhatsLink>
               <WhatsIcon icon={faWhatsapp} size="lg" />
               Atención al cliente

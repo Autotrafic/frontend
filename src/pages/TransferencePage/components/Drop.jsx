@@ -1,5 +1,5 @@
 import Lottie from "react-lottie";
-import dropAnimation from "../assets/form-drop2.json";
+import dropAnimation from "../../../assets/form-drop2.json";
 
 const defaultOptions = {
   loop: false,

@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import Title from "./Title";
+import Title from "../../../components/reusable/Title";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { colors } from "../utils/styles";
-import GoogleReviewsBox from "./reusable/GoogleReviewsBox";
-import dgtLogo from "../assets/dgt.svg";
-import ministerioImg from "../assets/ministerio.svg";
+import { colors } from "../../../utils/styles";
+import GoogleReviewsBox from "../../../components/reusable/GoogleReviewsBox";
+import dgtLogo from "../../../assets/dgt.svg";
+import ministerioImg from "../../../assets/ministerio.svg";
 
 const TransferContainer = styled.div`
   display: flex;
@@ -59,7 +59,7 @@ const ContactIcon = styled(FontAwesomeIcon)`
 `;
 
 const ContactLink = styled.a`
-flex: 1;
+  flex: 1;
 `;
 
 const ContactButtonText = styled.p`
@@ -71,7 +71,6 @@ const ContactButtonText = styled.p`
 `;
 
 const ContactButtonWhatsapp = styled.div`
-  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -129,14 +128,13 @@ const BoxesContainer = styled.div`
 `;
 
 export default function TransferContentDesktop() {
-
   return (
     <>
       <TransferContainer>
         <Title>Cambio de nombre de vehículo online</Title>
         <ExplanationText>
-          Nunca había sido tan fácil tramitar la transferencia de un vehículo.
-          Realiza el cambio de nombre de cualquier vehículo en 5 minutos.
+          Nunca había sido tan fácil tramitar la transferencia de un vehículo. Realiza el cambio de
+          nombre de cualquier vehículo en 5 minutos.
         </ExplanationText>
 
         <AdvantagesListContainer>
@@ -160,8 +158,8 @@ export default function TransferContentDesktop() {
       <AnyQuestionContainer>
         <Title lineWidth={"15%"}>¿Alguna duda?</Title>
         <ExplanationText>
-          Si tienes alguna duda durante el proceso, no dudes en contactar con
-          nosotros. Uno de nuestros gestores estará encantado de ayudarte.
+          Si tienes alguna duda durante el proceso, no dudes en contactar con nosotros. Uno de
+          nuestros gestores estará encantado de ayudarte.
         </ExplanationText>
         <ContactButtonsContainer>
           <ContactLink
@@ -182,10 +180,7 @@ export default function TransferContentDesktop() {
             </ContactButton>
           </ContactLink>
 
-          <ContactLink
-            href="mailto:contacto@autotrafic.es"
-            style={{ textDecoration: "none" }}
-          >
+          <ContactLink href="mailto:contacto@autotrafic.es" style={{ textDecoration: "none" }}>
             <ContactButton>
               <ContactIcon icon={faEnvelope} />
               <ContactButtonText>Email</ContactButtonText>
