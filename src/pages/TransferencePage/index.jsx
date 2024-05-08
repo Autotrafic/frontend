@@ -45,7 +45,7 @@ export default function TransferencePage() {
       <Sections>
         <Prices />
         <FrequentAskedQuestions />
-        <NecessaryDocumentsList />
+        {/* <NecessaryDocumentsList /> */}
         <OrderSteps />
         <ContactForm />
       </Sections>
