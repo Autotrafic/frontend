@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Lottie from "react-lottie";
 import dropAnimation from "../../../assets/form-drop2.json";
 
@@ -10,20 +11,28 @@ const defaultOptions = {
   },
 };
 
-function Drop() {
+function Drop({ smartFormHeight }) {
   const screenWidth = window.innerWidth;
+
+  const [dropHeight, setDropHeight] = useState();
+
+  useEffect(() => {
+    setDropHeight(smartFormHeight + 80);
+  }, [smartFormHeight]);
+
   let dropPosition;
 
-  if (screenWidth < 450) {
-    dropPosition = { top: -30, right: -160, width: 650, height: 930 };
-  } else if (screenWidth < 600) {
-    dropPosition = { top: -50, right: -160, width: 845, height: 970 };
+  if (screenWidth < 415) {
+    dropPosition = { top: -30, right: -160, width: 650, height: dropHeight ?? 930 };
+  } else if (screenWidth < 490) {
+    console.log('here')
+    dropPosition = { top: -50, right: -240, width: 895, height: dropHeight + 30 };
   } else if (screenWidth < 1000) {
-    dropPosition = { top: -30, right: -230, width: 9999, height: 865 };
+    dropPosition = { top: -30, right: -237, width: 9999, height: dropHeight ?? 865 };
   } else if (screenWidth < 1580) {
-    dropPosition = { top: -100, right: -190, width: 675, height: 670 };
+    dropPosition = { top: -100, right: -190, width: 675, height: dropHeight ?? 670 };
   } else {
-    dropPosition = { top: -100, right: -100, width: 675, height: 670 };
+    dropPosition = { top: -100, right: -100, width: 675, height: dropHeight ?? 670 };
   }
 
   const dropStyles = {

@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import SmartForm from "smartForm/SmartForm";
 import TransferContentMobile from "./TransferContentMobile";
@@ -47,16 +48,37 @@ const SmartFormContainer = styled.div`
 `;
 
 export default function TransferMobile({ userInfo }) {
+  const [smartFormHeight, setSmartFormHeight] = useState(0);
+  const smartFormRef = useRef(null);
+
+  useEffect(() => {
+    const resizeObserver = new ResizeObserver(entries => {
+      for (let entry of entries) {
+        if (entry.target === smartFormRef.current) {
+          setSmartFormHeight(entry.contentRect.height);
+        }
+      }
+    });
+
+    if (smartFormRef.current) {
+      resizeObserver.observe(smartFormRef.current);
+    }
+
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, [smartFormRef]);
+
   return (
     <Container>
       <LeftSide>
         <TransferContentMobile />
       </LeftSide>
-      <RightSide>
+      <RightSide ref={smartFormRef}>
         <SmartFormContainer>
           <SmartForm sessionId={userInfo.sessionId} />
         </SmartFormContainer>
-        <Drop isMobile={true} />
+        <Drop smartFormHeight={smartFormHeight} />
         <ProsMobile />
       </RightSide>
     </Container>
