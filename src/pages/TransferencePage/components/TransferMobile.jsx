@@ -40,6 +40,7 @@ const RightSide = styled.div`
 `;
 
 const SmartFormContainer = styled.div`
+  width: 100%;
   padding: 5px;
   background-color: #fff;
   border-radius: 8px;
@@ -52,7 +53,7 @@ export default function TransferMobile({ userInfo }) {
   const smartFormRef = useRef(null);
 
   useEffect(() => {
-    const resizeObserver = new ResizeObserver(entries => {
+    const resizeObserver = new ResizeObserver((entries) => {
       for (let entry of entries) {
         if (entry.target === smartFormRef.current) {
           setSmartFormHeight(entry.contentRect.height);

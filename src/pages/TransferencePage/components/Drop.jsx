@@ -25,7 +25,6 @@ function Drop({ smartFormHeight }) {
   if (screenWidth < 415) {
     dropPosition = { top: -30, right: -160, width: 650, height: dropHeight ?? 930 };
   } else if (screenWidth < 490) {
-    console.log('here')
     dropPosition = { top: -50, right: -240, width: 895, height: dropHeight + 30 };
   } else if (screenWidth < 1000) {
     dropPosition = { top: -30, right: -237, width: 9999, height: dropHeight ?? 865 };
