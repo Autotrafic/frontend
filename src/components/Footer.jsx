@@ -3,6 +3,11 @@ import { colors } from "../utils/styles";
 import autotraficLogo from "../assets/logo-horizontal.png";
 import colegioLogo from "../assets/colegio-logo.png";
 import whatsappIcon from "../assets/whatsapp-icon.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+import GoogleReviewsBox from "./reusable/GoogleReviewsBox";
+import dgtLogo from "../assets/dgt.svg";
+import ministerioImg from "../assets/ministerio.svg";
 
 const tabletScreenMedia = "1000px";
 const bigPhoneScreenMedia = "476px";
@@ -12,8 +17,8 @@ export default function Footer() {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 100px;
-    background-color: #232323;
-    padding: 80px 100px;
+    background-color: #f3f3f3;
+    padding: 80px 60px;
 
     @media (max-width: ${tabletScreenMedia}) {
       display: flex;
@@ -42,6 +47,7 @@ export default function Footer() {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: center;
 
     @media (max-width: ${bigPhoneScreenMedia}) {
       gap: 10px;
@@ -51,11 +57,11 @@ export default function Footer() {
   const ContactTextGroup = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 5px;
   `;
 
   const ContactTitle = styled.p`
-    color: #d8d8d8;
     margin: 0;
 
     @media (max-width: 475px) {
@@ -64,13 +70,16 @@ export default function Footer() {
   `;
 
   const ContactText = styled.p`
-    color: white;
-    font-weight: bold;
+    color: #232323;
+    font-size: 18px;
     margin: 0;
     text-decoration: none;
     transition: 0.1s;
     width: fit-content;
+    margin-bottom: 10px;
+
     &:hover {
+      font-weight: bold;
       cursor: pointer;
       color: ${colors.primaryColor};
       transition: 0.2s;
@@ -82,7 +91,6 @@ export default function Footer() {
   `;
 
   const GridTitle = styled.p`
-    color: white;
     font-weight: bold;
     margin: 0;
 
@@ -92,7 +100,7 @@ export default function Footer() {
   `;
 
   const GridText = styled.p`
-    color: #d8d8d8;
+    color: #232323;
     margin: 0;
     transition: 0.1s;
     &:hover {
@@ -117,14 +125,13 @@ export default function Footer() {
   `;
 
   const WhatsappIcon = styled.img`
-    width: 60px;
+    width: 50px;
     border-radius: 5px;
 
     @media (max-width: ${tabletScreenMedia}) {
       width: 55px;
       border-radius: 4px;
     }
-
 
     @media (max-width: 475px) {
       width: 45px;
@@ -133,7 +140,7 @@ export default function Footer() {
   `;
 
   const ColegioLogo = styled.img`
-    width: 250px;
+    width: 160px;
     border-radius: 5px;
 
     @media (max-width: 475px) {
@@ -142,20 +149,74 @@ export default function Footer() {
     }
   `;
 
+  const DgtLogoBackground = styled.div`
+    width: 140px;
+    height: 75px;
+    background-color: white;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  `;
+
+  const ContactIcon = styled(FontAwesomeIcon)`
+    width: 40px;
+    height: 40px;
+    transition: 0.1s;
+    color: ${colors.primaryColor};
+    &:hover {
+      color: #3581ff;
+      width: 45px;
+      height: 45px;
+      transition: 0.2s;
+    }
+
+    @media (max-width: ${bigPhoneScreenMedia}) {
+      width: 35px;
+      height: 35px;
+      margin-bottom: 0;
+    }
+  `;
+
+  const WhatsappContainer = styled.div`
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  `;
+
+  const IconsContainer = styled.div`
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  `;
+
+  const IconsGroupContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  `;
+
   return (
     <FooterContainer>
       <GridComponent>
         <a href="https://autotrafic.es/" style={{ textDecoration: "none" }}>
           <AutotraficLogo src={autotraficLogo} alt="autotraficLogo" />
         </a>
+      </GridComponent>
+      <GridComponent>
+        <GridTitle>Contacto</GridTitle>
         <ContactTextGroup>
-          <ContactTitle>Teléfono</ContactTitle>
+          <a href="callto:+34674219155">
+            <ContactIcon icon={faPhone} />
+          </a>
           <a href="callto:+34674219155" style={{ textDecoration: "none" }}>
             <ContactText>+34 643 21 92 97</ContactText>
           </a>
         </ContactTextGroup>
         <ContactTextGroup>
-          <ContactTitle>Correo electrónico</ContactTitle>
+          <a href="mailto:contacto@autotrafic.es">
+            <ContactIcon icon={faEnvelope} />
+          </a>
           <a
             href="mailto:contacto@autotrafic.es"
             style={{ textDecoration: "none" }}
@@ -163,8 +224,20 @@ export default function Footer() {
             <ContactText>contacto@autotrafic.es</ContactText>
           </a>
         </ContactTextGroup>
+        <WhatsappContainer>
+          <a href="https://wa.me/643219297" target="_blank">
+            <WhatsappIcon src={whatsappIcon} alt="colegioLogo" />
+          </a>
+          <a
+            href="https://wa.me/643219297"
+            target="_blank"
+            style={{ textDecoration: "none" }}
+          >
+            <GridText>¡Escríbenos!</GridText>
+          </a>
+        </WhatsappContainer>
       </GridComponent>
-      <GridComponent>
+      {/*  <GridComponent>
         <GridTitle>Páginas</GridTitle>
         <a href="https://autotrafic.es/" style={{ textDecoration: "none" }}>
           <GridText>Home</GridText>
@@ -187,7 +260,7 @@ export default function Footer() {
         >
           <GridText>Artículos</GridText>
         </a>
-      </GridComponent>
+      </GridComponent> */}
       <GridComponent>
         <GridTitle>Legal</GridTitle>
         <a
@@ -216,11 +289,18 @@ export default function Footer() {
         </a>
       </GridComponent>
       <GridComponent>
-        <a href="https://wa.me/643219297" target="_blank">
-          <WhatsappIcon src={whatsappIcon} alt="colegioLogo" />
-        </a>
-
-        <ColegioLogo src={colegioLogo} alt="colegioLogo" />
+        <IconsContainer>
+          <IconsGroupContainer>
+            <GoogleReviewsBox />
+            <DgtLogoBackground>
+              <img src={dgtLogo} alt="" width={100} />
+            </DgtLogoBackground>
+          </IconsGroupContainer>
+          <IconsGroupContainer>
+            <ColegioLogo src={colegioLogo} alt="colegioLogo" />
+            <img src={ministerioImg} alt="" width={150} />
+          </IconsGroupContainer>
+        </IconsContainer>
       </GridComponent>
     </FooterContainer>
   );
