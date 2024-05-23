@@ -8,6 +8,7 @@ import { colors } from "../../../utils/styles";
 import GoogleReviewsBox from "../../../components/reusable/GoogleReviewsBox";
 import dgtLogo from "../../../assets/dgt.svg";
 import ministerioImg from "../../../assets/ministerio.svg";
+import colegioImg from "../../../assets/colegio-simple-logo.png";
 
 const TransferContainer = styled.div`
   display: flex;
@@ -15,8 +16,18 @@ const TransferContainer = styled.div`
   gap: 28px;
 `;
 
+const SubTitle = styled.p`
+  font-size: 18px;
+  letter-spacing: 0.3px;
+  word-spacing: 1.5px;
+  margin: 0;
+  line-height: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+`;
+
 const ExplanationText = styled.p`
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
   line-height: 22px;
 `;
@@ -24,17 +35,18 @@ const ExplanationText = styled.p`
 const AdvantagesListContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 10px;
 `;
 
 const AdvantageListItem = styled.div`
   display: flex;
   gap: 10px;
   align-items: center;
+  font-size: 18px;
 `;
 
 const ListText = styled.p`
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
 `;
 
@@ -45,17 +57,12 @@ const AnyQuestionContainer = styled.div`
   margin-top: 45px;
 `;
 
-const ContactButtonsContainer = styled.div`
-  display: flex;
-  gap: 30px;
-`;
-
 const ContactIcon = styled(FontAwesomeIcon)`
   width: 20px;
   height: 20px;
-  color: ${colors.primaryColor};
   padding-left: 10px;
   transition: 0.3s;
+  color: white;
 `;
 
 const ContactLink = styled.a`
@@ -64,10 +71,16 @@ const ContactLink = styled.a`
 
 const ContactButtonText = styled.p`
   font-size: 14px;
-  color: ${colors.primaryColor};
+
   margin: 0;
   padding: 10px 10px;
   transition: 0.3s;
+`;
+
+const ContactButtonsContainer = styled.div`
+  display: flex;
+  gap: 30px;
+  width: 70%;
 `;
 
 const ContactButtonWhatsapp = styled.div`
@@ -75,22 +88,24 @@ const ContactButtonWhatsapp = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 6px;
-  border: 1px solid ${colors.primaryColor};
+  background-color: #03ce00;
+  color: white;
   transition: 0.3s;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
 
   &:hover {
     cursor: pointer;
     border: none;
-    background-color: #03ce00;
+    border: 1px solid ${colors.primaryColor};
     transition: 0.3s;
     transform: translateY(5px);
+    background-color: white;
 
     ${ContactIcon} {
-      color: white;
+      color: ${colors.primaryColor};
     }
     ${ContactButtonText} {
-      color: white;
+      color: ${colors.primaryColor};
     }
   }
 `;
@@ -102,21 +117,22 @@ const ContactButton = styled.div`
   justify-content: center;
   border-radius: 6px;
   border: 1px solid ${colors.primaryColor};
+  color: white;
+  background-color: ${colors.primaryColor};
   transition: 0.3s;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
 
   &:hover {
     cursor: pointer;
-    border: none;
-    background-color: ${colors.primaryColor};
+    background-color: white;
     transition: 0.3s;
     transform: translateY(5px);
 
     ${ContactIcon} {
-      color: white;
+      color: ${colors.primaryColor};
     }
     ${ContactButtonText} {
-      color: white;
+      color: ${colors.primaryColor};
     }
   }
 `;
@@ -131,35 +147,61 @@ export default function TransferContentDesktop() {
   return (
     <>
       <TransferContainer>
-        <Title>Cambio de nombre de vehículo online</Title>
-        <ExplanationText>
-          Nunca había sido tan fácil tramitar la transferencia de un vehículo. Realiza el cambio de
-          nombre de cualquier vehículo en 5 minutos.
-        </ExplanationText>
+        <Title>
+          ¡Cambia de nombre tu vehículo desde tu sofá en menos de 5 minutos!
+        </Title>
+        <div>
+          <SubTitle>
+            Gestoría Online especializada en la Transferencia de Vehículos con
+            la DGT
+          </SubTitle>
+          <ExplanationText>
+            NOS ENCARGAMOS DE TODO - MEJOR PRECIO GARANTIZADO
+          </ExplanationText>
+        </div>
 
         <AdvantagesListContainer>
           <AdvantageListItem>
-            ✅<ListText>Proceso rápido y sencillo</ListText>
+            ✅<ListText>Gestión 100% online rápida y sencilla</ListText>
           </AdvantageListItem>
           <AdvantageListItem>
-            ✅<ListText>Envío gratis del nuevo permiso de circulación</ListText>
+            ✅
+            <ListText>
+              Te enviamos el permiso de circulación provisional en pocos minutos
+              de acabar el trámite
+            </ListText>
           </AdvantageListItem>
           <AdvantageListItem>
-            ✅<ListText>Provisional en minutos</ListText>
+            ✅
+            <ListText>
+              Te envíamos el nuevo permiso de circulación directamente a casa en
+              unos 10 días
+            </ListText>
           </AdvantageListItem>
         </AdvantagesListContainer>
 
         <BoxesContainer>
           <GoogleReviewsBox />
-          <img src={dgtLogo} alt="" width={100} />
-          <img src={ministerioImg} alt="" width={150} />
+          <img src={dgtLogo} alt="" width={90} />
+          <img
+            src={ministerioImg}
+            alt=""
+            width={112}
+            style={{ borderRadius: "2px" }}
+          />
+          <img
+            src={colegioImg}
+            alt=""
+            width={140}
+            style={{ borderRadius: "2px" }}
+          />
         </BoxesContainer>
       </TransferContainer>
       <AnyQuestionContainer>
-        <Title lineWidth={"15%"}>¿Alguna duda?</Title>
+        <Title lineWidth={"15%"}>¿Necesitas ayuda?</Title>
         <ExplanationText>
-          Si tienes alguna duda durante el proceso, no dudes en contactar con nosotros. Uno de
-          nuestros gestores estará encantado de ayudarte.
+          Contacta ahora con nuestros gestores si necesitas ayuda con el proceso
+          o tienes alguna duda.
         </ExplanationText>
         <ContactButtonsContainer>
           <ContactLink
@@ -173,19 +215,25 @@ export default function TransferContentDesktop() {
             </ContactButtonWhatsapp>
           </ContactLink>
 
-          <ContactLink href="callto:+34674219155" style={{ textDecoration: "none" }}>
+          <ContactLink
+            href="callto:+34674219155"
+            style={{ textDecoration: "none" }}
+          >
             <ContactButton>
               <ContactIcon icon={faPhone} />
               <ContactButtonText>Teléfono</ContactButtonText>
             </ContactButton>
           </ContactLink>
 
-          <ContactLink href="mailto:contacto@autotrafic.es" style={{ textDecoration: "none" }}>
+          {/*  <ContactLink
+            href="mailto:contacto@autotrafic.es"
+            style={{ textDecoration: "none" }}
+          >
             <ContactButton>
               <ContactIcon icon={faEnvelope} />
               <ContactButtonText>Email</ContactButtonText>
             </ContactButton>
-          </ContactLink>
+          </ContactLink> */}
         </ContactButtonsContainer>
       </AnyQuestionContainer>
     </>
