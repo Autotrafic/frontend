@@ -50,7 +50,7 @@ export default function GoogleReviewsBox() {
 
   return (
     <ReviewsContainer>
-      <img src={googleLogo} alt="" style={{ width: isMobile ? "80px" : "110px" }} />
+      <img src={googleLogo} alt="" style={{ width: isMobile ? "60px" : "82px" }} />
       <ReviewsText $isMobile={isMobile}>123 reseñas </ReviewsText>
       <ReviewsStarsContainer>
         {starsArray.map((_, i) => (
