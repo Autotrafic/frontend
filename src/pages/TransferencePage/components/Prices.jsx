@@ -67,7 +67,7 @@ export default function Prices() {
 
   return (
     <Container>
-      <Title middleLine>Precio del cambio de titularidad</Title>
+      <Title middleLine>Los mejores precios del mercado de mayo 2024</Title>
       <PricesContainer>
         {prices.map((price) => (
           <PriceContainer>
