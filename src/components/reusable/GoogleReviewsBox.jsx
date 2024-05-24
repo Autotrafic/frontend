@@ -12,11 +12,9 @@ const ReviewsContainer = styled.div`
   gap: 8px;
   background-color: white;
   border-radius: 4px;
-  padding: 15px 15px;
 
   @media (min-width: 100px) {
     gap: 4px;
-    padding: 8px 0;
     max-width: 150px;
   }
 `;
@@ -26,10 +24,7 @@ const ReviewsText = styled.p`
   font-weight: 600;
   margin: 0;
   color: #242424;
-
-  @media (min-width: 100px) {
-    font-size: 13px;
-  }
+  font-size: ${({ $isMobile }) => ($isMobile ? "15px" : "15px")};
 `;
 
 const ReviewsStarsContainer = styled.div`
@@ -38,8 +33,8 @@ const ReviewsStarsContainer = styled.div`
 `;
 
 const ReviewsStar = styled(FontAwesomeIcon)`
-  width: 20px;
-  height: 20px;
+  width: ${({ $isMobile }) => ($isMobile ? "25px" : "20px")};
+  height: ${({ $isMobile }) => ($isMobile ? "25px" : "20px")};
   color: #ffc106;
 `;
 
@@ -50,13 +45,17 @@ export default function GoogleReviewsBox() {
 
   return (
     <ReviewsContainer>
-      <img src={googleLogo} alt="" style={{ width: isMobile ? "60px" : "82px" }} />
-      <ReviewsText $isMobile={isMobile}>123 reseñas </ReviewsText>
+      <img
+        src={googleLogo}
+        alt=""
+        style={{ width: isMobile ? "80px" : "82px" }}
+      />
       <ReviewsStarsContainer>
         {starsArray.map((_, i) => (
-          <ReviewsStar key={i} icon={faStar} size={isMobile && "2xs"} />
+          <ReviewsStar key={i} icon={faStar} $isMobile={isMobile} />
         ))}
       </ReviewsStarsContainer>
+      <ReviewsText $isMobile={isMobile}>123 reseñas </ReviewsText>
     </ReviewsContainer>
   );
 }

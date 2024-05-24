@@ -19,7 +19,7 @@ export function Navbar() {
     <div className="navbarContainer">
       <a href="https://autotrafic.es/" style={{ textDecoration: "none" }}>
         <div className="sideSection">
-          <Logo />
+          <Logo isMobile={isMobile}/>
           <LinkDiv />
         </div>
       </a>
