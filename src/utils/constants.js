@@ -31,9 +31,22 @@ export const FAQ = [
   },
 ];
 
+export const TRANSFERENCE_ID = "transference-page";
+export const PROCESS_SECTION_ID = "process-section";
+export const PRICES_SECTION_ID = "prices-section";
+export const FAQ_SECTION_ID = "faq-section";
+export const CONTACT_SECTION_ID = "contact-section";
+
 export const NAVBAR_ROUTES = [
   { title: "Inicio", route: "https://autotrafic.es/" },
   { title: "Transferencia de vehículo", route: "/" },
   { title: "Noticias", route: "https://autotrafic.es/noticias/" },
   { title: "Contacto", route: "https://autotrafic.es/contacto/" },
+];
+
+export const TRANS_NAVBAR_ROUTES = [
+  { title: "Cómo funciona", scrollTo: PROCESS_SECTION_ID },
+  { title: "Precios", scrollTo: PRICES_SECTION_ID },
+  { title: "Preguntas frecuentes", scrollTo: FAQ_SECTION_ID },
+  { title: "Contacto", scrollTo: CONTACT_SECTION_ID },
 ];

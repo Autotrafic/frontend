@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Title from "../../../components/reusable/Title";
 import { colors } from "../../../utils/styles";
+import { PRICES_SECTION_ID } from "../../../utils/constants";
 
 const Container = styled.div`
   width: 100%;
@@ -66,7 +67,7 @@ export default function Prices() {
   ];
 
   return (
-    <Container>
+    <Container id={PRICES_SECTION_ID}>
       <Title middleLine>Los mejores precios del mercado de mayo 2024</Title>
       <PricesContainer>
         {prices.map((price) => (

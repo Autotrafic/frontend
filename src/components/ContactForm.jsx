@@ -11,6 +11,7 @@ import {
   faSquareWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 import LegalCheckbox from "./reusable/LegalCheckbox";
+import { CONTACT_SECTION_ID } from "../utils/constants";
 
 const columnWidth = "480px";
 
@@ -281,7 +282,7 @@ export default function ContactForm() {
   `;
 
   return (
-    <Container>
+    <Container id={CONTACT_SECTION_ID}>
       <TitleContainer>
         <Title>Contacto</Title>
         <Line />

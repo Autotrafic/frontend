@@ -5,6 +5,7 @@ import Prices from "./components/Prices";
 import FrequentAskedQuestions from "../../components/FrequentAskedQuestions";
 import OrderSteps from "./components/OrderSteps";
 import ContactForm from "../../components/ContactForm";
+import { TRANSFERENCE_ID } from "../../utils/constants";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -31,7 +32,7 @@ export default function TransferencePage() {
 
   return (
     <>
-      <Wrapper>
+      <Wrapper id={TRANSFERENCE_ID}>
         {isMobile ? (
           <TransferMobile />
         ) : (

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import "../styles/faqAccordionStyled.css";
-import { FAQ } from "../utils/constants";
+import { FAQ, FAQ_SECTION_ID } from "../utils/constants";
 import Title from "./reusable/Title";
 
 const bigPhoneScreenMedia = "476px";
@@ -53,7 +53,7 @@ export default function FrequentAskedQuestions() {
     }
   };
   return (
-    <Container>
+    <Container id={FAQ_SECTION_ID}>
       <Title middleLine>Preguntas frecuentes</Title>
       <FaqContainer>
         <div className="accordion">
