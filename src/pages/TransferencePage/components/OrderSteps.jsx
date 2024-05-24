@@ -53,8 +53,8 @@ export default function OrderSteps() {
 
   const StepIcon = styled(FontAwesomeIcon)`
     color: ${colors.primaryColor};
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     margin-right: 45px;
 
     @media (max-width: 620px) {
@@ -67,7 +67,7 @@ export default function OrderSteps() {
   `;
 
   const StepNumber = styled.p`
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
     color: ${colors.primaryColor};
     margin: 0;
@@ -78,7 +78,7 @@ export default function OrderSteps() {
     width: 420px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 
     @media (max-width: ${bigPhoneScreenMedia}) {
       gap: 5px;
@@ -87,6 +87,7 @@ export default function OrderSteps() {
 
   const StepTitle = styled.p`
     color: ${colors.primaryColor};
+    font-size: 24px;
     font-weight: bold;
     margin: 0;
 
@@ -97,7 +98,7 @@ export default function OrderSteps() {
 
   const StepText = styled.p`
     color: ${colors.primaryGrey};
-    font-size: 13px;
+    font-size: 14px;
     margin: 0;
 
     @media (max-width: ${bigPhoneScreenMedia}) {
@@ -107,53 +108,57 @@ export default function OrderSteps() {
 
   return (
     <Container>
-      <Title middleLine>Pasos para realizar el trámite</Title>
+      <Title middleLine>Paso a paso para cambiar de nombre tu vehículo</Title>
 
       <StepsGroupContainer>
         <StepContainer>
           <StepIcon icon={faKeyboard} rotation={90} />
-          <StepNumber>01</StepNumber>
+          <StepNumber>1</StepNumber>
           <TextContainer>
             <StepTitle>Facilítanos tus datos</StepTitle>
             <StepText>
-              Introduce los datos del vehículo para conocer el precio de la transferencia.
+              Introduce los datos del vehículo para conocer el precio de la
+              transferencia.
             </StepText>
           </TextContainer>
         </StepContainer>
 
         <StepContainer>
           <StepIcon icon={faCreditCard} rotation={90} />
-          <StepNumber>02</StepNumber>
+          <StepNumber>2</StepNumber>
           <TextContainer>
             <StepTitle>Paga online</StepTitle>
             <StepText>
-              Paga online de forma sencilla y segura. Recibirás un correo de confirmación con la
-              información de tu pedido.
+              Paga online de forma sencilla y segura. Recibirás un correo de
+              confirmación con la información de tu pedido.
             </StepText>
           </TextContainer>
         </StepContainer>
 
         <StepContainer>
           <StepIcon icon={faFileArrowDown} />
-          <StepNumber>03</StepNumber>
+          <StepNumber>3</StepNumber>
           <TextContainer>
             <StepTitle>Adjunta la documentación</StepTitle>
             <StepText>
-              Toma fotos al momento, o adjunta fotos que ya tengas de la documentación que
-              necesitamos.
+              Toma fotos al momento, o adjunta fotos que ya tengas de la
+              documentación que necesitamos.
             </StepText>
           </TextContainer>
         </StepContainer>
 
         <StepContainer>
           <StepIcon icon={faFileShield} />
-          <StepNumber>04</StepNumber>
+          <StepNumber>4</StepNumber>
           <TextContainer>
             <StepTitle>Recibe el provisional</StepTitle>
             <StepText>
-              Posteriormente recibirás el permiso provisional, con el que el comprador ya podrá
-              circular. El nuevo permiso de circulación llegará al domicilio indicado en 1/2
-              semanas.
+              Verificada la documentación por nuestros gestores, en unos minutos
+              le enviamos el permiso provisional para circular con su nuevo
+              vehículo con total seguridad y poder realizar el seguro de este.
+              En aproximadamente 10 días recibe el nuevo permiso de circulación
+              en el domicilio que nos indique a través de servicio de mensajería
+              sin coste adicional.
             </StepText>
           </TextContainer>
         </StepContainer>

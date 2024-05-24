@@ -25,7 +25,6 @@ export default function ContactForm() {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #f3f3f3;
     padding: 60px 0 100px 0;
     margin-bottom: 0;
 
@@ -54,7 +53,7 @@ export default function ContactForm() {
 
   const ContactContainer = styled.div`
     display: flex;
-    gap: 10px;
+    gap: 20px;
 
     @media (max-width: ${tabletScreenMedia}) {
       flex-direction: column;
@@ -67,29 +66,13 @@ export default function ContactForm() {
   `;
 
   const RightContactFormContainer = styled.div`
+    width: ${columnWidth};
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: ${columnWidth};
-
-    @media (max-width: ${tabletScreenMedia}) {
-      gap: 10px;
-    }
-    @media (max-width: ${bigPhoneScreenMedia}) {
-      width: 320px;
-      gap: 10px;
-    }
-   
-  `;
-
-  const SubContactContainer = styled.div`
-    display: flex;
     gap: 50px;
-    padding: 40px;
+    padding: 10% 40px;
     justify-items: center;
     align-items: center;
-    height: 49%;
-    width: 100%;
     background-color: white;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
     border-radius: 10px;
@@ -98,6 +81,7 @@ export default function ContactForm() {
       gap: 20px;
       padding: 10px;
       height: 140px;
+      width: 320px;
     }
   `;
 
@@ -285,6 +269,17 @@ export default function ContactForm() {
     }
   `;
 
+  const TopRightContainer = styled.div`
+    display: flex;
+    gap: 60px;
+  `;
+
+  const WhatsappContainer = styled.div`
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  `;
+
   return (
     <Container>
       <TitleContainer>
@@ -309,7 +304,7 @@ export default function ContactForm() {
         </LeftContactFormContainer>
 
         <RightContactFormContainer>
-          <SubContactContainer>
+          <TopRightContainer>
             <SubContactContainerIndividual>
               <a href="mailto:contacto@autotrafic.es">
                 <ContactIcon icon={faEnvelope} />
@@ -333,30 +328,18 @@ export default function ContactForm() {
                 <ContactText>643 21 92 97</ContactText>
               </a>
             </SubContactContainerIndividual>
-          </SubContactContainer>
+          </TopRightContainer>
 
-          <SubContactContainer>
-            <SubContactContainerIndividual>
-              <ContactIcon icon={faComments} />
-              <ContactTitle>Redes sociales</ContactTitle>
-              <SocialMediaIcons>
-                <a href="https://wa.me/643219297" target="_blank">
-                  <WhatsappIcon icon={faSquareWhatsapp} />
-                </a>
-                <a
-                  href="https://www.instagram.com/autotrafic.gestoria/"
-                  target="_blank"
-                >
-                  <InstagramIcon
-                    icon={faSquareInstagram}
-                    style={{
-                      color: "#CB3CC0",
-                    }}
-                  />
-                </a>
-              </SocialMediaIcons>
-            </SubContactContainerIndividual>
-          </SubContactContainer>
+          <a
+            href="https://wa.me/643219297"
+            target="_blank"
+            style={{ textDecoration: "none" }}
+          >
+            <WhatsappContainer>
+              <WhatsappIcon icon={faSquareWhatsapp} />
+              <ContactText>Whatsapp</ContactText>
+            </WhatsappContainer>
+          </a>
         </RightContactFormContainer>
       </ContactContainer>
     </Container>
