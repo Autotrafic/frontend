@@ -9,6 +9,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1.5em;
+  padding: 0 15px;
 `;
 
 const PricesContainer = styled.div`

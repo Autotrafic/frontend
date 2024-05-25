@@ -79,8 +79,7 @@ export default function ContactForm() {
 
     @media (max-width: ${bigPhoneScreenMedia}) {
       gap: 20px;
-      padding: 10px;
-      height: 140px;
+      padding: 20px;
       width: 320px;
     }
   `;
@@ -271,7 +270,8 @@ export default function ContactForm() {
 
   const TopRightContainer = styled.div`
     display: flex;
-    gap: 60px;
+    flex-direction: column;
+    gap: 20px;
   `;
 
   const WhatsappContainer = styled.div`
