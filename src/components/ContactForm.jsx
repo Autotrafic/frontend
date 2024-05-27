@@ -70,9 +70,9 @@ export default function ContactForm() {
     width: ${columnWidth};
     display: flex;
     flex-direction: column;
-    gap: 50px;
-    padding: 10% 40px;
-    justify-items: center;
+    gap: 30px;
+    padding: 20px 40px;
+    justify-content: center;
     align-items: center;
     background-color: white;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
@@ -104,7 +104,6 @@ export default function ContactForm() {
     color: ${colors.primaryColor};
     width: 40px;
     height: 40px;
-    margin-bottom: 15px;
     transition: 0.1s;
     &:hover {
       width: 45px;
@@ -272,7 +271,7 @@ export default function ContactForm() {
   const TopRightContainer = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
   `;
 
   const WhatsappContainer = styled.div`
@@ -333,7 +332,7 @@ export default function ContactForm() {
           </TopRightContainer>
 
           <a
-            href="https://wa.me/643219297"
+            href="https://wa.me/34643219297"
             target="_blank"
             style={{ textDecoration: "none" }}
           >

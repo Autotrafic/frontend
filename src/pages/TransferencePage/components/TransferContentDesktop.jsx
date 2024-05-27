@@ -147,9 +147,7 @@ export default function TransferContentDesktop() {
   return (
     <>
       <TransferContainer>
-        <Title>
-          ¡Cambia de nombre tu vehículo desde tu sofá en menos de 5 minutos!
-        </Title>
+        <Title>Cambia de nombre tu vehículo online en menos de 5 minutos</Title>
         <div>
           <SubTitle>
             Gestoría Online especializada en la Transferencia de Vehículos con

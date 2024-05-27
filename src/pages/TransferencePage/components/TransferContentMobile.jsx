@@ -74,6 +74,7 @@ export default function TransferContentMobile() {
   return (
     <>
       <TransferContainer>
+
         <Title fontSize={"21px"}>Cambia de nombre tu vehículo online en menos de 5 minutos</Title>
         <TextWrapper>
           <SubTitle>
