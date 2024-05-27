@@ -1,13 +1,12 @@
-import { useContext } from "react";
 import styled from "styled-components";
-import { UserContext } from "../../context/user";
 import TransferMobile from "./components/TransferMobile";
 import TransferDesktop from "./components/TransferDesktop";
 import Prices from "./components/Prices";
 import FrequentAskedQuestions from "../../components/FrequentAskedQuestions";
-import NecessaryDocumentsList from "../../components/NecessaryDocumentsList";
 import OrderSteps from "./components/OrderSteps";
 import ContactForm from "../../components/ContactForm";
+import { TRANSFERENCE_ID } from "../../utils/constants";
+import Comparatives from "./components/Comparatives";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -29,23 +28,22 @@ const Sections = styled.div`
 `;
 
 export default function TransferencePage() {
-  const { userInfo } = useContext(UserContext);
 
   const isMobile = window.innerWidth < 1000;
 
   return (
     <>
-      <Wrapper>
+      <Wrapper id={TRANSFERENCE_ID}>
         {isMobile ? (
-          <TransferMobile userInfo={userInfo} />
+          <TransferMobile />
         ) : (
-          <TransferDesktop userInfo={userInfo} />
+          <TransferDesktop />
         )}
       </Wrapper>
       <Sections>
         <Prices />
+        <Comparatives />
         <FrequentAskedQuestions />
-        {/* <NecessaryDocumentsList /> */}
         <OrderSteps />
         <ContactForm />
       </Sections>

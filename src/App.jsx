@@ -1,10 +1,10 @@
 import "./styles/App.css";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import FooterDesktop from "./components/FooterDesktop";
 import FooterMobile from "./components/FooterMobile";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { Navbar } from "./components/Navbar/navbar";
-import { UserProvider } from "./context/user";
+import { NavbarTransf } from "./components/NavbarTransf/navbar";
 import TransferencePage from "./pages/TransferencePage";
 import styled from "styled-components";
 import { faSquareWhatsapp } from "@fortawesome/free-brands-svg-icons";
@@ -49,9 +49,13 @@ function App() {
     isMobile = true;
   }
 
+function App() {
+  const location = useLocation();
+  
   return (
     <>
-      <Navbar />
+      {location.pathname === "/" && <NavbarTransf />}
+      {location.pathname === "/inicio" && <Navbar />}
 
       <Routes>
         <Route path="/" element={<TransferencePage />} />
@@ -73,9 +77,7 @@ function App() {
 
 ReactDOM.render(
   <BrowserRouter>
-    <UserProvider>
-      <App />
-    </UserProvider>
+    <App />
   </BrowserRouter>,
   document.getElementById("app")
 );

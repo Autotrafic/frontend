@@ -1,13 +1,15 @@
 import "./navbar.css";
 import { useMediaQuery } from "react-responsive";
+import { Link } from "react-scroll";
 import { Logo } from "../logo";
 import { Accessibility } from "./accessibility";
 import { NavLinks } from "./navLinks";
 import { MobileNavLinks } from "./mobileNavLinks";
 import { DEVICE_SIZES } from "../../../utils/styles";
 import styled from "styled-components";
+import { TRANSFERENCE_ID } from "../../../utils/constants";
 
-export function Navbar() {
+export function NavbarTransf() {
   const isMobile = useMediaQuery({ maxWidth: DEVICE_SIZES.mobile });
 
   const LinkDiv = styled.div`
@@ -17,16 +19,14 @@ export function Navbar() {
   `;
   return (
     <div className="navbarContainer">
-      <a href="https://autotrafic.es/" style={{ textDecoration: "none" }}>
+      <Link to={TRANSFERENCE_ID} smooth>
         <div className="sideSection">
-          <Logo isMobile={isMobile}/>
+          <Logo />
           <LinkDiv />
         </div>
-      </a>
+      </Link>
       <div className="middleSection">{!isMobile && <NavLinks />}</div>
-      <div className="sideSection">
-        {isMobile ? <MobileNavLinks /> : <Accessibility />}
-      </div>
+      <div className="sideSection">{isMobile ? <MobileNavLinks /> : <Accessibility />}</div>
     </div>
   );
 }

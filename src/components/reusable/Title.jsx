@@ -14,7 +14,7 @@ const Container = styled.div`
 
 const Text = styled.h1`
   color: ${colors.black} !important;
-  font-size: 22px !important;
+  font-size: ${({ $fontSize }) => ($fontSize ? $fontSize : "22px")};
   font-weight: 600 !important;
   margin: 0;
 
@@ -34,10 +34,10 @@ const Line = styled.div`
   }
 `;
 
-function Title({ children, lineWidth, middleLine }) {
+function Title({ children, lineWidth, middleLine, fontSize }) {
   return (
     <Container $middleLine={middleLine}>
-      <Text>{children}</Text>
+      <Text $fontSize={fontSize}>{children}</Text>
       <Line $lineWidth={lineWidth} />
     </Container>
   );

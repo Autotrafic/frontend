@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Title from "../../../components/reusable/Title";
 import { colors } from "../../../utils/styles";
+import { PRICES_SECTION_ID } from "../../../utils/constants";
 
 const Container = styled.div`
   width: 100%;
@@ -9,7 +10,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1.5em;
-  padding: 0 15px;
+  padding: 0 2rem;
 `;
 
 const PricesContainer = styled.div`
@@ -21,7 +22,8 @@ const PricesContainer = styled.div`
 `;
 
 const PriceContainer = styled.div`
-  width: 330px;
+  width: 100%;
+  max-width: 330px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,7 +69,7 @@ export default function Prices() {
   ];
 
   return (
-    <Container>
+    <Container id={PRICES_SECTION_ID}>
       <Title middleLine>Los mejores precios del mercado de mayo 2024</Title>
       <PricesContainer>
         {prices.map((price) => (

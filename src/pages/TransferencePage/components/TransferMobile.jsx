@@ -48,7 +48,7 @@ const SmartFormContainer = styled.div`
     -4px 0 5px rgba(0, 0, 0, 0.2);
 `;
 
-export default function TransferMobile({ userInfo }) {
+export default function TransferMobile() {
   const [smartFormHeight, setSmartFormHeight] = useState(0);
   const smartFormRef = useRef(null);
 
@@ -77,7 +77,7 @@ export default function TransferMobile({ userInfo }) {
       </LeftSide>
       <RightSide ref={smartFormRef}>
         <SmartFormContainer>
-          <SmartForm sessionId={userInfo.sessionId} />
+          <SmartForm />
         </SmartFormContainer>
         <Drop smartFormHeight={smartFormHeight} />
         <ProsMobile />

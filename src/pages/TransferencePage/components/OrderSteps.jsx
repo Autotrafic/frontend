@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { colors } from "../../../utils/styles";
 import Title from "../../../components/reusable/Title";
+import { PROCESS_SECTION_ID } from "../../../utils/constants";
 
 const bigPhoneScreenMedia = "476px";
 
@@ -107,7 +108,7 @@ export default function OrderSteps() {
   `;
 
   return (
-    <Container>
+    <Container id={PROCESS_SECTION_ID}>
       <Title middleLine>Paso a paso para cambiar de nombre tu vehículo</Title>
 
       <StepsGroupContainer>

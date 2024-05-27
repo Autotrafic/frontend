@@ -11,6 +11,7 @@ import {
   faSquareWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 import LegalCheckbox from "./reusable/LegalCheckbox";
+import { CONTACT_SECTION_ID } from "../utils/constants";
 
 const columnWidth = "480px";
 
@@ -95,7 +96,7 @@ export default function ContactForm() {
     }
 
     @media (max-width: ${bigPhoneScreenMedia}) {
-      gap: 8px;
+      gap: 5px;
     }
   `;
 
@@ -276,12 +277,13 @@ export default function ContactForm() {
 
   const WhatsappContainer = styled.div`
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 10px;
     align-items: center;
   `;
 
   return (
-    <Container>
+    <Container id={CONTACT_SECTION_ID}>
       <TitleContainer>
         <Title>Contacto</Title>
         <Line />
