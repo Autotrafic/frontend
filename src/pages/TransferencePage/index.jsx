@@ -6,6 +6,7 @@ import FrequentAskedQuestions from "../../components/FrequentAskedQuestions";
 import OrderSteps from "./components/OrderSteps";
 import ContactForm from "../../components/ContactForm";
 import { TRANSFERENCE_ID } from "../../utils/constants";
+import Comparatives from "./components/Comparatives";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -41,6 +42,7 @@ export default function TransferencePage() {
       </Wrapper>
       <Sections>
         <Prices />
+        <Comparatives />
         <FrequentAskedQuestions />
         <OrderSteps />
         <ContactForm />

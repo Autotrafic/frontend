@@ -10,6 +10,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1.5em;
+  padding: 0 2rem;
 `;
 
 const PricesContainer = styled.div`
@@ -21,7 +22,8 @@ const PricesContainer = styled.div`
 `;
 
 const PriceContainer = styled.div`
-  width: 330px;
+  width: 100%;
+  max-width: 330px;
   display: flex;
   align-items: center;
   justify-content: center;
