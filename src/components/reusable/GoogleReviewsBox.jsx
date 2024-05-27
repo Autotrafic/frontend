@@ -10,7 +10,6 @@ const ReviewsContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background-color: white;
   border-radius: 4px;
 
   @media (min-width: 100px) {

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { colors } from "../utils/styles";
-import autotraficLogo from "../assets/logo-horizontal.png";
+import autotraficLogo from "../components/Navbar/logo/logo.svg";
 import colegioLogo from "../assets/colegio-logo.png";
 import whatsappIcon from "../assets/whatsapp-icon.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -76,7 +76,6 @@ export default function FooterDesktop() {
     text-decoration: none;
     transition: 0.1s;
     width: fit-content;
-    margin-bottom: 10px;
 
     &:hover {
       font-weight: bold;
@@ -206,17 +205,11 @@ export default function FooterDesktop() {
       <GridComponent>
         <GridTitle>Contacto</GridTitle>
         <ContactTextGroup>
-          <a href="callto:+34674219155">
-            <ContactIcon icon={faPhone} />
-          </a>
           <a href="callto:+34674219155" style={{ textDecoration: "none" }}>
             <ContactText>+34 643 21 92 97</ContactText>
           </a>
         </ContactTextGroup>
         <ContactTextGroup>
-          <a href="mailto:contacto@autotrafic.es">
-            <ContactIcon icon={faEnvelope} />
-          </a>
           <a
             href="mailto:contacto@autotrafic.es"
             style={{ textDecoration: "none" }}
@@ -225,11 +218,11 @@ export default function FooterDesktop() {
           </a>
         </ContactTextGroup>
         <WhatsappContainer>
-          <a href="https://wa.me/643219297" target="_blank">
+          <a href="https://wa.me/34643219297" target="_blank">
             <WhatsappIcon src={whatsappIcon} alt="colegioLogo" />
           </a>
           <a
-            href="https://wa.me/643219297"
+            href="https://wa.me/34643219297"
             target="_blank"
             style={{ textDecoration: "none" }}
           >

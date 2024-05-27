@@ -1,4 +1,9 @@
-import { faBolt, faHeadset, faRightLeft, faTruckFast } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBolt,
+  faHeadset,
+  faRightLeft,
+  faTruckFast,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 
@@ -7,7 +12,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2em;
-  width: 85%;
+  width: 75%;
   max-width: 500px;
 
   @media (max-width: 400px) {
@@ -17,8 +22,8 @@ const Container = styled.div`
 
 const ProItem = styled.div`
   display: flex;
+  gap: 25px;
   width: 100%;
-  justify-content: space-between;
   align-items: center;
 `;
 
@@ -33,8 +38,6 @@ const Text = styled.span`
   @media (max-width: 415px) {
     font-size: 14px;
   }
-
-
 `;
 
 export default function ProsMobile() {

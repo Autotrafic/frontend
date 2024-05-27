@@ -70,7 +70,7 @@ export default function TransferContentMobile() {
     <>
       <TransferContainer>
         <Title fontSize={"21px"}>
-          ¡Cambia de nombre tu vehículo online en menos de 5 minutos!
+          Cambia de nombre tu vehículo online en menos de 5 minutos
         </Title>
         <SubTitle>
           Gestoría Online especializada en la Transferencia de Vehículos con la
