@@ -69,9 +69,9 @@ const ComparativeItem = styled.li`
 
 const goodComparations = [
   "Sin cita previa",
-  "Desde cualquier lugar",
   "Disponible cualquier hora del día",
-  "Asesoramiento de un gestor durante todo el proceso",
+  "Proceso fácil y rápido",
+  "Asesoramiento con un gestor durante todo el proceso",
   "Precio muy económico",
 ];
 
@@ -86,7 +86,7 @@ const badComparations = [
 export default function Comparatives() {
   return (
     <Container>
-      <Title middleLine>Por fin una solución a la burocracia española</Title>
+      <Title middleLine>Apostamos por la tranquilidad del cliente</Title>
       <ComparativesStyled>
         <ComparativeBox />
         <ComparativeBox isQuality />
