@@ -6,13 +6,12 @@ import GoogleReviewsBox from "../../../components/reusable/GoogleReviewsBox";
 import dgtLogo from "../../../assets/dgt.svg";
 import ministerioImg from "../../../assets/ministerio.svg";
 import colegioImg from "../../../assets/colegio-simple-logo.png";
-import { colors } from "../../../utils/styles";
 
 const TransferContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 2em;
 `;
 
 const SubTitle = styled.p`
@@ -33,7 +32,7 @@ const ExplanationText = styled.p`
 const BoxesContainer = styled.div`
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
 `;
 
 const WhatsContactContainer = styled.div`
@@ -63,45 +62,34 @@ const WhatsLink = styled.a`
   border: none;
 `;
 
+const TextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+`;
+
 const WhatsIcon = styled(FontAwesomeIcon)``;
 
 export default function TransferContentMobile() {
   return (
     <>
       <TransferContainer>
-        <Title fontSize={"21px"}>
-          ¡Cambia de nombre tu vehículo online en menos de 5 minutos!
-        </Title>
-        <SubTitle>
-          Gestoría Online especializada en la Transferencia de Vehículos con la
-          DGT
-        </SubTitle>
-        <ExplanationText>
-          NOS ENCARGAMOS DE TODO - MEJOR PRECIO GARANTIZADO
-        </ExplanationText>
+        <Title fontSize={"21px"}>Cambia de nombre tu vehículo online en menos de 5 minutos</Title>
+        <TextWrapper>
+          <SubTitle>
+            Gestoría Online especializada en la Transferencia de Vehículos con la DGT
+          </SubTitle>
+          <ExplanationText>NOS ENCARGAMOS DE TODO - MEJOR PRECIO GARANTIZADO</ExplanationText>
+        </TextWrapper>
 
         <BoxesContainer>
-          <img
-            src={colegioImg}
-            alt=""
-            width={80}
-            style={{ borderRadius: "2px" }}
-          />
-          <img src={dgtLogo} alt="" width={53} />
-          <img
-            src={ministerioImg}
-            alt=""
-            width={77}
-            style={{ borderRadius: "2px" }}
-          />
+          <img src={colegioImg} alt="" width={125} style={{ borderRadius: "2px" }} />
+          <img src={dgtLogo} alt="" width={60} />
+          <img src={ministerioImg} alt="" width={90} style={{ borderRadius: "2px" }} />
         </BoxesContainer>
 
         <WhatsContactContainer>
-          <a
-            href="https://wa.me/643219297"
-            target="_blank"
-            style={{ textDecoration: "none" }}
-          >
+          <a href="https://wa.me/643219297" target="_blank" style={{ textDecoration: "none" }}>
             <WhatsLink>
               <WhatsIcon icon={faWhatsapp} size="lg" />
               Habla con un gestor ahora
