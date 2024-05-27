@@ -1,0 +1,137 @@
+/************ Index ************/
+.navbarContainer {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  box-shadow: 0 2px 3px rgba(15, 15, 15, 0.13);
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5em;
+  z-index: 1;
+}
+
+.sideSection {
+  display: flex;
+  cursor: pointer;
+}
+
+.middleSection {
+  display: flex;
+  flex: 2;
+  height: 100%;
+  justify-content: center;
+}
+
+/************ Accessibility ************/
+.accessibilityContainer {
+  display: flex;
+  margin-left: 10px;
+}
+
+.accessButton {
+  border: 0;
+  outline: 0;
+  padding: 10px 1em;
+  color: #1b1b1b;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 2px solid #4154f1;
+  transition: all 240ms ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    color: #fff;
+    background-color: #4154f1;
+  }
+
+  &:not(:last-of-type) {
+    margin-right: 7px;
+  }
+}
+
+/************ Menu Toggle ************/
+.toggleButton {
+  cursor: pointer;
+}
+
+/************ Mobile NavLinks ************/
+.navLinksContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.linksWrapper {
+  overflow: hidden;
+  background: rgb(2, 0, 36);
+  background: radial-gradient(
+    circle,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(8, 8, 56, 1) 0%,
+    rgba(65, 84, 241, 0.9990371148459384) 0%,
+    rgba(0, 157, 255, 1) 100%
+  );
+  margin: 0;
+  padding: 2em 0;
+  display: flex;
+  gap: 1.3em;
+  height: 100%;
+  list-style: none;
+  background-color: #fff;
+  width: 100%;
+  flex-direction: column;
+  position: fixed;
+  top: 65px;
+  left: 0;
+}
+
+.linkItem {
+  width: 100%;
+  padding: 0 1.1em;
+  color: #222;
+  font-weight: 500;
+  font-size: 16px;
+  display: flex;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.marginer {
+  height: 0.5em;
+}
+
+/************ Desktop NavLinks ************/
+.desktopNavLinksContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.desktopLinksWrapper {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100%;
+  list-style: none;
+}
+
+.desktopLinkItem {
+  height: 100%;
+  padding: 0 1.1em;
+  color: #222;
+  font-weight: 500;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-top: 2px solid transparent;
+  transition: all 100ms ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    border-top: 3px solid #4154f1;
+  }
+}

@@ -42,7 +42,7 @@ const SmartFormContainer = styled.div`
     -4px 0 5px rgba(0, 0, 0, 0.2);
 `;
 
-export default function TransferDesktop({ userInfo }) {
+export default function TransferDesktop() {
   return (
     <Container>
       <LeftSide>
@@ -50,7 +50,7 @@ export default function TransferDesktop({ userInfo }) {
       </LeftSide>
       <RightSide>
         <SmartFormContainer>
-          <SmartForm sessionId={userInfo.sessionId} />
+          <SmartForm />
         </SmartFormContainer>
         <Drop />
       </RightSide>
