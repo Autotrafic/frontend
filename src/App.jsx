@@ -42,42 +42,40 @@ const WhatsappIconContainer = styled.div`
 `;
 
 function App() {
+  const location = useLocation();
   const screenWidth = window.innerWidth;
+
   let isMobile = false;
 
   if (screenWidth < 415) {
     isMobile = true;
   }
 
-  function App() {
-    const location = useLocation();
+  return (
+    <>
+      {location.pathname === "/" && <NavbarTransf />}
+      {location.pathname === "/inicio" && <Navbar />}
 
-    return (
-      <>
-        {location.pathname === "/" && <NavbarTransf />}
-        {location.pathname === "/inicio" && <Navbar />}
-
-        <Routes>
-          <Route path="/" element={<TransferencePage />} />
-        </Routes>
-        {isMobile ? <FooterMobile /> : <FooterDesktop />}
-        <a href="https://wa.me/643219297" target="_blank" style={{ textDecoration: "none" }}>
-          <WhatsappIconContainer>
-            {isMobile ? (
-              <img src={whatsappIcon} alt="" width={60} />
-            ) : (
-              <img src={whatsappIcon} alt="" width={80} />
-            )}
-          </WhatsappIconContainer>
-        </a>
-      </>
-    );
-  }
-
-  ReactDOM.render(
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>,
-    document.getElementById("app")
+      <Routes>
+        <Route path="/" element={<TransferencePage />} />
+      </Routes>
+      {isMobile ? <FooterMobile /> : <FooterDesktop />}
+      <a href="https://wa.me/643219297" target="_blank" style={{ textDecoration: "none" }}>
+        <WhatsappIconContainer>
+          {isMobile ? (
+            <img src={whatsappIcon} alt="" width={60} />
+          ) : (
+            <img src={whatsappIcon} alt="" width={80} />
+          )}
+        </WhatsappIconContainer>
+      </a>
+    </>
   );
 }
+
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById("app")
+);
