@@ -49,35 +49,35 @@ function App() {
     isMobile = true;
   }
 
-function App() {
-  const location = useLocation();
-  
-  return (
-    <>
-      {location.pathname === "/" && <NavbarTransf />}
-      {location.pathname === "/inicio" && <Navbar />}
+  function App() {
+    const location = useLocation();
 
-      <Routes>
-        <Route path="/" element={<TransferencePage />} />
-      </Routes>
-      {isMobile ? <FooterMobile /> : <FooterDesktop />}
-      <a
-        href="https://wa.me/643219297"
-        target="_blank"
-        style={{ textDecoration: "none" }}
-      >
-        <WhatsappIconContainer>
-        {isMobile ? <img src={whatsappIcon} alt="" width={60} /> : <img src={whatsappIcon} alt="" width={80} />}
-          
-        </WhatsappIconContainer>
-      </a>
-    </>
+    return (
+      <>
+        {location.pathname === "/" && <NavbarTransf />}
+        {location.pathname === "/inicio" && <Navbar />}
+
+        <Routes>
+          <Route path="/" element={<TransferencePage />} />
+        </Routes>
+        {isMobile ? <FooterMobile /> : <FooterDesktop />}
+        <a href="https://wa.me/643219297" target="_blank" style={{ textDecoration: "none" }}>
+          <WhatsappIconContainer>
+            {isMobile ? (
+              <img src={whatsappIcon} alt="" width={60} />
+            ) : (
+              <img src={whatsappIcon} alt="" width={80} />
+            )}
+          </WhatsappIconContainer>
+        </a>
+      </>
+    );
+  }
+
+  ReactDOM.render(
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>,
+    document.getElementById("app")
   );
 }
-
-ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  document.getElementById("app")
-);
