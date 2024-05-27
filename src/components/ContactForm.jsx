@@ -79,8 +79,8 @@ export default function ContactForm() {
     border-radius: 10px;
 
     @media (max-width: ${bigPhoneScreenMedia}) {
-      gap: 25px;
-      padding: 30px 10px;
+      gap: 20px;
+      padding: 20px;
       width: 320px;
     }
   `;
@@ -271,11 +271,8 @@ export default function ContactForm() {
 
   const TopRightContainer = styled.div`
     display: flex;
-    gap: 60px;
-    @media (max-width: ${bigPhoneScreenMedia}) {
-      flex-direction: column;
-      gap: 25px;
-    }
+    flex-direction: column;
+    gap: 20px;
   `;
 
   const WhatsappContainer = styled.div`

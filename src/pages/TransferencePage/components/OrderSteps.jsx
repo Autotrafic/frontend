@@ -154,12 +154,10 @@ export default function OrderSteps() {
           <TextContainer>
             <StepTitle>Recibe el provisional</StepTitle>
             <StepText>
-              Verificada la documentación por nuestros gestores, en unos minutos
-              le enviamos el permiso provisional para circular con su nuevo
-              vehículo con total seguridad y poder realizar el seguro de este.
-              En aproximadamente 10 días recibe el nuevo permiso de circulación
-              en el domicilio que nos indique a través de servicio de mensajería
-              sin coste adicional.
+              Una vez verificada la documentación, te enviamos el permiso
+              provisional, con el que podrás circular con tu nuevo vehículo y
+              realizar el seguro para éste. Y sin coste adicional te enviamos a
+              tu domicilio el nuevo permiso de circulación en 6-12 días.
             </StepText>
           </TextContainer>
         </StepContainer>

@@ -12,38 +12,32 @@ import ministerioImg from "../assets/ministerio.svg";
 const tabletScreenMedia = "1000px";
 const bigPhoneScreenMedia = "476px";
 
-export default function Footer() {
+export default function FooterMobile() {
   const FooterContainer = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 100px;
     background-color: #f3f3f3;
-    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px 20px;
+    display: flex;
+    width: 100%;
 
     @media (max-width: ${tabletScreenMedia}) {
-      display: flex;
-      align-items: center;
-      justify-content: start;
-      flex-wrap: wrap;
-      gap: 60px;
-      padding: 40px 20px;
-      display: flex;
-      width: 100%;
     }
 
     @media (max-width: ${bigPhoneScreenMedia}) {
-      display: flex;
-      align-items: center;
-      justify-content: start;
-      flex-wrap: wrap;
-      gap: 60px;
-      padding: 40px 20px;
-      display: flex;
-      width: 100%;
     }
   `;
 
-  const GridComponent = styled.div`
+  const SubContainer = styled.div`
+    display: flex;
+    gap: 30px;
+    width: 100%;
+  `;
+
+  const SubContainerGroup = styled.div`
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -85,8 +79,9 @@ export default function Footer() {
       transition: 0.2s;
     }
 
-    @media (max-width: 475px) {
-      font-size: 12px;
+    @media (max-width: ${bigPhoneScreenMedia}) {
+      margin-bottom: 0;
+      font-size: 15px;
     }
   `;
 
@@ -95,7 +90,7 @@ export default function Footer() {
     margin: 0;
 
     @media (max-width: 475px) {
-      font-size: 12px;
+      font-size: 16px;
     }
   `;
 
@@ -110,7 +105,7 @@ export default function Footer() {
       text-decoration: underline;
     }
     @media (max-width: 475px) {
-      font-size: 12px;
+      font-size: 13px;
     }
   `;
 
@@ -119,7 +114,7 @@ export default function Footer() {
     border-radius: 10px;
 
     @media (max-width: 475px) {
-      width: 150px;
+      width: 200px;
       border-radius: 6px;
     }
   `;
@@ -133,8 +128,8 @@ export default function Footer() {
       border-radius: 4px;
     }
 
-    @media (max-width: 475px) {
-      width: 45px;
+    @media (max-width: ${bigPhoneScreenMedia}) {
+      width: 35px;
       border-radius: 2px;
     }
   `;
@@ -150,8 +145,8 @@ export default function Footer() {
   `;
 
   const DgtLogoBackground = styled.div`
-    width: 140px;
-    height: 75px;
+    width: 120px;
+    height: 65px;
     background-color: white;
     border-radius: 2px;
     display: flex;
@@ -198,110 +193,80 @@ export default function Footer() {
 
   return (
     <FooterContainer>
-      <GridComponent>
-        <a href="https://autotrafic.es/" style={{ textDecoration: "none" }}>
-          <AutotraficLogo src={autotraficLogo} alt="autotraficLogo" />
-        </a>
-      </GridComponent>
-      <GridComponent>
-        <GridTitle>Contacto</GridTitle>
-        <ContactTextGroup>
-          <a href="callto:+34674219155">
-            <ContactIcon icon={faPhone} />
-          </a>
-          <a href="callto:+34674219155" style={{ textDecoration: "none" }}>
-            <ContactText>+34 643 21 92 97</ContactText>
-          </a>
-        </ContactTextGroup>
-        <ContactTextGroup>
-          <a href="mailto:contacto@autotrafic.es">
-            <ContactIcon icon={faEnvelope} />
-          </a>
+      <a href="https://autotrafic.es/" style={{ textDecoration: "none" }}>
+        <AutotraficLogo src={autotraficLogo} alt="autotraficLogo" />
+      </a>
+      <SubContainer>
+        <SubContainerGroup>
+          <GridTitle>Contacto</GridTitle>
+          <ContactTextGroup>
+            <a href="callto:+34674219155" style={{ textDecoration: "none" }}>
+              <ContactText>+34 643 21 92 97</ContactText>
+            </a>
+          </ContactTextGroup>
+          <ContactTextGroup>
+            <a
+              href="mailto:contacto@autotrafic.es"
+              style={{ textDecoration: "none" }}
+            >
+              <ContactText>contacto@autotrafic.es</ContactText>
+            </a>
+          </ContactTextGroup>
+          <WhatsappContainer>
+            <a href="https://wa.me/643219297" target="_blank">
+              <WhatsappIcon src={whatsappIcon} alt="colegioLogo" />
+            </a>
+            <a
+              href="https://wa.me/643219297"
+              target="_blank"
+              style={{ textDecoration: "none" }}
+            >
+              <GridText>¡Escríbenos!</GridText>
+            </a>
+          </WhatsappContainer>
+        </SubContainerGroup>
+        <SubContainerGroup>
+          <GridTitle>Legal</GridTitle>
           <a
-            href="mailto:contacto@autotrafic.es"
+            href="https://autotrafic.es/aviso-legal/"
             style={{ textDecoration: "none" }}
           >
-            <ContactText>contacto@autotrafic.es</ContactText>
-          </a>
-        </ContactTextGroup>
-        <WhatsappContainer>
-          <a href="https://wa.me/643219297" target="_blank">
-            <WhatsappIcon src={whatsappIcon} alt="colegioLogo" />
+            <GridText>Aviso Legal</GridText>
           </a>
           <a
-            href="https://wa.me/643219297"
-            target="_blank"
+            href="https://autotrafic.es/politica-de-privacidad/"
             style={{ textDecoration: "none" }}
           >
-            <GridText>¡Escríbenos!</GridText>
+            <GridText>Política de privacidad</GridText>
           </a>
-        </WhatsappContainer>
-      </GridComponent>
-      {/*  <GridComponent>
-        <GridTitle>Páginas</GridTitle>
-        <a href="https://autotrafic.es/" style={{ textDecoration: "none" }}>
-          <GridText>Home</GridText>
-        </a>
-        <a
-          href="https://autotrafic.es/noticias/"
-          style={{ textDecoration: "none" }}
-        >
-          <GridText>Noticias</GridText>
-        </a>
-        <a
-          href="https://autotrafic.es/contacto/"
-          style={{ textDecoration: "none" }}
-        >
-          <GridText>Contacto</GridText>
-        </a>
-        <a
-          href="https://autotrafic.es/articulos/"
-          style={{ textDecoration: "none" }}
-        >
-          <GridText>Artículos</GridText>
-        </a>
-      </GridComponent> */}
-      <GridComponent>
-        <GridTitle>Legal</GridTitle>
-        <a
-          href="https://autotrafic.es/aviso-legal/"
-          style={{ textDecoration: "none" }}
-        >
-          <GridText>Aviso Legal</GridText>
-        </a>
-        <a
-          href="https://autotrafic.es/politica-de-privacidad/"
-          style={{ textDecoration: "none" }}
-        >
-          <GridText>Política de privacidad</GridText>
-        </a>
-        <a
-          href="https://autotrafic.es/politica-de-cookies/"
-          style={{ textDecoration: "none" }}
-        >
-          <GridText>Política de cookies</GridText>
-        </a>
-        <a
-          href="https://autotrafic.es/terminos-generales/"
-          style={{ textDecoration: "none" }}
-        >
-          <GridText>Términos generales</GridText>
-        </a>
-      </GridComponent>
-      <GridComponent>
+          <a
+            href="https://autotrafic.es/politica-de-cookies/"
+            style={{ textDecoration: "none" }}
+          >
+            <GridText>Política de cookies</GridText>
+          </a>
+          <a
+            href="https://autotrafic.es/terminos-generales/"
+            style={{ textDecoration: "none" }}
+          >
+            <GridText>Términos generales</GridText>
+          </a>
+        </SubContainerGroup>
+      </SubContainer>
+      <SubContainerGroup>
         <IconsContainer>
           <IconsGroupContainer>
             <GoogleReviewsBox />
             <DgtLogoBackground>
-              <img src={dgtLogo} alt="" width={100} />
+              <img src={dgtLogo} alt="" height={50} />
             </DgtLogoBackground>
           </IconsGroupContainer>
           <IconsGroupContainer>
             <ColegioLogo src={colegioLogo} alt="colegioLogo" />
-            <img src={ministerioImg} alt="" width={150} />
+            <img src={ministerioImg} alt="" height={65} />
           </IconsGroupContainer>
         </IconsContainer>
-      </GridComponent>
+      </SubContainerGroup>
     </FooterContainer>
   );
 }
