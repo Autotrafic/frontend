@@ -79,9 +79,8 @@ export default function ContactForm() {
     border-radius: 10px;
 
     @media (max-width: ${bigPhoneScreenMedia}) {
-      gap: 20px;
-      padding: 10px;
-      height: 140px;
+      gap: 25px;
+      padding: 30px 10px;
       width: 320px;
     }
   `;
@@ -97,7 +96,7 @@ export default function ContactForm() {
     }
 
     @media (max-width: ${bigPhoneScreenMedia}) {
-      gap: 8px;
+      gap: 5px;
     }
   `;
 
@@ -273,11 +272,16 @@ export default function ContactForm() {
   const TopRightContainer = styled.div`
     display: flex;
     gap: 60px;
+    @media (max-width: ${bigPhoneScreenMedia}) {
+      flex-direction: column;
+      gap: 25px;
+    }
   `;
 
   const WhatsappContainer = styled.div`
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 10px;
     align-items: center;
   `;
 
