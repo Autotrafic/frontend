@@ -5,6 +5,45 @@ import TransferContentMobile from "./TransferContentMobile";
 import ProsMobile from "./ProsMobile";
 import Drop from "./Drop";
 
+export default function TransferMobile() {
+  const [smartFormHeight, setSmartFormHeight] = useState(0);
+  const smartFormRef = useRef(null);
+
+  useEffect(() => {
+    const resizeObserver = new ResizeObserver((entries) => {
+      for (let entry of entries) {
+        if (entry.target === smartFormRef.current) {
+          setSmartFormHeight(entry.contentRect.height);
+        }
+      }
+    });
+
+    if (smartFormRef.current) {
+      resizeObserver.observe(smartFormRef.current);
+    }
+
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, [smartFormRef]);
+
+  return (
+    <Container>
+      <LeftSide>
+        <TransferContentMobile />
+      </LeftSide>
+      <RightSide ref={smartFormRef}>
+        <Title middleLine>Realizar transferencia online</Title>
+        <SmartFormContainer>
+          <SmartForm />
+        </SmartFormContainer>
+        <Drop smartFormHeight={smartFormHeight} />
+        <ProsMobile />
+      </RightSide>
+    </Container>
+  );
+}
+
 const Container = styled.div`
   width: 100%;
   max-width: 1300px;
@@ -54,42 +93,3 @@ const SmartFormContainer = styled.div`
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2), 2px 0 5px rgba(0, 0, 0, 0.2),
     -4px 0 5px rgba(0, 0, 0, 0.2);
 `;
-
-export default function TransferMobile() {
-  const [smartFormHeight, setSmartFormHeight] = useState(0);
-  const smartFormRef = useRef(null);
-
-  useEffect(() => {
-    const resizeObserver = new ResizeObserver((entries) => {
-      for (let entry of entries) {
-        if (entry.target === smartFormRef.current) {
-          setSmartFormHeight(entry.contentRect.height);
-        }
-      }
-    });
-
-    if (smartFormRef.current) {
-      resizeObserver.observe(smartFormRef.current);
-    }
-
-    return () => {
-      resizeObserver.disconnect();
-    };
-  }, [smartFormRef]);
-
-  return (
-    <Container>
-      <LeftSide>
-        <TransferContentMobile />
-      </LeftSide>
-      <RightSide ref={smartFormRef}>
-        <Title middleLine>Realizar transferencia online</Title>
-        <SmartFormContainer>
-          <SmartForm />
-        </SmartFormContainer>
-        <Drop smartFormHeight={smartFormHeight} />
-        <ProsMobile />
-      </RightSide>
-    </Container>
-  );
-}

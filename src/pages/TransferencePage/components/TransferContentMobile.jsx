@@ -7,6 +7,40 @@ import dgtLogo from "../../../assets/dgt.svg";
 import ministerioImg from "../../../assets/ministerio.svg";
 import colegioImg from "../../../assets/colegio-simple-logo.png";
 
+export default function TransferContentMobile() {
+  return (
+    <TransferContainer>
+      <Title fontSize={"21px"}>Cambia de nombre tu vehículo online en menos de 5 minutos</Title>
+      <TextWrapper>
+        <SubTitle>
+          Gestoría Online especializada en la Transferencia de Vehículos con la DGT
+        </SubTitle>
+        <ExplanationText>NOS ENCARGAMOS DE TODO - MEJOR PRECIO GARANTIZADO</ExplanationText>
+      </TextWrapper>
+
+      <BoxesContainer>
+        <img src={colegioImg} alt="" width={125} style={{ borderRadius: "2px" }} />
+        <img src={dgtLogo} alt="" width={60} />
+        <img src={ministerioImg} alt="" width={90} style={{ borderRadius: "2px" }} />
+      </BoxesContainer>
+
+      <WhatsContactContainer>
+        <a href="https://wa.me/643219297" target="_blank" style={{ textDecoration: "none" }}>
+          <WhatsLink>
+            <WhatsIcon icon={faWhatsapp} size="lg" />
+            Habla con un gestor ahora
+          </WhatsLink>
+        </a>
+        <WhatsText>Respondemos al instante</WhatsText>
+      </WhatsContactContainer>
+
+      <GoogleReviewsBox />
+    </TransferContainer>
+  );
+}
+
+const WhatsIcon = styled(FontAwesomeIcon)``;
+
 const TransferContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -68,38 +102,3 @@ const TextWrapper = styled.div`
   flex-direction: column;
   gap: 5px;
 `;
-
-const WhatsIcon = styled(FontAwesomeIcon)``;
-
-export default function TransferContentMobile() {
-  return (
-      <TransferContainer>
-
-        <Title fontSize={"21px"}>Cambia de nombre tu vehículo online en menos de 5 minutos</Title>
-        <TextWrapper>
-          <SubTitle>
-            Gestoría Online especializada en la Transferencia de Vehículos con la DGT
-          </SubTitle>
-          <ExplanationText>NOS ENCARGAMOS DE TODO - MEJOR PRECIO GARANTIZADO</ExplanationText>
-        </TextWrapper>
-
-        <BoxesContainer>
-          <img src={colegioImg} alt="" width={125} style={{ borderRadius: "2px" }} />
-          <img src={dgtLogo} alt="" width={60} />
-          <img src={ministerioImg} alt="" width={90} style={{ borderRadius: "2px" }} />
-        </BoxesContainer>
-
-        <WhatsContactContainer>
-          <a href="https://wa.me/643219297" target="_blank" style={{ textDecoration: "none" }}>
-            <WhatsLink>
-              <WhatsIcon icon={faWhatsapp} size="lg" />
-              Habla con un gestor ahora
-            </WhatsLink>
-          </a>
-          <WhatsText>Respondemos al instante</WhatsText>
-        </WhatsContactContainer>
-
-        <GoogleReviewsBox />
-      </TransferContainer>
-  );
-}

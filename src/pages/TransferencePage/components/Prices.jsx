@@ -3,6 +3,33 @@ import Title from "../../../components/reusable/Title";
 import { colors } from "../../../utils/styles";
 import { PRICES_SECTION_ID } from "../../../utils/constants";
 
+export default function Prices() {
+  const prices = [
+    { title: "Coche", price: "119,95" },
+    { title: "Moto", price: "119,95" },
+    { title: "Ciclomotor", price: "94,95" },
+  ];
+
+  return (
+    <Container id={PRICES_SECTION_ID}>
+      <Title middleLine>Los mejores precios del mercado de mayo 2024</Title>
+      <PricesContainer>
+        {prices.map((price) => (
+          <PriceContainer>
+            <PriceTitle>{price.title}</PriceTitle>
+            <Price>{price.price} €</Price>
+            <Incluiding>TODO INCLUIDO</Incluiding>
+            <ConditionsContainer>
+              <Condition>Gestión del ITP incluida</Condition>
+              <Condition>Envío a domicilio incluido</Condition>
+            </ConditionsContainer>
+          </PriceContainer>
+        ))}
+      </PricesContainer>
+    </Container>
+  );
+}
+
 const Container = styled.div`
   width: 100%;
   display: flex;
@@ -60,30 +87,3 @@ const Incluiding = styled.span`
 const Condition = styled.span`
   font-size: 14px;
 `;
-
-export default function Prices() {
-  const prices = [
-    { title: "Coche", price: "119,95" },
-    { title: "Moto", price: "119,95" },
-    { title: "Ciclomotor", price: "94,95" },
-  ];
-
-  return (
-    <Container id={PRICES_SECTION_ID}>
-      <Title middleLine>Los mejores precios del mercado de mayo 2024</Title>
-      <PricesContainer>
-        {prices.map((price) => (
-          <PriceContainer>
-            <PriceTitle>{price.title}</PriceTitle>
-            <Price>{price.price} €</Price>
-            <Incluiding>TODO INCLUIDO</Incluiding>
-            <ConditionsContainer>
-              <Condition>Gestión del ITP incluida</Condition>
-              <Condition>Envío a domicilio incluido</Condition>
-            </ConditionsContainer>
-          </PriceContainer>
-        ))}
-      </PricesContainer>
-    </Container>
-  );
-}

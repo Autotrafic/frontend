@@ -3,6 +3,22 @@ import SmartForm from "smartForm/SmartForm";
 import TransferContentDesktop from "./TransferContentDesktop";
 import Drop from "./Drop";
 
+export default function TransferDesktop() {
+  return (
+    <Container>
+      <LeftSide>
+        <TransferContentDesktop />
+      </LeftSide>
+      <RightSide>
+        <SmartFormContainer>
+          <SmartForm />
+        </SmartFormContainer>
+        <Drop />
+      </RightSide>
+    </Container>
+  );
+}
+
 const Container = styled.div`
   width: 100%;
   max-width: 1300px;
@@ -41,19 +57,3 @@ const SmartFormContainer = styled.div`
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2), 2px 0 5px rgba(0, 0, 0, 0.2),
     -4px 0 5px rgba(0, 0, 0, 0.2);
 `;
-
-export default function TransferDesktop() {
-  return (
-    <Container>
-      <LeftSide>
-        <TransferContentDesktop />
-      </LeftSide>
-      <RightSide>
-        <SmartFormContainer>
-          <SmartForm />
-        </SmartFormContainer>
-        <Drop />
-      </RightSide>
-    </Container>
-  );
-}

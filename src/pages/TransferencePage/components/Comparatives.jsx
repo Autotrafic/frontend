@@ -3,6 +3,44 @@ import Title from "../../../components/reusable/Title";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faXmark } from "@fortawesome/free-solid-svg-icons";
 
+export default function Comparatives() {
+  return (
+    <Container>
+      <Title middleLine>Apostamos por la tranquilidad del cliente</Title>
+      <ComparativesStyled>
+        <ComparativeBox />
+        <ComparativeBox isQuality />
+      </ComparativesStyled>
+    </Container>
+  );
+}
+
+function ComparativeBox({ isQuality }) {
+  const comparativeItems = isQuality ? goodComparations : badComparations;
+
+  return (
+    <ComparativeBoxStyled $isQuality={isQuality}>
+      <ComparativeTitle>
+        {isQuality
+          ? "Transferencia con Gestoría AutoTrafic"
+          : "Transferencia con una gestoría convencional"}
+      </ComparativeTitle>
+      <ComparativeList>
+        {comparativeItems.map((comparation) => (
+          <ComparativeItem>
+            {isQuality ? (
+              <FontAwesomeIcon icon={faCheck} size="xs" />
+            ) : (
+              <FontAwesomeIcon icon={faXmark} size="xs" />
+            )}
+            {comparation}
+          </ComparativeItem>
+        ))}
+      </ComparativeList>
+    </ComparativeBoxStyled>
+  );
+}
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -82,41 +120,3 @@ const badComparations = [
   "Sin asesoramiento personalizado",
   "Precio elevado",
 ];
-
-export default function Comparatives() {
-  return (
-    <Container>
-      <Title middleLine>Apostamos por la tranquilidad del cliente</Title>
-      <ComparativesStyled>
-        <ComparativeBox />
-        <ComparativeBox isQuality />
-      </ComparativesStyled>
-    </Container>
-  );
-}
-
-function ComparativeBox({ isQuality }) {
-  const comparativeItems = isQuality ? goodComparations : badComparations;
-
-  return (
-    <ComparativeBoxStyled $isQuality={isQuality}>
-      <ComparativeTitle>
-        {isQuality
-          ? "Transferencia con Gestoría AutoTrafic"
-          : "Transferencia con una gestoría convencional"}
-      </ComparativeTitle>
-      <ComparativeList>
-        {comparativeItems.map((comparation) => (
-          <ComparativeItem>
-            {isQuality ? (
-              <FontAwesomeIcon icon={faCheck} size="xs" />
-            ) : (
-              <FontAwesomeIcon icon={faXmark} size="xs" />
-            )}
-            {comparation}
-          </ComparativeItem>
-        ))}
-      </ComparativeList>
-    </ComparativeBoxStyled>
-  );
-}

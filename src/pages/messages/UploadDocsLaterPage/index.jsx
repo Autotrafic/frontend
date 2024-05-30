@@ -19,7 +19,6 @@ export function UploadDocsLaterPage() {
     })();
   }, [orderId]);
 
-  console.log("asd", order);
   return (
     <Wrapper>
       {order ? (
