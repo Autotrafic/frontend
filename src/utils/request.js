@@ -10,7 +10,7 @@ export const apiRequest = async (endpoint, data, method = "GET") => {
     body: data && JSON.stringify({ ...data }),
   });
 
-  const result = response.status === 201 ? await response.json() : null;
+  const result = await response.json();
 
   return result;
 };

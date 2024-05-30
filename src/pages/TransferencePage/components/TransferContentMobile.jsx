@@ -12,6 +12,7 @@ const TransferContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 2em;
+  margin-bottom: 2em;
 `;
 
 const SubTitle = styled.p`
@@ -54,7 +55,7 @@ const WhatsLink = styled.a`
   border-radius: 6px;
   background-color: #51ca50;
   color: white;
-  padding: 0.3rem 1rem;
+  padding: 0.3rem 1.5rem;
   width: -moz-fit-content;
   width: 100%;
   font-weight: 600;
@@ -72,7 +73,6 @@ const WhatsIcon = styled(FontAwesomeIcon)``;
 
 export default function TransferContentMobile() {
   return (
-    <>
       <TransferContainer>
 
         <Title fontSize={"21px"}>Cambia de nombre tu vehículo online en menos de 5 minutos</Title>
@@ -101,6 +101,5 @@ export default function TransferContentMobile() {
 
         <GoogleReviewsBox />
       </TransferContainer>
-    </>
   );
 }

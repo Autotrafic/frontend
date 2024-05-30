@@ -18,6 +18,13 @@ const Container = styled.div`
   }
 `;
 
+const Title = styled.h2`
+  color: #fff;
+  font-weight: 600;
+  margin: 0 0 1em 0;
+  font-size: 20px;
+`;
+
 const LeftSide = styled.div`
   flex: 4;
 
@@ -76,6 +83,7 @@ export default function TransferMobile() {
         <TransferContentMobile />
       </LeftSide>
       <RightSide ref={smartFormRef}>
+        <Title middleLine>Realizar transferencia online</Title>
         <SmartFormContainer>
           <SmartForm />
         </SmartFormContainer>

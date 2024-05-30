@@ -10,6 +10,7 @@ import styled from "styled-components";
 import { faSquareWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import whatsappIcon from "./assets/whatsapp-icon-skeleton.svg";
+import { UploadDocsLaterPage } from "./pages/UploadDocsLaterPage";
 
 const tabletScreenMedia = "1000px";
 const bigPhoneScreenMedia = "476px";
@@ -58,6 +59,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<TransferencePage />} />
+        <Route path="/subir-docs-luego/:orderId" element={<UploadDocsLaterPage />} />
       </Routes>
       {isMobile ? <FooterMobile /> : <FooterDesktop />}
       <a href="https://wa.me/643219297" target="_blank" style={{ textDecoration: "none" }}>
