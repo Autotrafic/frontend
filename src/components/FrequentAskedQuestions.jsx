@@ -9,40 +9,6 @@ import Title from "./reusable/Title";
 const bigPhoneScreenMedia = "476px";
 
 export default function FrequentAskedQuestions() {
-  const Container = styled.div`
-    width: 100%;
-    display: flex;
-    gap: 40px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0 20px;
-
-    @media (max-width: ${bigPhoneScreenMedia}) {
-      margin-bottom: 0;
-      gap: 15px;
-      width: 100%;
-    }
-  `;
-
-  const FaqContainer = styled.div`
-    max-width: 1000px;
-    width: 65%;
-
-    @media (max-width: 1035px) {
-      width: 75%;
-    }
-    @media (max-width: 900px) {
-      width: 85%;
-    }
-    @media (max-width: 790px) {
-      width: 90%;
-    }
-    @media (max-width: 750px) {
-      width: 100%;
-    }
-  `;
-
   const [isClicked, setIsClicked] = useState(false);
 
   const toggleFaq = (index) => {
@@ -86,3 +52,37 @@ export default function FrequentAskedQuestions() {
     </Container>
   );
 }
+
+const Container = styled.div`
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+
+  @media (max-width: ${bigPhoneScreenMedia}) {
+    margin-bottom: 0;
+    gap: 15px;
+    width: 100%;
+  }
+`;
+
+const FaqContainer = styled.div`
+  max-width: 1000px;
+  width: 65%;
+
+  @media (max-width: 1035px) {
+    width: 75%;
+  }
+  @media (max-width: 900px) {
+    width: 85%;
+  }
+  @media (max-width: 790px) {
+    width: 90%;
+  }
+  @media (max-width: 750px) {
+    width: 100%;
+  }
+`;

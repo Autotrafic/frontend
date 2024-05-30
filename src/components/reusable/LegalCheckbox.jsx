@@ -2,6 +2,30 @@ import styled from "styled-components";
 import { colors } from "../../utils/styles";
 import { PRIVACY_URL, TERMS_URL } from "../../utils/constants";
 
+export default function LegalCheckbox({ value, handleChange }) {
+  return (
+    <Container>
+      <Checkbox
+        type="checkbox"
+        id="legal"
+        required
+        checked={!!value}
+        onChange={handleChange}
+      />
+      <label htmlFor="legal">
+        <LegalPhrase>He leído y acepto los </LegalPhrase>
+        <Link href={TERMS_URL} target="_blank">
+          términos de uso
+        </Link>
+        <LegalPhrase> y </LegalPhrase>
+        <Link href={PRIVACY_URL} target="_blank">
+          privacidad
+        </Link>
+      </label>
+    </Container>
+  );
+}
+
 const Container = styled.div`
   display: flex;
   align-items: center;
@@ -29,29 +53,3 @@ const Link = styled.a`
   cursor: pointer;
   color: ${colors.primaryColor} !important;
 `;
-
-function LegalCheckbox({ value, handleChange }) {
-  return (
-    <Container>
-      <Checkbox
-        type="checkbox"
-        id="legal"
-        required
-        checked={!!value}
-        onChange={handleChange}
-      />
-      <label htmlFor="legal">
-        <LegalPhrase>He leído y acepto los </LegalPhrase>
-        <Link href={TERMS_URL} target="_blank">
-          términos de uso
-        </Link>
-        <LegalPhrase> y </LegalPhrase>
-        <Link href={PRIVACY_URL} target="_blank">
-          privacidad
-        </Link>
-      </label>
-    </Container>
-  );
-}
-
-export default LegalCheckbox;
