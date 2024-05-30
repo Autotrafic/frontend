@@ -59,7 +59,7 @@ function App() {
       <Routes>
         <Route path="/" element={<TransferencePage />} />
         <Route path="/subir-docs-luego/:orderId" element={<UploadDocsLaterPage />} />
-        <Route path="/*" element={<NotFoundPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
 
       {isMobile ? <FooterMobile /> : <FooterDesktop />}
