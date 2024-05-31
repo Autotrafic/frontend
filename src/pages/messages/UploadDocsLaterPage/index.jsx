@@ -1,13 +1,10 @@
 import styled from "styled-components";
-import confetiCheck from "../../../assets/check-confetti.svg";
-import confetiSquare from "../../../assets/confeti_square.gif";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getOrderById } from "../../../services/order";
+import CheckIcon from "../../../components/reusable/CheckIcon";
 
-const ICON_DIMENSION = 100;
-
-export function UploadDocsLaterPage() {
+export default function UploadDocsLaterPage() {
   const { orderId } = useParams();
 
   const [order, setOrder] = useState();
@@ -23,10 +20,7 @@ export function UploadDocsLaterPage() {
     <Wrapper>
       {order ? (
         <Container>
-          <Icon>
-            <Check />
-            <Square />
-          </Icon>
+          <CheckIcon />
 
           <p>
             <strong>
@@ -67,33 +61,6 @@ const Container = styled.div`
   font-size: 18px;
   line-height: 24px;
   margin: 0 auto;
-`;
-
-const Icon = styled.div`
-  position: relative;
-  z-index: 1;
-  display: inline-block;
-  margin-bottom: 32px;
-`;
-
-const Check = styled.div`
-  position: relative;
-  background: url(${confetiCheck}) center center no-repeat;
-  background-size: cover;
-  width: ${ICON_DIMENSION}px;
-  height: ${ICON_DIMENSION}px;
-  z-index: 1;
-`;
-
-const Square = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: url(${confetiSquare}) center center no-repeat;
-  background-size: 97% 97%;
-  width: ${ICON_DIMENSION}px;
-  height: ${ICON_DIMENSION}px;
-  z-index: 0;
 `;
 
 const TextContainer = styled.div`
