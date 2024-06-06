@@ -38,6 +38,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "favicons-webpack-plugin": "^6.0.1",
     "framer-motion": "^11.1.7",
     "ipdata": "^2.2.4",
     "react": "^18.2.0",
