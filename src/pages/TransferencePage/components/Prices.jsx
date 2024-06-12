@@ -12,7 +12,7 @@ export default function Prices() {
 
   return (
     <Container id={PRICES_SECTION_ID}>
-      <Title middleLine>Los mejores precios del mercado de mayo 2024</Title>
+      <Title middleLine>Los mejores precios del mercado de junio 2024</Title>
       <PricesContainer>
         {prices.map((price) => (
           <PriceContainer>
