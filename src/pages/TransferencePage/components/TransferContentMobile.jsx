@@ -10,24 +10,43 @@ import colegioImg from "../../../assets/colegio-simple-logo.png";
 export default function TransferContentMobile() {
   return (
     <TransferContainer>
-      <Title fontSize={"21px"}>Cambia de nombre tu vehículo online en menos de 5 minutos</Title>
+      <Title fontSize={"21px"}>
+        Cambia de nombre tu vehículo online en menos de 5 minutos
+      </Title>
       <TextWrapper>
         <SubTitle>
-          Gestoría Online especializada en la Transferencia de Vehículos con la DGT
+          Gestoría Online especializada en la Transferencia de Vehículos con la
+          DGT
         </SubTitle>
-        <ExplanationText>NOS ENCARGAMOS DE TODO - MEJOR PRECIO GARANTIZADO</ExplanationText>
+        <ExplanationText>
+          NOS ENCARGAMOS DE TODO - MEJOR PRECIO GARANTIZADO
+        </ExplanationText>
       </TextWrapper>
 
       <BoxesContainer>
-        <img src={colegioImg} alt="" width={125} style={{ borderRadius: "2px" }} />
+        <img
+          src={colegioImg}
+          alt=""
+          width={125}
+          style={{ borderRadius: "2px" }}
+        />
         <img src={dgtLogo} alt="" width={60} />
-        <img src={ministerioImg} alt="" width={90} style={{ borderRadius: "2px" }} />
+        <img
+          src={ministerioImg}
+          alt=""
+          width={90}
+          style={{ borderRadius: "2px" }}
+        />
       </BoxesContainer>
 
       <WhatsContactContainer>
-        <a href="https://wa.me/643219297" target="_blank" style={{ textDecoration: "none" }}>
+        <a
+          href="https://wa.me/643219297"
+          target="_blank"
+          style={{ textDecoration: "none" }}
+        >
           <WhatsLink>
-            <WhatsIcon icon={faWhatsapp} size="lg" />
+            <WhatsIcon icon={faWhatsapp} size="xl" />
             Habla con un gestor ahora
           </WhatsLink>
         </a>
@@ -89,7 +108,8 @@ const WhatsLink = styled.a`
   border-radius: 6px;
   background-color: #51ca50;
   color: white;
-  padding: 0.3rem 1.5rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 19px;
   width: -moz-fit-content;
   width: 100%;
   font-weight: 600;
