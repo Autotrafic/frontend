@@ -42,24 +42,25 @@ const WhatsContactContainer = styled.div`
 const WhatsText = styled.p`
   margin-top: 5px;
   text-align: center;
-  font-size: 13px;
+  font-size: 15px;
 `;
 
 const WhatsLink = styled.a`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -moz-column-gap: 1rem;
-  column-gap: 1rem;
-  border-radius: 6px;
-  background-color: #51ca50;
-  color: white;
-  padding: 0.3rem 1rem;
-  width: -moz-fit-content;
-  width: 100%;
-  font-weight: 600;
-  text-decoration: inherit;
-  border: none;
+display: flex;
+justify-content: center;
+align-items: center;
+-moz-column-gap: 1rem;
+column-gap: 1rem;
+border-radius: 12px;
+background-color: #51ca50;
+color: white;
+padding: 0.5rem 1.5rem;
+width: -moz-fit-content;
+width: 100%;
+font-size: 18px;
+font-weight: 600;
+text-decoration: inherit;
+border: none;
 `;
 
 const TextWrapper = styled.div`
@@ -92,7 +93,7 @@ export default function TransferContentMobile() {
         <WhatsContactContainer>
           <a href="https://wa.me/643219297" target="_blank" style={{ textDecoration: "none" }}>
             <WhatsLink>
-              <WhatsIcon icon={faWhatsapp} size="lg" />
+              <WhatsIcon icon={faWhatsapp} size="xl" />
               Habla con un gestor ahora
             </WhatsLink>
           </a>
