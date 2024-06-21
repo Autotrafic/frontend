@@ -2,13 +2,80 @@ import styled from "styled-components";
 import Title from "../../../components/reusable/Title";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { colors } from "../../../utils/styles";
 import GoogleReviewsBox from "../../../components/reusable/GoogleReviewsBox";
 import dgtLogo from "../../../assets/dgt.svg";
 import ministerioImg from "../../../assets/ministerio.svg";
 import colegioImg from "../../../assets/colegio-simple-logo.png";
+
+export default function TransferContentDesktop() {
+  return (
+    <>
+      <TransferContainer>
+        <Title>Cambia de nombre tu vehículo online en menos de 5 minutos</Title>
+        <div>
+          <SubTitle>
+            Gestoría Online especializada en la Transferencia de Vehículos con la DGT
+          </SubTitle>
+          <ExplanationText>NOS ENCARGAMOS DE TODO - MEJOR PRECIO GARANTIZADO</ExplanationText>
+        </div>
+
+        <AdvantagesListContainer>
+          <AdvantageListItem>
+            ✅<ListText>Gestión 100% online rápida y sencilla</ListText>
+          </AdvantageListItem>
+          <AdvantageListItem>
+            ✅
+            <ListText>
+              Te enviamos el permiso de circulación provisional en pocos minutos de acabar el
+              trámite
+            </ListText>
+          </AdvantageListItem>
+          <AdvantageListItem>
+            ✅
+            <ListText>
+              Te envíamos el nuevo permiso de circulación directamente a casa en unos 10 días
+            </ListText>
+          </AdvantageListItem>
+        </AdvantagesListContainer>
+
+        <BoxesContainer>
+          <GoogleReviewsBox />
+          <img src={dgtLogo} alt="" width={90} />
+          <img src={ministerioImg} alt="" width={112} style={{ borderRadius: "2px" }} />
+          <img src={colegioImg} alt="" width={140} style={{ borderRadius: "2px" }} />
+        </BoxesContainer>
+      </TransferContainer>
+      <AnyQuestionContainer>
+        <Title lineWidth={"15%"}>¿Necesitas ayuda?</Title>
+        <ExplanationText>
+          Contacta ahora con nuestros gestores si necesitas ayuda con el proceso o tienes alguna
+          duda.
+        </ExplanationText>
+        <ContactButtonsContainer>
+          <ContactLink
+            href="https://wa.me/643219297"
+            target="_blank"
+            style={{ textDecoration: "none" }}
+          >
+            <ContactButtonWhatsapp>
+              <ContactIcon icon={faWhatsapp} />
+              <ContactButtonText>Whatsapp</ContactButtonText>
+            </ContactButtonWhatsapp>
+          </ContactLink>
+
+          <ContactLink href="callto:+34674219155" style={{ textDecoration: "none" }}>
+            <ContactButton>
+              <ContactIcon icon={faPhone} />
+              <ContactButtonText>Teléfono</ContactButtonText>
+            </ContactButton>
+          </ContactLink>
+        </ContactButtonsContainer>
+      </AnyQuestionContainer>
+    </>
+  );
+}
 
 const TransferContainer = styled.div`
   display: flex;
@@ -142,98 +209,3 @@ const BoxesContainer = styled.div`
   align-items: center;
   justify-content: space-around;
 `;
-
-export default function TransferContentDesktop() {
-  return (
-    <>
-      <TransferContainer>
-        <Title>Cambia de nombre tu vehículo online en menos de 5 minutos</Title>
-        <div>
-          <SubTitle>
-            Gestoría Online especializada en la Transferencia de Vehículos con
-            la DGT
-          </SubTitle>
-          <ExplanationText>
-            NOS ENCARGAMOS DE TODO - MEJOR PRECIO GARANTIZADO
-          </ExplanationText>
-        </div>
-
-        <AdvantagesListContainer>
-          <AdvantageListItem>
-            ✅<ListText>Gestión 100% online rápida y sencilla</ListText>
-          </AdvantageListItem>
-          <AdvantageListItem>
-            ✅
-            <ListText>
-              Te enviamos el permiso de circulación provisional en pocos minutos
-              de acabar el trámite
-            </ListText>
-          </AdvantageListItem>
-          <AdvantageListItem>
-            ✅
-            <ListText>
-              Te envíamos el nuevo permiso de circulación directamente a casa en
-              unos 10 días
-            </ListText>
-          </AdvantageListItem>
-        </AdvantagesListContainer>
-
-        <BoxesContainer>
-          <GoogleReviewsBox />
-          <img src={dgtLogo} alt="" width={90} />
-          <img
-            src={ministerioImg}
-            alt=""
-            width={112}
-            style={{ borderRadius: "2px" }}
-          />
-          <img
-            src={colegioImg}
-            alt=""
-            width={140}
-            style={{ borderRadius: "2px" }}
-          />
-        </BoxesContainer>
-      </TransferContainer>
-      <AnyQuestionContainer>
-        <Title lineWidth={"15%"}>¿Necesitas ayuda?</Title>
-        <ExplanationText>
-          Contacta ahora con nuestros gestores si necesitas ayuda con el proceso
-          o tienes alguna duda.
-        </ExplanationText>
-        <ContactButtonsContainer>
-          <ContactLink
-            href="https://wa.me/643219297"
-            target="_blank"
-            style={{ textDecoration: "none" }}
-          >
-            <ContactButtonWhatsapp>
-              <ContactIcon icon={faWhatsapp} />
-              <ContactButtonText>Whatsapp</ContactButtonText>
-            </ContactButtonWhatsapp>
-          </ContactLink>
-
-          <ContactLink
-            href="callto:+34674219155"
-            style={{ textDecoration: "none" }}
-          >
-            <ContactButton>
-              <ContactIcon icon={faPhone} />
-              <ContactButtonText>Teléfono</ContactButtonText>
-            </ContactButton>
-          </ContactLink>
-
-          {/*  <ContactLink
-            href="mailto:contacto@autotrafic.es"
-            style={{ textDecoration: "none" }}
-          >
-            <ContactButton>
-              <ContactIcon icon={faEnvelope} />
-              <ContactButtonText>Email</ContactButtonText>
-            </ContactButton>
-          </ContactLink> */}
-        </ContactButtonsContainer>
-      </AnyQuestionContainer>
-    </>
-  );
-}

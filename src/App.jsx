@@ -1,75 +1,35 @@
 import "./styles/App.css";
 import ReactDOM from "react-dom";
-import FooterDesktop from "./components/FooterDesktop";
-import FooterMobile from "./components/FooterMobile";
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
-import { Navbar } from "./components/Navbar/navbar";
-import { NavbarTransf } from "./components/NavbarTransf/navbar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import TransferencePage from "./pages/TransferencePage";
-import styled from "styled-components";
-import { faSquareWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import whatsappIcon from "./assets/whatsapp-icon-skeleton.svg";
-
-const tabletScreenMedia = "1000px";
-const bigPhoneScreenMedia = "476px";
-
-const WhatsappIconContainer = styled.div`
-  position: fixed;
-  bottom: 40px;
-  right: 35px;
-  background-color: white;
-  border-radius: 50%;
-  width: 90px;
-  height: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  transition: 0.2s;
-
-  &:hover {
-    width: 100px;
-    height: 100px;
-    transition: 0.2s;
-  }
-
-  @media (max-width: ${tabletScreenMedia}) {
-    width: 70px;
-    height: 70px;
-  }
-`;
+import UploadDocsLaterPage from "./pages/messages/UploadDocsLaterPage";
+import NotFoundPage from "./pages/404";
+import FloatingWhatsappIcon from "./components/FloatingWhatsappIcon";
+import NavbarContainer from "./containers/NavbarContainer";
+import FooterContainer from "./containers/FooterContainer";
+import UploadedDocsPage from "./pages/messages/UploadedDocsPage";
 
 function App() {
-  const location = useLocation();
-  const screenWidth = window.innerWidth;
-
-  let isMobile = false;
-
-  if (screenWidth < 415) {
-    isMobile = true;
-  }
-
   return (
     <>
-      {location.pathname === "/" && <NavbarTransf />}
-      {location.pathname === "/inicio" && <Navbar />}
+      <NavbarContainer />
 
-      <Routes>
-        <Route path="/" element={<TransferencePage />} />
-      </Routes>
-      {isMobile ? <FooterMobile /> : <FooterDesktop />}
-      <a href="https://wa.me/643219297" target="_blank" style={{ textDecoration: "none" }}>
-        <WhatsappIconContainer>
-          {isMobile ? (
-            <img src={whatsappIcon} alt="" width={60} />
-          ) : (
-            <img src={whatsappIcon} alt="" width={80} />
-          )}
-        </WhatsappIconContainer>
-      </a>
+      <Router />
+
+      <FooterContainer />
+      <FloatingWhatsappIcon />
     </>
+  );
+}
+
+function Router() {
+  return (
+    <Routes>
+      <Route path="/" element={<TransferencePage />} />
+      <Route path="/documentacion-pendiente/:orderId" element={<UploadDocsLaterPage />} />
+      <Route path="/gracias-documentacion/:orderId" element={<UploadedDocsPage />} />
+      <Route path="*" element={<NotFoundPage />} />
+    </Routes>
   );
 }
 

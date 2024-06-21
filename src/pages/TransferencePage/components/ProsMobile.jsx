@@ -1,11 +1,26 @@
-import {
-  faBolt,
-  faHeadset,
-  faRightLeft,
-  faTruckFast,
-} from "@fortawesome/free-solid-svg-icons";
+import { faBolt, faHeadset, faRightLeft, faTruckFast } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
+
+export default function ProsMobile() {
+  const pros = [
+    { icon: faBolt, text: "PROCESO RÁPIDO Y SENCILLO" },
+    { icon: faRightLeft, text: "GARANTÍA DE DEVOLUCIÓN" },
+    { icon: faTruckFast, text: "ENVÍO GRATIS" },
+    { icon: faHeadset, text: "ATENCIÓN 24/7" },
+  ];
+
+  return (
+    <Container>
+      {pros.map((pro) => (
+        <ProItem>
+          <Icon icon={pro.icon} size="xl" />
+          <Text>{pro.text}</Text>
+        </ProItem>
+      ))}
+    </Container>
+  );
+}
 
 const Container = styled.div`
   margin-top: 2.5em;
@@ -39,23 +54,3 @@ const Text = styled.span`
     font-size: 14px;
   }
 `;
-
-export default function ProsMobile() {
-  const pros = [
-    { icon: faBolt, text: "PROCESO RÁPIDO Y SENCILLO" },
-    { icon: faRightLeft, text: "GARANTÍA DE DEVOLUCIÓN" },
-    { icon: faTruckFast, text: "ENVÍO GRATIS" },
-    { icon: faHeadset, text: "ATENCIÓN 24/7" },
-  ];
-
-  return (
-    <Container>
-      {pros.map((pro) => (
-        <ProItem>
-          <Icon icon={pro.icon} size="xl" />
-          <Text>{pro.text}</Text>
-        </ProItem>
-      ))}
-    </Container>
-  );
-}

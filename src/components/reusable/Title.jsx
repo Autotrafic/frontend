@@ -1,6 +1,15 @@
 import styled from "styled-components";
 import { colors } from "../../utils/styles";
 
+export default function Title({ children, lineWidth, middleLine, fontSize }) {
+  return (
+    <Container $middleLine={middleLine}>
+      <Text $fontSize={fontSize}>{children}</Text>
+      <Line $lineWidth={lineWidth} />
+    </Container>
+  );
+}
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -33,14 +42,3 @@ const Line = styled.div`
     align-self: center;
   }
 `;
-
-function Title({ children, lineWidth, middleLine, fontSize }) {
-  return (
-    <Container $middleLine={middleLine}>
-      <Text $fontSize={fontSize}>{children}</Text>
-      <Line $lineWidth={lineWidth} />
-    </Container>
-  );
-}
-
-export default Title;

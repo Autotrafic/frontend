@@ -8,6 +8,23 @@ import ContactForm from "../../components/ContactForm";
 import { TRANSFERENCE_ID } from "../../utils/constants";
 import Comparatives from "./components/Comparatives";
 
+export default function TransferencePage() {
+  const isMobile = window.innerWidth < 1000;
+
+  return (
+    <>
+      <Wrapper id={TRANSFERENCE_ID}>{isMobile ? <TransferMobile /> : <TransferDesktop />}</Wrapper>
+      <Sections>
+        <Prices />
+        <Comparatives />
+        <FrequentAskedQuestions />
+        <OrderSteps />
+        <ContactForm />
+      </Sections>
+    </>
+  );
+}
+
 const Wrapper = styled.div`
   width: 100%;
   display: flex;
@@ -26,27 +43,3 @@ const Sections = styled.div`
     margin-top: 6em;
   }
 `;
-
-export default function TransferencePage() {
-
-  const isMobile = window.innerWidth < 1000;
-
-  return (
-    <>
-      <Wrapper id={TRANSFERENCE_ID}>
-        {isMobile ? (
-          <TransferMobile />
-        ) : (
-          <TransferDesktop />
-        )}
-      </Wrapper>
-      <Sections>
-        <Prices />
-        <Comparatives />
-        <FrequentAskedQuestions />
-        <OrderSteps />
-        <ContactForm />
-      </Sections>
-    </>
-  );
-}
