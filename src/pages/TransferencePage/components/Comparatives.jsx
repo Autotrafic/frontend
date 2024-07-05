@@ -6,7 +6,7 @@ import { faCheck, faXmark } from "@fortawesome/free-solid-svg-icons";
 export default function Comparatives() {
   return (
     <Container>
-      <Title middleLine>Apostamos por la tranquilidad del cliente</Title>
+      <Title middleLine>Razones para tramitar con nosotros</Title>
       <ComparativesStyled>
         <ComparativeBox />
         <ComparativeBox isQuality />

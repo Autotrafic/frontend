@@ -24,7 +24,8 @@ export default function OrderSteps() {
           <TextContainer>
             <StepTitle>Facilítanos tus datos</StepTitle>
             <StepText>
-              Introduce los datos del vehículo para conocer el precio de la transferencia.
+              Introduce los datos del vehículo para conocer el precio de la
+              transferencia.
             </StepText>
           </TextContainer>
         </StepContainer>
@@ -35,8 +36,8 @@ export default function OrderSteps() {
           <TextContainer>
             <StepTitle>Paga online</StepTitle>
             <StepText>
-              Paga online de forma sencilla y segura. Recibirás un correo de confirmación con la
-              información de tu pedido.
+              Paga online de forma sencilla y segura. Recibirás un correo de
+              confirmación con la información de tu pedido.
             </StepText>
           </TextContainer>
         </StepContainer>
@@ -47,8 +48,8 @@ export default function OrderSteps() {
           <TextContainer>
             <StepTitle>Adjunta la documentación</StepTitle>
             <StepText>
-              Toma fotos al momento, o adjunta fotos que ya tengas de la documentación que
-              necesitamos.
+              Toma fotos al momento, o adjunta fotos que ya tengas de la
+              documentación que necesitamos.
             </StepText>
           </TextContainer>
         </StepContainer>
@@ -59,9 +60,10 @@ export default function OrderSteps() {
           <TextContainer>
             <StepTitle>Recibe el provisional</StepTitle>
             <StepText>
-              Una vez verificada la documentación, te enviamos el permiso provisional, con el que
-              podrás circular con tu nuevo vehículo y realizar el seguro para éste. Y sin coste
-              adicional te enviamos a tu domicilio el nuevo permiso de circulación en 6-12 días.
+              Una vez verificada la documentación, te enviamos el permiso
+              provisional, con el que podrás circular con tu nuevo vehículo y
+              realizar el seguro para éste. Y sin coste adicional te enviamos a
+              tu domicilio el nuevo permiso de circulación a tu domicilio.
             </StepText>
           </TextContainer>
         </StepContainer>
@@ -156,7 +158,7 @@ const StepTitle = styled.p`
 
 const StepText = styled.p`
   color: ${colors.primaryGrey};
-  font-size: 14px;
+  font-size: 15px;
   margin: 0;
 
   @media (max-width: ${bigPhoneScreenMedia}) {

@@ -16,9 +16,12 @@ export default function TransferContentDesktop() {
         <Title>Cambia de nombre tu vehículo online en menos de 5 minutos</Title>
         <div>
           <SubTitle>
-            Gestoría Online especializada en la Transferencia de Vehículos con la DGT
+            Gestoría Online especializada en la Transferencia de Vehículos con
+            la DGT
           </SubTitle>
-          <ExplanationText>NOS ENCARGAMOS DE TODO - MEJOR PRECIO GARANTIZADO</ExplanationText>
+          <ExplanationText>
+            NOS ENCARGAMOS DE TODO - MEJOR PRECIO GARANTIZADO
+          </ExplanationText>
         </div>
 
         <AdvantagesListContainer>
@@ -28,14 +31,15 @@ export default function TransferContentDesktop() {
           <AdvantageListItem>
             ✅
             <ListText>
-              Te enviamos el permiso de circulación provisional en pocos minutos de acabar el
-              trámite
+              Te enviamos el permiso de circulación provisional en pocos minutos
+              de acabar el trámite
             </ListText>
           </AdvantageListItem>
           <AdvantageListItem>
             ✅
             <ListText>
-              Te envíamos el nuevo permiso de circulación directamente a casa en unos 10 días
+              Te envíamos el nuevo permiso de circulación directamente a casa en
+              unos 10 días
             </ListText>
           </AdvantageListItem>
         </AdvantagesListContainer>
@@ -43,15 +47,25 @@ export default function TransferContentDesktop() {
         <BoxesContainer>
           <GoogleReviewsBox />
           <img src={dgtLogo} alt="" width={90} />
-          <img src={ministerioImg} alt="" width={112} style={{ borderRadius: "2px" }} />
-          <img src={colegioImg} alt="" width={140} style={{ borderRadius: "2px" }} />
+          <img
+            src={ministerioImg}
+            alt=""
+            width={112}
+            style={{ borderRadius: "2px" }}
+          />
+          <img
+            src={colegioImg}
+            alt=""
+            width={140}
+            style={{ borderRadius: "2px" }}
+          />
         </BoxesContainer>
       </TransferContainer>
       <AnyQuestionContainer>
         <Title lineWidth={"15%"}>¿Necesitas ayuda?</Title>
         <ExplanationText>
-          Contacta ahora con nuestros gestores si necesitas ayuda con el proceso o tienes alguna
-          duda.
+          Contacta ahora con nuestros gestores si necesitas ayuda con el proceso
+          o tienes alguna duda, respondemos al instante.
         </ExplanationText>
         <ContactButtonsContainer>
           <ContactLink
@@ -65,7 +79,10 @@ export default function TransferContentDesktop() {
             </ContactButtonWhatsapp>
           </ContactLink>
 
-          <ContactLink href="callto:+34674219155" style={{ textDecoration: "none" }}>
+          <ContactLink
+            href="callto:+34674219155"
+            style={{ textDecoration: "none" }}
+          >
             <ContactButton>
               <ContactIcon icon={faPhone} />
               <ContactButtonText>Teléfono</ContactButtonText>

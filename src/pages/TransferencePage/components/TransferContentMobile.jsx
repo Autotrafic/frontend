@@ -40,6 +40,7 @@ export default function TransferContentMobile() {
       </BoxesContainer>
 
       <WhatsContactContainer>
+        <WhatsText>Te guiamos por Whatsapp en todo el proceso</WhatsText>
         <a
           href="https://wa.me/643219297"
           target="_blank"
@@ -94,7 +95,6 @@ const WhatsContactContainer = styled.div`
 `;
 
 const WhatsText = styled.p`
-  margin-top: 5px;
   text-align: center;
   font-size: 15px;
 `;
@@ -108,6 +108,7 @@ const WhatsLink = styled.a`
   border-radius: 6px;
   background-color: #51ca50;
   color: white;
+  margin: 0.5rem 0;
   padding: 0.5rem 1.5rem;
   font-size: 19px;
   width: -moz-fit-content;

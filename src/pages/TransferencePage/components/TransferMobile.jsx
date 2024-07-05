@@ -33,7 +33,7 @@ export default function TransferMobile() {
         <TransferContentMobile />
       </LeftSide>
       <RightSide ref={smartFormRef}>
-        <Title middleLine>Realizar transferencia online</Title>
+        <Title middleLine>Empezar transferencia online</Title>
         <SmartFormContainer>
           <SmartForm />
         </SmartFormContainer>
