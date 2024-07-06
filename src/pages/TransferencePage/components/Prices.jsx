@@ -10,9 +10,34 @@ export default function Prices() {
     { title: "Ciclomotor", price: "94,95" },
   ];
 
+  const meses = [
+    "Enero",
+    "Febrero",
+    "Marzo",
+    "Abril",
+    "Mayo",
+    "Junio",
+    "Julio",
+    "Agosto",
+    "Septiembre",
+    "Octubre",
+    "Noviembre",
+    "Diciembre",
+  ];
+
+  function obtenerNombreDelMes(fecha) {
+    const mes = fecha.getMonth();
+    return meses[mes];
+  }
+
+  const fecha = new Date();
+  const nombreDelMes = obtenerNombreDelMes(fecha);
+
   return (
     <Container id={PRICES_SECTION_ID}>
-      <Title middleLine>Los mejores precios del mercado de junio 2024</Title>
+      <Title middleLine>
+        Los mejores precios del mercado de {nombreDelMes} 2024
+      </Title>
       <PricesContainer>
         {prices.map((price) => (
           <PriceContainer>
