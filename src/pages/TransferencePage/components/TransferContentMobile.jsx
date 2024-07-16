@@ -121,6 +121,7 @@ const WhatsLink = styled.a`
   column-gap: 1rem;
   border-radius: 6px;
   background-color: #51ca50;
+  box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.3);
   color: white;
   margin: 0.5rem 0;
   padding: 0.5rem 1.5rem;
@@ -139,11 +140,12 @@ const TextWrapper = styled.div`
 `;
 
 const GoogleReviewsAndPhoneButtonContainer = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-gap: 10px;`;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+`;
 
 const ContactLink = styled.a`
   flex: 1;

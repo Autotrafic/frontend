@@ -45,7 +45,7 @@ const WhatsappFloating = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  bottom: 40px;
+  bottom: 43px;
   right: 110px;
   width: 250px; /* Asegúrate de que sea igual al ancho de la imagen */
   height: auto;
