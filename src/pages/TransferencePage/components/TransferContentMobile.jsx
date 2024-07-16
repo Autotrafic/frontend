@@ -6,6 +6,8 @@ import GoogleReviewsBox from "../../../components/reusable/GoogleReviewsBox";
 import dgtLogo from "../../../assets/dgt.svg";
 import ministerioImg from "../../../assets/ministerio.svg";
 import colegioImg from "../../../assets/colegio-simple-logo.png";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { colors } from "../../../utils/styles";
 
 export default function TransferContentMobile() {
   return (
@@ -54,7 +56,18 @@ export default function TransferContentMobile() {
         <WhatsText>Respondemos al instante</WhatsText>
       </WhatsContactContainer>
 
-      <GoogleReviewsBox />
+      <GoogleReviewsAndPhoneButtonContainer>
+        <GoogleReviewsBox />
+        <ContactLink
+          href="callto:+34643219297"
+          style={{ textDecoration: "none" }}
+        >
+          <ContactButton>
+            <ContactIcon icon={faPhone} />
+            <ContactButtonText>Llama a un gestor</ContactButtonText>
+          </ContactButton>
+        </ContactLink>
+      </GoogleReviewsAndPhoneButtonContainer>
     </TransferContainer>
   );
 }
@@ -65,8 +78,8 @@ const TransferContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2em;
-  margin-bottom: 2em;
+  gap: 1.8em;
+  margin-bottom: 1.5em;
 `;
 
 const SubTitle = styled.p`
@@ -123,4 +136,42 @@ const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 5px;
+`;
+
+const GoogleReviewsAndPhoneButtonContainer = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 10px;`;
+
+const ContactLink = styled.a`
+  flex: 1;
+`;
+
+const ContactButton = styled.div`
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  border: 1px solid ${colors.primaryColor};
+  color: white;
+  background-color: ${colors.primaryColor};
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
+`;
+
+const ContactIcon = styled(FontAwesomeIcon)`
+  width: 20px;
+  height: 20px;
+  padding-left: 10px;
+  transition: 0.3s;
+  color: white;
+`;
+
+const ContactButtonText = styled.p`
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+  padding: 10px 10px;
 `;
