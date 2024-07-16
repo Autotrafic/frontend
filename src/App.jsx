@@ -9,6 +9,7 @@ import NavbarContainer from "./containers/NavbarContainer";
 import FooterContainer from "./containers/FooterContainer";
 import UploadedDocsPage from "./pages/messages/UploadedDocsPage";
 
+
 function App() {
   return (
     <>
@@ -17,6 +18,7 @@ function App() {
       <Router />
 
       <FooterContainer />
+      
       <FloatingWhatsappIcon />
     </>
   );
@@ -26,8 +28,14 @@ function Router() {
   return (
     <Routes>
       <Route path="/" element={<TransferencePage />} />
-      <Route path="/documentacion-pendiente/:orderId" element={<UploadDocsLaterPage />} />
-      <Route path="/gracias-documentacion/:orderId" element={<UploadedDocsPage />} />
+      <Route
+        path="/documentacion-pendiente/:orderId"
+        element={<UploadDocsLaterPage />}
+      />
+      <Route
+        path="/gracias-documentacion/:orderId"
+        element={<UploadedDocsPage />}
+      />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );

@@ -22,12 +22,15 @@ export default function FooterDesktop() {
       <GridComponent>
         <GridTitle>Contacto</GridTitle>
         <ContactTextGroup>
-          <a href="callto:+34674219155" style={{ textDecoration: "none" }}>
+          <a href="callto:+34643219297" style={{ textDecoration: "none" }}>
             <ContactText>+34 643 21 92 97</ContactText>
           </a>
         </ContactTextGroup>
         <ContactTextGroup>
-          <a href="mailto:contacto@autotrafic.es" style={{ textDecoration: "none" }}>
+          <a
+            href="mailto:contacto@autotrafic.es"
+            style={{ textDecoration: "none" }}
+          >
             <ContactText>contacto@autotrafic.es</ContactText>
           </a>
         </ContactTextGroup>
@@ -35,23 +38,39 @@ export default function FooterDesktop() {
           <a href="https://wa.me/34643219297" target="_blank">
             <WhatsappIcon src={whatsappIcon} alt="colegioLogo" />
           </a>
-          <a href="https://wa.me/34643219297" target="_blank" style={{ textDecoration: "none" }}>
+          <a
+            href="https://wa.me/34643219297"
+            target="_blank"
+            style={{ textDecoration: "none" }}
+          >
             <GridText>¡Escríbenos!</GridText>
           </a>
         </WhatsappContainer>
       </GridComponent>
       <GridComponent>
         <GridTitle>Legal</GridTitle>
-        <a href="https://autotrafic.es/aviso-legal/" style={{ textDecoration: "none" }}>
+        <a
+          href="https://autotrafic.es/aviso-legal/"
+          style={{ textDecoration: "none" }}
+        >
           <GridText>Aviso Legal</GridText>
         </a>
-        <a href="https://autotrafic.es/politica-de-privacidad/" style={{ textDecoration: "none" }}>
+        <a
+          href="https://autotrafic.es/politica-de-privacidad/"
+          style={{ textDecoration: "none" }}
+        >
           <GridText>Política de privacidad</GridText>
         </a>
-        <a href="https://autotrafic.es/politica-de-cookies/" style={{ textDecoration: "none" }}>
+        <a
+          href="https://autotrafic.es/politica-de-cookies/"
+          style={{ textDecoration: "none" }}
+        >
           <GridText>Política de cookies</GridText>
         </a>
-        <a href="https://autotrafic.es/terminos-generales/" style={{ textDecoration: "none" }}>
+        <a
+          href="https://autotrafic.es/terminos-generales/"
+          style={{ textDecoration: "none" }}
+        >
           <GridText>Términos generales</GridText>
         </a>
       </GridComponent>

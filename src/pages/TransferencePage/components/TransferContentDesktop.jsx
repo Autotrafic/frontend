@@ -80,7 +80,7 @@ export default function TransferContentDesktop() {
           </ContactLink>
 
           <ContactLink
-            href="callto:+34674219155"
+            href="callto:+34643219297"
             style={{ textDecoration: "none" }}
           >
             <ContactButton>

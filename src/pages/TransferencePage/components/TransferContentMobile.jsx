@@ -103,6 +103,7 @@ const WhatsLink = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   -moz-column-gap: 1rem;
   column-gap: 1rem;
   border-radius: 6px;
@@ -110,7 +111,7 @@ const WhatsLink = styled.a`
   color: white;
   margin: 0.5rem 0;
   padding: 0.5rem 1.5rem;
-  font-size: 19px;
+  font-size: 18px;
   width: -moz-fit-content;
   width: 100%;
   font-weight: 600;
