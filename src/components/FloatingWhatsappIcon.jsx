@@ -50,7 +50,7 @@ const WhatsappFloating = styled.div`
   width: 250px; /* Asegúrate de que sea igual al ancho de la imagen */
   height: auto;
   @media (max-width: ${tabletScreenMedia}) {
-  right: 60px;
+    right: 60px;
   }
 `;
 
@@ -93,6 +93,11 @@ const WhatsappIconContainer = styled.div`
     height: 64px;
     right: 20px;
   }
+  &:hover {
+    width: 64px;
+    height: 64px;
+    transition: 0;
+  }
 `;
 
 const WhatsappIcon = styled(FontAwesomeIcon)`
@@ -101,7 +106,7 @@ const WhatsappIcon = styled(FontAwesomeIcon)`
   height: 60px;
 
   @media (max-width: ${tabletScreenMedia}) {
-     width: 50px;
-  height: 50px;
+    width: 50px;
+    height: 50px;
   }
 `;
