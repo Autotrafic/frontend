@@ -11,10 +11,19 @@ export default function UploadDocsLaterPage() {
 
   useEffect(() => {
     (async () => {
-      const orderReceived = await getOrderById(orderId);
-      setOrder(orderReceived);
+      try {
+        const orderReceived = await getOrderById(orderId);
+        setOrder(orderReceived);
+      } catch (error) {
+        console.error('Error fetching order:', error);
+        setOrder(null);
+      }
     })();
   }, [orderId]);
+
+  const fullName = order?.billData?.fullName || '';
+  const firstName = fullName.split(' ')[0];
+  const email = order?.billData?.email || '';
 
   return (
     <Wrapper>
@@ -24,20 +33,22 @@ export default function UploadDocsLaterPage() {
 
           <p>
             <strong>
-              ¡Fantástico {order.billData.fullName.split(" ")[0]}! Hemos recibido tus datos
+              ¡Fantástico {fullName}! Hemos recibido tus datos
               correctamente
             </strong>
           </p>
 
           <TextContainer>
             <p>
-              Hemos enviado un correo electrónico a la dirección {order.billData.email} con los
+              Hemos enviado un correo electrónico a tu dirección de correo electrónico {email} con los
               documentos que necesitamos para continuar con el trámite.
             </p>
 
             <p>Responde al mismo correo con una foto para cada documento.</p>
 
             <p>Agradecemos muchísimo su confianza. ¡Esperamos verle de nuevo por aquí!</p>
+
+            <p>Puedes cerrar ésta ventana.</p>
           </TextContainer>
         </Container>
       ) : (
