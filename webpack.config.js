@@ -90,7 +90,7 @@ module.exports = (_, argv) => ({
     new HtmlWebPackPlugin({
       template: "./index.html",
     }),
-    new Dotenv(),
+    new Dotenv({ systemvars: true }),
     new webpack.DefinePlugin(envKeys),
     new FaviconsWebpackPlugin("./src/assets/favicon.svg"),
   ],
