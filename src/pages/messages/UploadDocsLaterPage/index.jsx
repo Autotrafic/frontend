@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getOrderById } from "../../../services/order";
 import CheckIcon from "../../../components/reusable/CheckIcon";
+import notifySlack from "../../../services/notifier";
 
 export default function UploadDocsLaterPage() {
   const { orderId } = useParams();
@@ -14,16 +15,19 @@ export default function UploadDocsLaterPage() {
       try {
         const orderReceived = await getOrderById(orderId);
         setOrder(orderReceived);
+        notifySlack(`${orderReceived}`);
       } catch (error) {
-        console.error('Error fetching order:', error);
+        const errorMessage = `Error while receiving order by ID on documents later thankyou page: ${error}.`;
+        notifySlack(errorMessage);
+
         setOrder(null);
       }
     })();
   }, [orderId]);
 
-  const fullName = order?.billData?.fullName || '';
-  const firstName = fullName.split(' ')[0];
-  const email = order?.billData?.email || '';
+  const fullName = order?.billData?.fullName || "";
+  const firstName = fullName.split(" ")[0];
+  const email = order?.billData?.email || "";
 
   return (
     <Wrapper>
@@ -32,16 +36,13 @@ export default function UploadDocsLaterPage() {
           <CheckIcon />
 
           <p>
-            <strong>
-              ¡Fantástico {fullName}! Hemos recibido tus datos
-              correctamente
-            </strong>
+            <strong>¡Fantástico {fullName}! Hemos recibido tus datos correctamente</strong>
           </p>
 
           <TextContainer>
             <p>
-              Hemos enviado un correo electrónico a tu dirección de correo electrónico {email} con los
-              documentos que necesitamos para continuar con el trámite.
+              Hemos enviado un correo electrónico a tu dirección de correo electrónico {email} con
+              los documentos que necesitamos para continuar con el trámite.
             </p>
 
             <p>Responde al mismo correo con una foto para cada documento.</p>
