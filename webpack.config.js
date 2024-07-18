@@ -1,7 +1,16 @@
+const webpack = require("webpack");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const Dotenv = require("dotenv-webpack");
+const dotenv = require("dotenv");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
+
+const env = dotenv.config().parsed;
+
+const envKeys = Object.keys(env).reduce((prev, next) => {
+  prev[`process.env.${next}`] = JSON.stringify(env[next]);
+  return prev;
+}, {});
 
 const deps = require("./package.json").dependencies;
 module.exports = (_, argv) => ({
@@ -82,6 +91,7 @@ module.exports = (_, argv) => ({
       template: "./index.html",
     }),
     new Dotenv(),
+    new webpack.DefinePlugin(envKeys),
     new FaviconsWebpackPlugin("./src/assets/favicon.svg"),
   ],
 });

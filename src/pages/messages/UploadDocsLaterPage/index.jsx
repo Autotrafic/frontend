@@ -9,12 +9,14 @@ export default function UploadDocsLaterPage() {
   const { orderId } = useParams();
 
   const [order, setOrder] = useState();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     (async () => {
       try {
         const orderReceived = await getOrderById(orderId);
         setOrder(orderReceived);
+        setLoading(false);
         notifySlack(`${orderReceived}`);
       } catch (error) {
         const errorMessage = `Error while receiving order by ID on documents later thankyou page: ${error}.`;
@@ -31,29 +33,42 @@ export default function UploadDocsLaterPage() {
 
   return (
     <Wrapper>
-      {order ? (
-        <Container>
-          <CheckIcon />
-
-          <p>
-            <strong>¡Fantástico {fullName}! Hemos recibido tus datos correctamente</strong>
-          </p>
-
-          <TextContainer>
-            <p>
-              Hemos enviado un correo electrónico a tu dirección de correo electrónico {email} con
-              los documentos que necesitamos para continuar con el trámite.
-            </p>
-
-            <p>Responde al mismo correo con una foto para cada documento.</p>
-
-            <p>Agradecemos muchísimo su confianza. ¡Esperamos verle de nuevo por aquí!</p>
-
-            <p>Puedes cerrar ésta ventana.</p>
-          </TextContainer>
-        </Container>
-      ) : (
+      {loading ? (
         <span>Cargando...</span>
+      ) : (
+        <Container>
+          {order ? (
+            <>
+              <CheckIcon />
+
+              <p>
+                <strong>¡Fantástico {fullName}! Hemos recibido tus datos correctamente</strong>
+              </p>
+
+              <TextContainer>
+                <p>
+                  Hemos enviado un correo electrónico a tu dirección de correo electrónico {email}{" "}
+                  con los documentos que necesitamos para continuar con el trámite.
+                </p>
+
+                <p>Responde al mismo correo con una foto para cada documento.</p>
+
+                <p>Agradecemos muchísimo su confianza. ¡Esperamos verle de nuevo por aquí!</p>
+
+                <p>Puedes cerrar ésta ventana.</p>
+              </TextContainer>
+            </>
+          ) : (
+            <TextContainer>
+              <p>
+                Gracias por su compra. Pronto uno de nuestros gestores se pondrá en contacto
+                contigo por WhatsApp.
+              </p>
+
+              <p>Puedes cerrar ésta ventana</p>
+            </TextContainer>
+          )}
+        </Container>
       )}
     </Wrapper>
   );
