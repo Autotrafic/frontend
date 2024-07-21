@@ -13,7 +13,7 @@ export default function Title({ children, lineWidth, middleLine, fontSize }) {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 7px;
   align-items: ${({ $middleLine }) => ($middleLine ? "center" : "flex-start")};
 
   @media (max-width: 1000px) {

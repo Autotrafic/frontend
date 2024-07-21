@@ -14,7 +14,12 @@ export function MobileNavLinks() {
       {isOpen && (
         <ul className="linksWrapper">
           {TRANS_NAVBAR_ROUTES.map((route) => (
-            <Link to={route.scrollTo} smooth offset={-90} onClick={() => setOpen(false)}>
+            <Link
+              to={route.scrollTo}
+              smooth
+              offset={-90}
+              onClick={() => setOpen(false)}
+            >
               <li className="linkItem">{route.title}</li>
             </Link>
           ))}
