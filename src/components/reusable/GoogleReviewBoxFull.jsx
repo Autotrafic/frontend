@@ -43,7 +43,9 @@ const Container = styled.div`
   padding: 15px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 10px;
+  height: 250px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
 `;
 
