@@ -43,7 +43,7 @@ export default function GoogleReviewsCarousel() {
   return (
     <>
      <div className="carousel-wrapper">
-      <Title middleLine>Nuestros clientes agradecidos por un buen servicio</Title>
+      <Title middleLine>Nuestros clientes agradecen un buen servicio</Title>
       <Carousel
         responsive={responsive}
         autoPlay={true}
