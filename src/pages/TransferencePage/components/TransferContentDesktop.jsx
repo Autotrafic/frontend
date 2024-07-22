@@ -19,9 +19,9 @@ export default function TransferContentDesktop() {
             Gestoría Online especializada en la Transferencia de Vehículos con
             la DGT
           </SubTitle>
-          <ExplanationText>
+          <TopExplanationText>
             NOS ENCARGAMOS DE TODO - MEJOR PRECIO GARANTIZADO
-          </ExplanationText>
+          </TopExplanationText>
         </div>
 
         <AdvantagesListContainer>
@@ -110,6 +110,12 @@ const SubTitle = styled.p`
   margin-bottom: 10px;
 `;
 
+const TopExplanationText = styled.p`
+  font-size: 16px;
+  margin: 0;
+  line-height: 22px;
+  font-style: italic;
+`;
 const ExplanationText = styled.p`
   font-size: 16px;
   margin: 0;

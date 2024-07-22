@@ -6,6 +6,7 @@ export const colors = {
   secondaryGrey: "rgb(230, 230, 230, 40)",
   placeholderGrey: "rgb(118, 118, 118)",
   lightGrey: "#ccc",
+  googleReviewGrey: "#e2e8f0",
   primaryGreen: "#30C03A",
   errorRed: "#CA2020",
   linkBlue: "#208FFF",

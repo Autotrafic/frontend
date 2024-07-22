@@ -62,8 +62,8 @@ export default function OrderSteps() {
             <StepText>
               Una vez verificada la documentación, te enviamos el permiso
               provisional, con el que podrás circular con tu nuevo vehículo y
-              realizar el seguro para éste. Y sin coste adicional te enviamos a
-              tu domicilio el nuevo permiso de circulación a tu domicilio.
+              realizar el seguro para éste. Y sin coste adicional te enviamos
+              el nuevo permiso de circulación a tu domicilio.
             </StepText>
           </TextContainer>
         </StepContainer>
