@@ -21,8 +21,8 @@ export default function TransferencePage() {
         <GoogleReviewsCarousel />
         <Prices />
         <Comparatives />
-        <FrequentAskedQuestions />
         <OrderSteps />
+        <FrequentAskedQuestions />
         <ContactForm />
       </Sections>
     </>
