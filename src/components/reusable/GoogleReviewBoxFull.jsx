@@ -37,14 +37,13 @@ export default function GoogleReviewBoxFull({ boxData }) {
 
 const Container = styled.div`
   border: 1px solid ${colors.googleReviewGrey};
-  min-width: 300px;
+  min-width: 180px;
   border-radius: 15px;
   background-color: #fff;
   padding: 15px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-left: 50px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
 `;
 
