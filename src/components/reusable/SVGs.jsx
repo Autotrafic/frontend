@@ -11,11 +11,11 @@ export function GoogleLogo() {
       <g
         id="icons/google-icon__vHRaVHp0"
         stroke="none"
-        stroke-width="1"
+        strokeWidth="1"
         fill="none"
-        fill-rule="evenodd"
+        fillRule="evenodd"
       >
-        <g id="Google__G__Logo__vHRaVHp0" fill-rule="nonzero">
+        <g id="Google__G__Logo__vHRaVHp0" fillRule="nonzero">
           <path
             d="M31.3260073,16.3750916 C31.3260073,15.2908425 31.2380952,14.2007326 31.0505495,13.1340659 L16.0058608,13.1340659 L16.0058608,19.2761905 L24.6212454,19.2761905 C24.2637363,21.2571429 23.1150183,23.0095238 21.432967,24.1230769 L21.432967,28.1084249 L26.5728938,28.1084249 C29.5912088,25.3304029 31.3260073,21.2278388 31.3260073,16.3750916 Z"
             fill="#2A84FC"

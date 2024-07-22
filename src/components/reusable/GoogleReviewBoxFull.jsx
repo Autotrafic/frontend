@@ -37,7 +37,7 @@ export default function GoogleReviewBoxFull({ boxData }) {
 
 const Container = styled.div`
   border: 1px solid ${colors.googleReviewGrey};
-  max-width: 300px;
+  min-width: 300px;
   border-radius: 15px;
   background-color: #fff;
   padding: 15px;
