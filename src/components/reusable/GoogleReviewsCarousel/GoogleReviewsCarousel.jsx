@@ -42,31 +42,31 @@ export default function GoogleReviewsCarousel() {
 
   return (
     <>
-     <div className="carousel-wrapper">
-      <Title middleLine>Nuestros clientes agradecen un buen servicio</Title>
-      <Carousel
-        responsive={responsive}
-        autoPlay={true}
-        swipeable={true}
-        draggable={true}
-        showDots={true}
-        infinite={true}
-        partialVisible={false}
-        arrows={false}
-        autoPlaySpeed={5000}
-        containerClass="custom-carousel"
-        dotListClass="custom-dot-list-style"
-      >
-        {googleReviews.map((review) => (
-          <GoogleReviewBoxFull boxData={review} key={review.customerName} />
-        ))}
-      </Carousel>
-       {/* <ButtonWrapper>
+      <div className="carousel-wrapper">
+        <Title middleLine>La satisfacción de nuestros clientes nos avala</Title>
+        <Carousel
+          responsive={responsive}
+          autoPlay={true}
+          swipeable={true}
+          draggable={true}
+          showDots={true}
+          infinite={true}
+          partialVisible={false}
+          arrows={false}
+          autoPlaySpeed={5000}
+          containerClass="custom-carousel"
+          dotListClass="custom-dot-list-style"
+        >
+          {googleReviews.map((review) => (
+            <GoogleReviewBoxFull boxData={review} key={review.customerName} />
+          ))}
+        </Carousel>
+        {/* <ButtonWrapper>
          <Button onClick={handlePrev}>Previous</Button>
         <Button onClick={handleNext}>Next</Button>
       </ButtonWrapper> */}
       </div>
-      </>
+    </>
   );
 }
 
