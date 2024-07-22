@@ -7,6 +7,7 @@ import OrderSteps from "./components/OrderSteps";
 import ContactForm from "../../components/ContactForm";
 import { TRANSFERENCE_ID } from "../../utils/constants";
 import Comparatives from "./components/Comparatives";
+import GoogleReviewBoxFull from "../../components/reusable/GoogleReviewBoxFull";
 
 export default function TransferencePage() {
   const isMobile = window.innerWidth < 1000;
@@ -15,7 +16,8 @@ export default function TransferencePage() {
     <>
       <Wrapper id={TRANSFERENCE_ID}>{isMobile ? <TransferMobile /> : <TransferDesktop />}</Wrapper>
       <Sections>
-        <Prices />
+        {/* <Prices /> */}
+        <GoogleReviewBoxFull />
         <Comparatives />
         <FrequentAskedQuestions />
         <OrderSteps />
