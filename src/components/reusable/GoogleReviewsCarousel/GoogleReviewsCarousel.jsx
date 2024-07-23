@@ -6,6 +6,7 @@ import { useRef } from "react";
 import { googleReviews } from "../../../utils/data";
 import GoogleReviewBoxFull from "../GoogleReviewBoxFull";
 import Title from "../Title";
+import CarouselButtons from "./CarouselButtons";
 
 export default function GoogleReviewsCarousel() {
   const carouselRef = useRef();
@@ -28,45 +29,32 @@ export default function GoogleReviewsCarousel() {
     },
   };
 
-  const handleNext = () => {
-    if (carouselRef.current) {
-      carouselRef.current.next();
-    }
-  };
-
-  const handlePrev = () => {
-    if (carouselRef.current) {
-      carouselRef.current.previous();
-    }
-  };
-
   return (
-    <>
-     <div className="carousel-wrapper">
-      <Title middleLine>Nuestros clientes agradecen un buen servicio</Title>
-      <Carousel
-        responsive={responsive}
-        autoPlay={true}
-        swipeable={true}
-        draggable={true}
-        showDots={true}
-        infinite={true}
-        partialVisible={false}
-        arrows={false}
-        autoPlaySpeed={5000}
-        containerClass="custom-carousel"
-        dotListClass="custom-dot-list-style"
-      >
-        {googleReviews.map((review) => (
-          <GoogleReviewBoxFull boxData={review} key={review.customerName} />
-        ))}
-      </Carousel>
-       {/* <ButtonWrapper>
-         <Button onClick={handlePrev}>Previous</Button>
-        <Button onClick={handleNext}>Next</Button>
-      </ButtonWrapper> */}
+    <div className="carousel-container">
+      <div className="carousel-wrapper">
+        <Title middleLine>Nuestros clientes agradecen un buen servicio</Title>
+        <Carousel
+          responsive={responsive}
+          pauseOnHover
+          autoPlay={true}
+          swipeable={true}
+          draggable={true}
+          showDots={true}
+          infinite={true}
+          partialVisible={false}
+          arrows={false}
+          autoPlaySpeed={5000}
+          containerClass="custom-carousel"
+          dotListClass="custom-dot-list-style"
+          renderButtonGroupOutside
+          customButtonGroup={<CarouselButtons />}
+        >
+          {googleReviews.map((review) => (
+            <GoogleReviewBoxFull boxData={review} key={review.customerName} />
+          ))}
+        </Carousel>
       </div>
-      </>
+    </div>
   );
 }
 
