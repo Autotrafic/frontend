@@ -31,7 +31,8 @@ const Container = styled.div`
   padding: 0 5.1em;
 
   @media (max-width: 800px) {
-    padding: 0 4em;
+    justify-content: center;
+    padding: 0;
   }
 `;
 
