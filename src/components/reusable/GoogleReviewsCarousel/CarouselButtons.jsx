@@ -3,15 +3,17 @@ import { colors } from "../../../utils/styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
-export default function CarouselButtons() {
+export default function CarouselButtons({ next, previous, goToSlide, ...rest }) {
+  const { carouselState: { currentSlide } } = rest;
+
   return (
     <Container>
       <RelativeDiv>
         <ButtonsWrapper>
-          <Button>
+          <Button onClick={() => previous()}>
             <FontAwesomeIcon icon={faChevronLeft} size="xs" />
           </Button>
-          <Button>
+          <Button onClick={() => goToSlide(currentSlide + 1)}>
             <FontAwesomeIcon icon={faChevronRight} size="xs" />
           </Button>
         </ButtonsWrapper>
