@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export function MobileNavLinks() {
   return (
-    <div
+    <a
       className="contact-link"
       href="callto:+34643219297"
       style={{ textDecoration: "none" }}
@@ -18,6 +18,6 @@ export function MobileNavLinks() {
         />
         <p className="call-us-text">Llámanos</p>
       </div>
-    </div>
+    </a>
   );
 }

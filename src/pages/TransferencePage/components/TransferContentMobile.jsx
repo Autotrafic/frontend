@@ -12,23 +12,42 @@ import { colors } from "../../../utils/styles";
 export default function TransferContentMobile() {
   return (
     <TransferContainer>
-      <Title fontSize={"21px"}>Cambia de nombre tu vehículo online en menos de 5 minutos</Title>
+      <Title fontSize={"21px"}>
+        Cambia de nombre tu vehículo online en menos de 5 minutos
+      </Title>
       <TextWrapper>
         <SubTitle>
-          Gestoría Online especializada en la Transferencia de Vehículos con la DGT
+          Gestoría Online especializada en la Transferencia de Vehículos con la
+          DGT
         </SubTitle>
-        <ExplanationText>NOS ENCARGAMOS DE TODO - MEJOR PRECIO GARANTIZADO</ExplanationText>
+        <ExplanationText>
+          NOS ENCARGAMOS DE TODO - MEJOR PRECIO GARANTIZADO
+        </ExplanationText>
       </TextWrapper>
 
       <BoxesContainer>
-        <img src={colegioImg} alt="" width={125} style={{ borderRadius: "2px" }} />
+        <img
+          src={colegioImg}
+          alt=""
+          width={125}
+          style={{ borderRadius: "2px" }}
+        />
         <img src={dgtLogo} alt="" width={60} />
-        <img src={ministerioImg} alt="" width={90} style={{ borderRadius: "2px" }} />
+        <img
+          src={ministerioImg}
+          alt=""
+          width={90}
+          style={{ borderRadius: "2px" }}
+        />
       </BoxesContainer>
 
       <WhatsContactContainer>
         <WhatsText>Te guiamos por Whatsapp en todo el proceso</WhatsText>
-        <a href="https://wa.me/643219297" target="_blank" style={{ textDecoration: "none" }}>
+        <a
+          href="https://wa.me/643219297"
+          target="_blank"
+          style={{ textDecoration: "none" }}
+        >
           <WhatsLink>
             <WhatsIcon icon={faWhatsapp} size="xl" />
             Habla con un gestor ahora
@@ -39,12 +58,12 @@ export default function TransferContentMobile() {
 
       <GoogleReviewsAndPhoneButtonContainer>
         <GoogleReviewsBox />
-        <ContactLink href="callto:+34643219297" style={{ textDecoration: "none" }}>
+        {/*  <ContactLink href="callto:+34643219297" style={{ textDecoration: "none" }}>
           <ContactButton>
             <ContactIcon icon={faPhone} />
             <ContactButtonText>Llama a un gestor</ContactButtonText>
           </ContactButton>
-        </ContactLink>
+        </ContactLink> */}
       </GoogleReviewsAndPhoneButtonContainer>
     </TransferContainer>
   );
@@ -57,7 +76,7 @@ const TransferContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 1.8em;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
 `;
 
 const SubTitle = styled.p`

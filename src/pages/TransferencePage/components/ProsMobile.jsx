@@ -29,7 +29,7 @@ export default function ProsMobile() {
 }
 
 const Container = styled.div`
-  margin-top: 2.5em;
+  margin-top: 2em;
   display: flex;
   flex-direction: column;
   gap: 2em;
