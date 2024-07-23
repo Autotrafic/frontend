@@ -32,7 +32,7 @@ export default function GoogleReviewsCarousel() {
   return (
     <div className="carousel-container">
       <div className="carousel-wrapper">
-        <Title middleLine>Nuestros clientes agradecen un buen servicio</Title>
+        <Title middleLine>La satisfacción de nuestros clientes nos avala</Title>
         <Carousel
           responsive={responsive}
           pauseOnHover

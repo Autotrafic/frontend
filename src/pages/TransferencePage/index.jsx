@@ -18,8 +18,8 @@ export default function TransferencePage() {
         {isMobile ? <TransferMobile /> : <TransferDesktop />}
       </Wrapper>
       <Sections>
-        <GoogleReviewsCarousel />
         <Prices />
+        <GoogleReviewsCarousel />
         <Comparatives />
         <OrderSteps />
         <FrequentAskedQuestions />
