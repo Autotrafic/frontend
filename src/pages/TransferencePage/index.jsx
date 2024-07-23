@@ -14,13 +14,15 @@ export default function TransferencePage() {
 
   return (
     <>
-      <Wrapper id={TRANSFERENCE_ID}>{isMobile ? <TransferMobile /> : <TransferDesktop />}</Wrapper>
+      <Wrapper id={TRANSFERENCE_ID}>
+        {isMobile ? <TransferMobile /> : <TransferDesktop />}
+      </Wrapper>
       <Sections>
-        {/* <Prices /> */}
         <GoogleReviewsCarousel />
+        <Prices />
         <Comparatives />
-        <FrequentAskedQuestions />
         <OrderSteps />
+        <FrequentAskedQuestions />
         <ContactForm />
       </Sections>
     </>
