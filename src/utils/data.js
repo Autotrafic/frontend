@@ -1,40 +1,43 @@
 export const googleReviews = [
   {
-    timestamp: "Hace 4 días",
+    timestamp: "Hace 2 días",
     customerPicture:
-      "https://cdn.transferencia24.com/central/reviews/aoh14ghf5sklsbziyai9d0gnybkln9lviallvle4szf1uw=s128-c0x00000000-cc-rp-mo.webp",
-    customerName: "Jose Manuel Garcia",
+      "https://cdn.transferencia24.com/central/reviews/aoh14ggi-kc3mvucbx9yjt42v3c0lkssg2hpegrmauev=s128-c0x00000000-cc-rp-mo.webp",
+    customerName: "Jhony Star",
     reviewText:
-      "Solo 10 minutos, y sin moverme casa, para poder dar de baja temporal mi moto. Ahora esperar que me hagan el tramite! Así de fácil!",
+      "Rapidísimo y sencillo, además con el mejor precio que he visto. Contentísimo!!!",
   },
   {
-    timestamp: "Hace 1 semana",
+    timestamp: "Hace 5 días",
     customerPicture:
       "https://cdn.transferencia24.com/central/reviews/aatxajxf7-fvu4_bjl7l1zz8eyd3eidwsmy2eozuf_nf=s128-c0x00000000-cc-rp-mo.webp",
-    customerName: "Javier León",
+    customerName: "Joaquín Ramírez Ortiz",
     reviewText:
-      "Muy recomendable. Trámite rápido y perfectamente explicado. Resuelven incidencias por teléfono al instante.",
+      "Muy recomendable. Mejor calidad precio. Trámite rápido y perfectamente explicado. Resuelven dudas por teléfono al instante 👍",
   },
   {
     timestamp: "Hace 1 semana",
     customerPicture:
       "https://cdn.transferencia24.com/central/reviews/aatxajzkbmuhenvcg9oanspouwrpy0cli5kdyn86mbgv=s128-c0x00000000-cc-rp-mo.webp",
-    customerName: "Eric Martin",
-    reviewText: "Todo perfecto",
+    customerName: "Ezequiel Navarro",
+    reviewText:
+      "Todo perfecto, y a un precio muy bajo, muy recomendable. A partir de ahora haré todos los trámites con ellos.",
+  },
+
+  {
+    timestamp: "Hace 1 semana",
+    customerPicture:
+      "https://cdn.transferencia24.com/central/reviews/aoh14ghpeqixh2itkza0hsdvo6qs-a1xb1x2b3h1cvgi=s128-c0x00000000-cc-rp-mo-ba2.webp",
+    customerName: "Valeria Montenegro",
+    reviewText:
+      "Rápido, fácil e intuitivo. Muy cómodo y sin moverte de casa. Además te ayudan con cualquier cosa que necesites 😍",
   },
   {
     timestamp: "Hace 2 semanas",
     customerPicture:
-      "https://cdn.transferencia24.com/central/reviews/aoh14ggi-kc3mvucbx9yjt42v3c0lkssg2hpegrmauev=s128-c0x00000000-cc-rp-mo.webp",
-    customerName: "Kristian Diez Pinedo",
+      "https://cdn.transferencia24.com/central/reviews/aoh14ghf5sklsbziyai9d0gnybkln9lviallvle4szf1uw=s128-c0x00000000-cc-rp-mo.webp",
+    customerName: "Isa Mendoza",
     reviewText:
-      "Rapidísimo y sencillo, aunque las transferencias tienen un coste superior a lo habitual, pero vale la pena. Recomendable 100%",
-  },
-  {
-    timestamp: "Hace 1 mes",
-    customerPicture:
-      "https://cdn.transferencia24.com/central/reviews/aoh14ghpeqixh2itkza0hsdvo6qs-a1xb1x2b3h1cvgi=s128-c0x00000000-cc-rp-mo-ba2.webp",
-    customerName: "Manuel Castellon",
-    reviewText: "Rápido, fácil e intuitivo. Muy cómodo y sin moverte de casa.",
+      "Solo 5 minutos, y sin moverme casa, para cambiar de nombre mi moto. Ahora esperar que me envien el nuevo permiso! Facilísimo! 😜",
   },
 ];
