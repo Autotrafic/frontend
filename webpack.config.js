@@ -82,6 +82,9 @@ module.exports = (_, argv) => ({
       template: "./index.html",
     }),
     new Dotenv({ systemvars: true }),
-    new FaviconsWebpackPlugin("./src/assets/favicon.ico"),
+    new FaviconsWebpackPlugin({
+      logo: "./src/assets/favicon.ico",
+      outputPath: 'auto/assets',
+  }),
   ],
 });
