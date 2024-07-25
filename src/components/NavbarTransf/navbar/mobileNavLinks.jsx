@@ -7,7 +7,7 @@ export function MobileNavLinks() {
   return (
     <a
       className="contact-link"
-      href="callto:+34643219297"
+      href="tel:+34643219297"
       style={{ textDecoration: "none" }}
     >
       <div className="call-us-container">
@@ -16,7 +16,7 @@ export function MobileNavLinks() {
           size="sm"
           style={{ color: "#FCFCFC", marginRight: "4px" }}
         />
-        <p className="call-us-text">+34 643219297</p>
+        <p className="call-us-text" spaced-digits>+34 643219297</p>
       </div>
     </a>
   );

@@ -58,7 +58,7 @@ export default function TransferContentMobile() {
 
       <GoogleReviewsAndPhoneButtonContainer>
         <GoogleReviewsBox />
-        {/*  <ContactLink href="callto:+34643219297" style={{ textDecoration: "none" }}>
+        {/*  <ContactLink href="tel:+34643219297" style={{ textDecoration: "none" }}>
           <ContactButton>
             <ContactIcon icon={faPhone} />
             <ContactButtonText>Llama a un gestor</ContactButtonText>
