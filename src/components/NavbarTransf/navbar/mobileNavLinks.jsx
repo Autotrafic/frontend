@@ -16,7 +16,7 @@ export function MobileNavLinks() {
           size="sm"
           style={{ color: "#FCFCFC", marginRight: "4px" }}
         />
-        <p className="call-us-text">Llámanos</p>
+        <p className="call-us-text">+34 643219297</p>
       </div>
     </a>
   );
