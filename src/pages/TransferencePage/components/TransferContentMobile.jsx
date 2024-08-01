@@ -106,7 +106,7 @@ const WhatsContactContainer = styled.div`
 
 const WhatsText = styled.p`
   text-align: center;
-  font-size: 15px;
+  font-size: 14px;
 `;
 
 const WhatsLink = styled.a`

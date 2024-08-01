@@ -3,14 +3,19 @@
   --primary-color: #4154f1;
   --secondary-color: #8080ff;
   --primary-grey: #787878;
-  --secondary-grey: rgba(230, 230, 230, 0.4); /* Note the correction for opacity */
+  --secondary-grey: rgba(
+    230,
+    230,
+    230,
+    0.4
+  ); /* Note the correction for opacity */
   --placeholder-grey: rgb(118, 118, 118);
   --light-grey: #ccc;
   --primary-green: #30c03a;
 }
 
 * {
-  font-family: "Montserrat";
+  font-family: "Poppins" !important;
   box-sizing: border-box;
   line-height: normal;
 }
@@ -26,7 +31,7 @@ textarea {
 }
 
 #react-app-root {
-  font-family: "Montserrat";
+  font-family: "Poppins" !important;
   box-sizing: border-box;
   line-height: normal;
   padding: 20px;
