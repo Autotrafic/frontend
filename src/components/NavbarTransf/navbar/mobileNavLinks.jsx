@@ -16,7 +16,9 @@ export function MobileNavLinks() {
           size="sm"
           style={{ color: "#FCFCFC", marginRight: "4px" }}
         />
-        <p className="call-us-text" spaced-digits>+34 643219297</p>
+        <p className="call-us-text" spaced-digits>
+          643 21 92 97
+        </p>
       </div>
     </a>
   );

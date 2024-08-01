@@ -61,7 +61,7 @@ const Title = styled.h2`
   color: #fff;
   font-weight: 600;
   margin: 0 0 1em 0;
-  font-size: 24px;
+  font-size: 22px;
 `;
 
 const LeftSide = styled.div`
