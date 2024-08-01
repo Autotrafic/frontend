@@ -16,7 +16,7 @@ export default function GoogleReviewsBox() {
           <ReviewsStar key={i} icon={faStar} $isMobile={isMobile} />
         ))}
       </ReviewsStarsContainer>
-      <ReviewsText $isMobile={isMobile}>123 reseñas </ReviewsText>
+      <ReviewsText $isMobile={isMobile}>148 reseñas </ReviewsText>
     </ReviewsContainer>
   );
 }
@@ -50,7 +50,7 @@ const ReviewsStarsContainer = styled.div`
 `;
 
 const ReviewsStar = styled(FontAwesomeIcon)`
-  width: ${({ $isMobile }) => ($isMobile ? "25px" : "20px")};
-  height: ${({ $isMobile }) => ($isMobile ? "25px" : "20px")};
+  width: ${({ $isMobile }) => ($isMobile ? "23px" : "20px")};
+  height: ${({ $isMobile }) => ($isMobile ? "23px" : "20px")};
   color: #ffc106;
 `;
