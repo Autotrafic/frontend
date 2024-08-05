@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import Title from "../../../components/reusable/Title";
 import { colors } from "../../../utils/styles";
-import { PRICES_SECTION_ID } from "../../../utils/constants";
+import {
+  PRICES_SECTION_ID,
+  sectionPadding,
+} from "../../../utils/constants";
 
 export default function Prices() {
   const prices = [
@@ -62,7 +65,9 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1.5em;
-  padding: 0 2rem;
+  padding: ${sectionPadding};
+  padding-right: 2em;
+  padding-left: 2em;
 `;
 
 const PricesContainer = styled.div`

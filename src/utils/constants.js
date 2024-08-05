@@ -1,11 +1,16 @@
-export const BASE_API_URL = "https://autotrafic-backend-395e940ac60f.herokuapp.com";
+export const BASE_API_URL =
+  "https://autotrafic-backend-395e940ac60f.herokuapp.com";
 
 export const TERMS_URL = "https://autotrafic.es/terminos-generales/";
 export const PRIVACY_URL = "https://autotrafic.es/politica-de-privacidad/";
 
+export const sectionPadding = "2.5em 0";
+export const sectionBackgroundColor = "#f7f9fd";
+
 export const FAQ = [
   {
-    question: "¿Cuál es el precio total de la transferencia en Gestoria AutoTrafic?",
+    question:
+      "¿Cuál es el precio total de la transferencia en Gestoria AutoTrafic?",
     answer:
       "Coches y motos: 119,95€. Ciclomotores: 95€. Si tu vehículo tiene que pagar ITP (Impuesto de Transmisiones Patrimoniales), éste va íntegramente a Hacienda y Gestoria AutoTrafic sólo intermedia el pago sin sobre coste.",
   },

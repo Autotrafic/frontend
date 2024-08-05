@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { colors } from "../../../utils/styles";
 import Title from "../../../components/reusable/Title";
-import { PROCESS_SECTION_ID } from "../../../utils/constants";
+import { PROCESS_SECTION_ID, sectionPadding } from "../../../utils/constants";
 
 const bigPhoneScreenMedia = "476px";
 
@@ -62,8 +62,8 @@ export default function OrderSteps() {
             <StepText>
               Una vez verificada la documentación, te enviamos el permiso
               provisional, con el que podrás circular con tu nuevo vehículo y
-              realizar el seguro para éste. Y sin coste adicional te enviamos
-              el nuevo permiso de circulación a tu domicilio.
+              realizar el seguro para éste. Y sin coste adicional te enviamos el
+              nuevo permiso de circulación a tu domicilio.
             </StepText>
           </TextContainer>
         </StepContainer>
@@ -79,7 +79,9 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 20px;
+  padding: ${sectionPadding};
+  padding-right: 2em;
+  padding-left: 2em;
 
   @media (max-width: ${bigPhoneScreenMedia}) {
     margin-bottom: 0;

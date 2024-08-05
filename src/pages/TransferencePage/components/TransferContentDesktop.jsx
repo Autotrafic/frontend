@@ -26,20 +26,13 @@ export default function TransferContentDesktop() {
 
         <AdvantagesListContainer>
           <AdvantageListItem>
-            ✅<ListText>Gestión 100% online rápida y sencilla</ListText>
+            ✅<ListText>Gestión 100% online, rápida y sencilla</ListText>
           </AdvantageListItem>
           <AdvantageListItem>
             ✅
             <ListText>
-              Te enviamos el permiso de circulación provisional en pocos minutos
-              de acabar el trámite
-            </ListText>
-          </AdvantageListItem>
-          <AdvantageListItem>
-            ✅
-            <ListText>
-              Te envíamos el nuevo permiso de circulación directamente a casa en
-              unos 10 días
+              Te damos el permiso provisional al momento para que puedas
+              circular
             </ListText>
           </AdvantageListItem>
         </AdvantagesListContainer>

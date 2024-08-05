@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Title from "../../../components/reusable/Title";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { sectionPadding } from "../../../utils/constants";
 
 export default function Comparatives() {
   return (
@@ -45,7 +46,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2em;
-  padding: 0 2rem;
+  padding: ${sectionPadding};
+  padding-right: 2em;
+  padding-left: 2em;
   align-items: center;
 `;
 
@@ -64,7 +67,8 @@ const ComparativesStyled = styled.div`
 `;
 
 const ComparativeBoxStyled = styled.div`
-  color: ${({ $isQuality }) => ($isQuality ? "rgb(4 120 87/1)" : "rgb(190 18 60/1)")};
+  color: ${({ $isQuality }) =>
+    $isQuality ? "rgb(4 120 87/1)" : "rgb(190 18 60/1)"};
   background-color: ${({ $isQuality }) =>
     $isQuality ? "rgba(209,250,229,.7)" : "rgba(255,228,230,.75)"};
   border-radius: 0.5rem;

@@ -34,14 +34,13 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   padding-top: 60px;
-  margin-bottom: 4.5em;
+  margin-bottom: 1.5em;
 `;
 
 const Sections = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 4em;
-  margin-bottom: 4em;
+  gap: 1.5em;
 
   @media (max-width: 600px) {
     margin-top: 6em;
