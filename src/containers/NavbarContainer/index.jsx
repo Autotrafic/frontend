@@ -7,7 +7,7 @@ export default function NavbarContainer() {
 
   return (
     <>
-      {location.pathname === "/" && <NavbarTransf />}
+      {location.pathname !== "/inicio" && <NavbarTransf />}
       {location.pathname === "/inicio" && <Navbar />}
     </>
   );
