@@ -78,7 +78,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 60px 0 100px 0;
+  padding: 30px 0 100px 0;
   margin-bottom: 0;
 
   @media (max-width: ${bigPhoneScreenMedia}) {

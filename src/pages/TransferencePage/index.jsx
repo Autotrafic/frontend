@@ -8,6 +8,7 @@ import ContactForm from "../../components/ContactForm";
 import { TRANSFERENCE_ID } from "../../utils/constants";
 import Comparatives from "./components/Comparatives";
 import GoogleReviewsCarousel from "../../components/reusable/GoogleReviewsCarousel/GoogleReviewsCarousel";
+import MoreProducts from "./components/MoreProducts";
 
 export default function TransferencePage() {
   const isMobile = window.innerWidth < 1000;
@@ -23,6 +24,7 @@ export default function TransferencePage() {
         <Comparatives />
         <OrderSteps />
         <FrequentAskedQuestions />
+        <MoreProducts />
         <ContactForm />
       </Sections>
     </>
@@ -34,14 +36,13 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   padding-top: 60px;
-  margin-bottom: 4.5em;
+  margin-bottom: 1.5em;
 `;
 
 const Sections = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 4em;
-  margin-bottom: 4em;
+  gap: 1.5em;
 
   @media (max-width: 600px) {
     margin-top: 6em;

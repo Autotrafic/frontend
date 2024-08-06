@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import "../styles/faqAccordionStyled.css";
-import { FAQ, FAQ_SECTION_ID } from "../utils/constants";
+import { FAQ, FAQ_SECTION_ID, sectionPadding } from "../utils/constants";
 import Title from "./reusable/Title";
 
 const bigPhoneScreenMedia = "476px";
@@ -30,18 +30,33 @@ export default function FrequentAskedQuestions() {
               onClick={() => toggleFaq(index)}
             >
               <div className="title">
-                <h1 className={`item-question ${isClicked === index ? "show-item-question" : ""}`}>
+                <h1
+                  className={`item-question ${
+                    isClicked === index ? "show-item-question" : ""
+                  }`}
+                >
                   {item.question}
                 </h1>
                 {isClicked === index ? (
-                  <FontAwesomeIcon icon={faMinus} style={{ color: "#ffffff" }} />
+                  <FontAwesomeIcon
+                    icon={faMinus}
+                    style={{ color: "#ffffff" }}
+                  />
                 ) : (
                   <FontAwesomeIcon icon={faPlus} />
                 )}
               </div>
 
-              <div className={`content ${isClicked === index ? "show-content" : ""}`}>
-                <p className={`item-answer ${isClicked === index ? "show-item-answer" : ""}`}>
+              <div
+                className={`content ${
+                  isClicked === index ? "show-content" : ""
+                }`}
+              >
+                <p
+                  className={`item-answer ${
+                    isClicked === index ? "show-item-answer" : ""
+                  }`}
+                >
                   {item.answer}
                 </p>
               </div>
@@ -60,7 +75,9 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 20px;
+  padding: ${sectionPadding};
+  padding-right: 2em;
+  padding-left: 2em;
 
   @media (max-width: ${bigPhoneScreenMedia}) {
     margin-bottom: 0;
