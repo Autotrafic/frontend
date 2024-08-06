@@ -1,5 +1,5 @@
-export const BASE_API_URL =
-  "https://autotrafic-backend-395e940ac60f.herokuapp.com";
+
+export const BASE_API_URL = "https://api.autotrafic.es";
 
 export const TERMS_URL = "https://autotrafic.es/terminos-generales/";
 export const PRIVACY_URL = "https://autotrafic.es/politica-de-privacidad/";
