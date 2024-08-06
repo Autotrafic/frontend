@@ -8,6 +8,7 @@ import FloatingWhatsappIcon from "./components/FloatingWhatsappIcon";
 import NavbarContainer from "./containers/NavbarContainer";
 import FooterContainer from "./containers/FooterContainer";
 import UploadedDocsPage from "./pages/messages/UploadedDocsPage";
+import ReferralPage from "./pages/referral";
 
 
 function App() {
@@ -28,6 +29,7 @@ function Router() {
   return (
     <Routes>
       <Route path="/" element={<TransferencePage />} />
+      <Route path="/referral/:referralId" element={<ReferralPage />} />
       <Route
         path="/documentacion-pendiente/:orderId"
         element={<UploadDocsLaterPage />}

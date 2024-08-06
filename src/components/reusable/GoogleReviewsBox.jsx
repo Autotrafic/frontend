@@ -16,7 +16,7 @@ export default function GoogleReviewsBox() {
           <ReviewsStar key={i} icon={faStar} $isMobile={isMobile} />
         ))}
       </ReviewsStarsContainer>
-      <ReviewsText $isMobile={isMobile}>148 reseñas </ReviewsText>
+      <ReviewsText $isMobile={isMobile}>278 reseñas </ReviewsText>
     </ReviewsContainer>
   );
 }

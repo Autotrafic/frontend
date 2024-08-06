@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import TransferMobile from "./components/TransferMobile";
 import TransferDesktop from "./components/TransferDesktop";
 import Prices from "./components/Prices";
@@ -9,15 +11,26 @@ import { TRANSFERENCE_ID } from "../../utils/constants";
 import Comparatives from "./components/Comparatives";
 import GoogleReviewsCarousel from "../../components/reusable/GoogleReviewsCarousel/GoogleReviewsCarousel";
 import MoreProducts from "./components/MoreProducts";
+import { apiRequest } from "../../utils/request";
 
 export default function TransferencePage() {
+  const { referralId } = useParams();
   const isMobile = window.innerWidth < 1000;
+
+  const [isReferralValid, setIsReferralValid] = useState(false);
+
+  useEffect(() => {
+    (async () => {
+      if (referralId) {
+        const { isValid } = await apiRequest(`referral/id/validate?id=${referralId}`);
+        setIsReferralValid(isValid);
+      }
+    })();
+  }, [referralId]);
 
   return (
     <>
-      <Wrapper id={TRANSFERENCE_ID}>
-        {isMobile ? <TransferMobile /> : <TransferDesktop />}
-      </Wrapper>
+      <Wrapper id={TRANSFERENCE_ID}>{isMobile ? <TransferMobile /> : <TransferDesktop />}</Wrapper>
       <Sections>
         <Prices />
         <GoogleReviewsCarousel />
