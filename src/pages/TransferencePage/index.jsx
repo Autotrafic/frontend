@@ -8,6 +8,7 @@ import ContactForm from "../../components/ContactForm";
 import { TRANSFERENCE_ID } from "../../utils/constants";
 import Comparatives from "./components/Comparatives";
 import GoogleReviewsCarousel from "../../components/reusable/GoogleReviewsCarousel/GoogleReviewsCarousel";
+import MoreProducts from "./components/MoreProducts";
 
 export default function TransferencePage() {
   const isMobile = window.innerWidth < 1000;
@@ -23,6 +24,7 @@ export default function TransferencePage() {
         <Comparatives />
         <OrderSteps />
         <FrequentAskedQuestions />
+        <MoreProducts />
         <ContactForm />
       </Sections>
     </>
