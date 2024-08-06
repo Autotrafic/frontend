@@ -42,9 +42,9 @@ const Wrapper = styled.div`
 const Sections = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1.5em;
+  gap: 0.5em;
 
   @media (max-width: 600px) {
-    margin-top: 6em;
+    margin-top: 4em;
   }
 `;
