@@ -2,15 +2,12 @@ import "react-multi-carousel/lib/styles.css";
 import "./styles.css";
 import styled from "styled-components";
 import Carousel from "react-multi-carousel";
-import { useRef } from "react";
 import { googleReviews } from "../../../utils/data";
 import GoogleReviewBoxFull from "../GoogleReviewBoxFull";
 import Title from "../Title";
 import CarouselButtons from "./CarouselButtons";
 
 export default function GoogleReviewsCarousel() {
-  const carouselRef = useRef();
-
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },

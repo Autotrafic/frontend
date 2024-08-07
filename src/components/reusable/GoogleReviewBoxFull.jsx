@@ -5,7 +5,7 @@ import { GoogleLogo, GoogleStar } from "./SVGs";
 const starsNumber = [1, 2, 3, 4, 5];
 
 export default function GoogleReviewBoxFull({ boxData }) {
-  const {timestamp, customerPicture, customerName, reviewText} = boxData;
+  const { timestamp, customerPicture, customerName, reviewText } = boxData;
 
   return (
     <Container>
@@ -44,9 +44,8 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 10px;
-  height: 250px;
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.15);
+  height: 260px;
 `;
 
 const TimestampContainer = styled.div`
@@ -101,13 +100,14 @@ const GoogleStars = styled.div`
 `;
 
 const GoogleContent = styled.div`
+  flex: 1;
   display: flex;
   justify-content: flex-end;
+  align-items: flex-end;
   width: 100%;
   font-size: 10px;
   font-weight: 500;
   line-height: 10px;
-  align-items: center;
   color: inherit;
   margin-top: 20px;
 `;
