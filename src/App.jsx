@@ -8,7 +8,6 @@ import FloatingWhatsappIcon from "./components/FloatingWhatsappIcon";
 import NavbarContainer from "./containers/NavbarContainer";
 import FooterContainer from "./containers/FooterContainer";
 import UploadedDocsPage from "./pages/messages/UploadedDocsPage";
-import ReferralPage from "./pages/referral";
 
 function App() {
   return (
