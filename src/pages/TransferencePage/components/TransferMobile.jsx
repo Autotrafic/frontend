@@ -5,7 +5,7 @@ import TransferContentMobile from "./TransferContentMobile";
 import ProsMobile from "./ProsMobile";
 import Drop from "./Drop";
 
-export default function TransferMobile() {
+export default function TransferMobile({isReferralValid}) {
   const [smartFormHeight, setSmartFormHeight] = useState(0);
   const smartFormRef = useRef(null);
 

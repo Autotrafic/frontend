@@ -25,16 +25,33 @@ export default function TransferContentDesktop() {
         </div>
 
         <AdvantagesListContainer>
-          <AdvantageListItem>
-            ✅<ListText>Gestión 100% online, rápida y sencilla</ListText>
-          </AdvantageListItem>
-          <AdvantageListItem>
-            ✅
+          <div>
+            <AdvantageListItem>
+              ✅
+              <ListTextBold>
+                Gestión 100% online, rápida y sencilla
+              </ListTextBold>
+            </AdvantageListItem>
             <ListText>
-              Te damos el permiso provisional al momento para que puedas
-              circular
+              - Ahorra tiempo y dinero: Sin necesidad de desplazamientos ni
+              largas colas
             </ListText>
-          </AdvantageListItem>
+          </div>
+          <div>
+            <AdvantageListItem>
+              ✅
+              <ListTextBold>
+                Te damos el permiso provisional al momento para que puedas
+                circular
+              </ListTextBold>
+            </AdvantageListItem>
+            <ListText>
+              - Todos tus documentos son manejados con total confidencialidad
+            </ListText>
+            <ListText>
+              - Nuestro servicio está autorizado y regulado por la DGT
+            </ListText>
+          </div>
         </AdvantagesListContainer>
 
         <BoxesContainer>
@@ -90,7 +107,7 @@ export default function TransferContentDesktop() {
 const TransferContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 30px;
 `;
 
 const SubTitle = styled.p`
@@ -128,9 +145,18 @@ const AdvantageListItem = styled.div`
   font-size: 18px;
 `;
 
-const ListText = styled.p`
+const ListTextBold = styled.p`
   font-size: 16px;
+  font-weight: 600;
   margin: 0;
+  color: #383838;
+`;
+
+const ListText = styled.p`
+  font-size: 14px;
+  margin: 0;
+  margin-left: 30px;
+  color: #4f4f4f;
 `;
 
 const AnyQuestionContainer = styled.div`

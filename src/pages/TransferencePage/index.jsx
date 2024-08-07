@@ -33,7 +33,11 @@ export default function TransferencePage() {
   return (
     <>
       <Wrapper id={TRANSFERENCE_ID}>
-        {isMobile ? <TransferMobile /> : <TransferDesktop />}
+        {isMobile ? (
+          <TransferMobile isReferralValid={isReferralValid} />
+        ) : (
+          <TransferDesktop isReferralValid={isReferralValid} />
+        )}
       </Wrapper>
       <Sections>
         <Prices />
