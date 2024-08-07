@@ -22,7 +22,9 @@ export default function TransferencePage() {
   useEffect(() => {
     (async () => {
       if (referralId) {
-        const { isValid } = await apiRequest(`referral/id/validate?id=${referralId}`);
+        const { isValid } = await apiRequest(
+          `referral/id/validate?id=${referralId}`
+        );
         setIsReferralValid(isValid);
       }
     })();
@@ -30,14 +32,16 @@ export default function TransferencePage() {
 
   return (
     <>
-      <Wrapper id={TRANSFERENCE_ID}>{isMobile ? <TransferMobile /> : <TransferDesktop />}</Wrapper>
+      <Wrapper id={TRANSFERENCE_ID}>
+        {isMobile ? <TransferMobile /> : <TransferDesktop />}
+      </Wrapper>
       <Sections>
         <Prices />
         <GoogleReviewsCarousel />
         <Comparatives />
         <OrderSteps />
         <FrequentAskedQuestions />
-        <MoreProducts />
+        {/* <MoreProducts /> */}
         <ContactForm />
       </Sections>
     </>
