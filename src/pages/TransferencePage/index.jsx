@@ -22,9 +22,7 @@ export default function TransferencePage() {
   useEffect(() => {
     (async () => {
       if (referralId) {
-        const { isValid } = await apiRequest(
-          `referral/id/validate?id=${referralId}`
-        );
+        const { isValid } = await apiRequest(`referral/id/validate?id=${referralId}`);
         setIsReferralValid(isValid);
       }
     })();
@@ -33,18 +31,15 @@ export default function TransferencePage() {
   return (
     <>
       {isReferralValid && (
-        <ReferralMessageContainer>
+        <ReferralMessageContainer $isReferralValid={isReferralValid}>
           <ReferralMessageText>
-            -10€ de descuento si vienes de HistorialVehículo!
+            ¡Tienes <strong>10€ de descuento</strong> por venir de HistorialVehículo!
           </ReferralMessageText>
         </ReferralMessageContainer>
       )}
-      <Wrapper id={TRANSFERENCE_ID}>
-        {isMobile ? (
-          <TransferMobile isReferralValid={isReferralValid} />
-        ) : (
-          <TransferDesktop isReferralValid={isReferralValid} />
-        )}
+
+      <Wrapper id={TRANSFERENCE_ID} $isReferralValid={isReferralValid}>
+        {isMobile ? <TransferMobile isReferralValid={isReferralValid} /> : <TransferDesktop isReferralValid={isReferralValid} />}
       </Wrapper>
       <Sections>
         <Prices />
@@ -60,14 +55,13 @@ export default function TransferencePage() {
 }
 
 const ReferralMessageContainer = styled.div`
+  margin-top: ${({ $isReferralValid }) => ($isReferralValid ? "60px" : "0")};
   display: flex;
   justify-content: center;
-  padding: 0.3em;
+  padding: 0.6em 0.3em;
   width: 100%;
   background-color: #fae7c8;
-  border: 2px solid #f78c00;
-  border-radius: 10px;
-  margin-bottom: 1em;
+  border-bottom: 2px solid #f78c00;
 `;
 
 const ReferralMessageText = styled.p`
@@ -81,7 +75,7 @@ const Wrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 60px;
+  padding-top: ${({ $isReferralValid }) => ($isReferralValid ? "0" : "60px")};
   margin-bottom: 1.5em;
 `;
 
