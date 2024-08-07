@@ -10,7 +10,6 @@ import FooterContainer from "./containers/FooterContainer";
 import UploadedDocsPage from "./pages/messages/UploadedDocsPage";
 import ReferralPage from "./pages/referral";
 
-
 function App() {
   return (
     <>
@@ -19,7 +18,7 @@ function App() {
       <Router />
 
       <FooterContainer />
-      
+
       <FloatingWhatsappIcon />
     </>
   );
@@ -29,7 +28,7 @@ function Router() {
   return (
     <Routes>
       <Route path="/" element={<TransferencePage />} />
-      <Route path="/referral/:referralId" element={<ReferralPage />} />
+      <Route path="/referral/:referralId" element={<TransferencePage />} />
       <Route
         path="/documentacion-pendiente/:orderId"
         element={<UploadDocsLaterPage />}

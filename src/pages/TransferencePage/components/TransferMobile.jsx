@@ -30,7 +30,7 @@ export default function TransferMobile({isReferralValid}) {
   return (
     <Container>
       <LeftSide>
-        <TransferContentMobile />
+        <TransferContentMobile isReferralValid={isReferralValid}/>
       </LeftSide>
       <RightSide ref={smartFormRef}>
         <Title middleLine>Empezar transferencia online</Title>

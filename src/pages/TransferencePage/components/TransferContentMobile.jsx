@@ -9,9 +9,9 @@ import colegioImg from "../../../assets/colegio-simple-logo.png";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { colors } from "../../../utils/styles";
 
-export default function TransferContentMobile() {
+export default function TransferContentMobile({ isReferralValid }) {
   return (
-    <TransferContainer>
+    <TransferContainer $isReferralValid={isReferralValid}>
       <Title fontSize={"21px"}>
         Cambia de nombre tu vehículo online en menos de 5 minutos
       </Title>
@@ -42,22 +42,19 @@ export default function TransferContentMobile() {
       </BoxesContainer>
 
       <WhatsContactContainer>
-        <WhatsText>Te guiamos por Whatsapp en todo el proceso</WhatsText>
-        <a
-          href="https://wa.me/643219297"
-          target="_blank"
-          style={{ textDecoration: "none" }}
-        >
-          <WhatsLink>
+        <WhatsText>Te guiamos por Whatsapp en todo momento</WhatsText>
+        <WhatsappButtonContainer href="https://wa.me/643219297" target="_blank">
+          <WhatsLink $isReferralValid={isReferralValid}>
             <WhatsIcon icon={faWhatsapp} size="xl" />
             Habla con un gestor ahora
           </WhatsLink>
-        </a>
+        </WhatsappButtonContainer>
         <WhatsText>Respondemos al instante</WhatsText>
       </WhatsContactContainer>
 
       <GoogleReviewsAndPhoneButtonContainer>
-        <GoogleReviewsBox />
+        {isReferralValid ? "" : <GoogleReviewsBox />}
+
         {/*  <ContactLink href="tel:+34643219297" style={{ textDecoration: "none" }}>
           <ContactButton>
             <ContactIcon icon={faPhone} />
@@ -75,8 +72,40 @@ const TransferContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.8em;
-  margin-bottom: 1em;
+  ${({ $isReferralValid }) =>
+    $isReferralValid ? "gap: 2.2em;" : "font-size: 18px;"}
+  ${({ $isReferralValid }) => ($isReferralValid ? "" : "margin-bottom: 1em;")}
+`;
+
+const WhatsappButtonContainer = styled.a`
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+`;
+const WhatsLink = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  -moz-column-gap: 1rem;
+  column-gap: 1rem;
+  border-radius: 6px;
+  background-color: #51ca50;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  color: white;
+  margin: 0.5rem 0;
+  ${({ $isReferralValid }) =>
+    $isReferralValid ? "margin: 0.3rem 0;" : "margin: 0.5rem 0;"}
+  ${({ $isReferralValid }) =>
+    $isReferralValid ? "padding: 0.4rem 1rem;" : "padding: 0.5rem 1.5rem;"}
+  ${({ $isReferralValid }) =>
+    $isReferralValid ? "font-size: 16px;" : "font-size: 18px;"}
+  ${({ $isReferralValid }) =>
+    $isReferralValid ? "width: 94%;" : "width: 100%;"}
+  width: -moz-fit-content;
+  font-weight: 600;
+  text-decoration: inherit;
+  border: none;
 `;
 
 const SubTitle = styled.p`
@@ -107,27 +136,7 @@ const WhatsContactContainer = styled.div`
 const WhatsText = styled.p`
   text-align: center;
   font-size: 14px;
-`;
-
-const WhatsLink = styled.a`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  -moz-column-gap: 1rem;
-  column-gap: 1rem;
-  border-radius: 6px;
-  background-color: #51ca50;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-  color: white;
-  margin: 0.5rem 0;
-  padding: 0.5rem 1.5rem;
-  font-size: 18px;
-  width: -moz-fit-content;
-  width: 100%;
-  font-weight: 600;
-  text-decoration: inherit;
-  border: none;
+  color: #383838;
 `;
 
 const TextWrapper = styled.div`

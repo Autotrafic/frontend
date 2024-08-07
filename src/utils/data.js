@@ -13,7 +13,7 @@ export const googleReviews = [
       "https://cdn.transferencia24.com/central/reviews/aatxajxf7-fvu4_bjl7l1zz8eyd3eidwsmy2eozuf_nf=s128-c0x00000000-cc-rp-mo.webp",
     customerName: "Joaquín Ramírez Ortiz",
     reviewText:
-      "Muy recomendable. Mejor calidad precio. Trámite rápido y perfectamente explicado. Resuelven dudas por teléfono al instante 👍",
+      "Muy recomendable. Mejor calidad precio. Trámite rápido y perfectamente explicado. Resuelven dudas por teléfono al momento 👍",
   },
   {
     timestamp: "Hace 1 semana",
@@ -30,7 +30,7 @@ export const googleReviews = [
       "https://cdn.transferencia24.com/central/reviews/aoh14ghpeqixh2itkza0hsdvo6qs-a1xb1x2b3h1cvgi=s128-c0x00000000-cc-rp-mo-ba2.webp",
     customerName: "Valeria Montenegro",
     reviewText:
-      "Rápido, fácil e intuitivo. Muy cómodo y sin moverte de casa. Además te ayudan con cualquier cosa que necesites 😍",
+      "Al principio tenía dudas sobre la seguridad, pero todo fue muy seguro y profesional. Súper contenta!! 😍",
   },
   {
     timestamp: "Hace 2 semanas",
@@ -38,6 +38,6 @@ export const googleReviews = [
       "https://cdn.transferencia24.com/central/reviews/aoh14ghf5sklsbziyai9d0gnybkln9lviallvle4szf1uw=s128-c0x00000000-cc-rp-mo.webp",
     customerName: "Isa Mendoza",
     reviewText:
-      "Solo 5 minutos, y sin moverme casa, para cambiar de nombre mi moto. Ahora esperar que me envien el nuevo permiso! Facilísimo! 😜",
+      "Solo 5 minutos, y sin moverme casa, para cambiar de nombre mi moto. Fácil y intuitivo, además te ayudan con cualquier cosa que necesites. Ok!",
   },
 ];

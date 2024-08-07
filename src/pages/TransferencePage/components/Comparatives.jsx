@@ -110,17 +110,17 @@ const ComparativeItem = styled.li`
 `;
 
 const goodComparations = [
-  "Sin cita previa",
-  "Disponible cualquier hora del día",
+  "Disponible en cualquier hora del día, sin moverte de casa",
   "Proceso fácil y rápido",
-  "Asesoramiento con un gestor durante todo el proceso",
+  "Asesoramiento con un gestor en todo momento",
   "Precio muy económico",
+  "Transparencia total, sin cargos ocultos",
 ];
 
 const badComparations = [
-  "Con cita previa",
-  "Colas y largas esperas",
+  "Desplazamiento y largas esperas",
   "Sólo en horario laboral",
   "Sin asesoramiento personalizado",
   "Precio elevado",
+  "Con cita previa",
 ];
