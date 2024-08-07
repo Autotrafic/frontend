@@ -11,58 +11,64 @@ import { colors } from "../../../utils/styles";
 
 export default function TransferContentMobile({ isReferralValid }) {
   return (
-    <TransferContainer $isReferralValid={isReferralValid}>
-      <Title fontSize={"21px"}>
-        Cambia de nombre tu vehículo online en menos de 5 minutos
-      </Title>
-      <TextWrapper>
-        <SubTitle>
-          Gestoría Online especializada en la Transferencia de Vehículos con la
-          DGT
-        </SubTitle>
-        <ExplanationText>
-          NOS ENCARGAMOS DE TODO - MEJOR PRECIO GARANTIZADO
-        </ExplanationText>
-      </TextWrapper>
+    <>
+      
+      <TransferContainer $isReferralValid={isReferralValid}>
+        <Title fontSize={"21px"}>
+          Cambia de nombre tu vehículo online en menos de 5 minutos
+        </Title>
+        <TextWrapper>
+          <SubTitle>
+            Gestoría Online especializada en la Transferencia de Vehículos con
+            la DGT
+          </SubTitle>
+          <ExplanationText>
+            NOS ENCARGAMOS DE TODO - MEJOR PRECIO GARANTIZADO
+          </ExplanationText>
+        </TextWrapper>
 
-      <BoxesContainer>
-        <img
-          src={colegioImg}
-          alt=""
-          width={125}
-          style={{ borderRadius: "2px" }}
-        />
-        <img src={dgtLogo} alt="" width={60} />
-        <img
-          src={ministerioImg}
-          alt=""
-          width={90}
-          style={{ borderRadius: "2px" }}
-        />
-      </BoxesContainer>
+        <BoxesContainer>
+          <img
+            src={colegioImg}
+            alt=""
+            width={125}
+            style={{ borderRadius: "2px" }}
+          />
+          <img src={dgtLogo} alt="" width={60} />
+          <img
+            src={ministerioImg}
+            alt=""
+            width={90}
+            style={{ borderRadius: "2px" }}
+          />
+        </BoxesContainer>
 
-      <WhatsContactContainer>
-        <WhatsText>Te guiamos por Whatsapp en todo momento</WhatsText>
-        <WhatsappButtonContainer href="https://wa.me/643219297" target="_blank">
-          <WhatsLink $isReferralValid={isReferralValid}>
-            <WhatsIcon icon={faWhatsapp} size="xl" />
-            Habla con un gestor ahora
-          </WhatsLink>
-        </WhatsappButtonContainer>
-        <WhatsText>Respondemos al instante</WhatsText>
-      </WhatsContactContainer>
+        <WhatsContactContainer>
+          <WhatsText>Te guiamos por Whatsapp en todo momento</WhatsText>
+          <WhatsappButtonContainer
+            href="https://wa.me/643219297"
+            target="_blank"
+          >
+            <WhatsLink $isReferralValid={isReferralValid}>
+              <WhatsIcon icon={faWhatsapp} size="xl" />
+              Habla con un gestor ahora
+            </WhatsLink>
+          </WhatsappButtonContainer>
+          <WhatsText>Respondemos al instante</WhatsText>
+        </WhatsContactContainer>
 
-      <GoogleReviewsAndPhoneButtonContainer>
-        {isReferralValid ? "" : <GoogleReviewsBox />}
+        <GoogleReviewsAndPhoneButtonContainer>
+          {isReferralValid ? "" : <GoogleReviewsBox />}
 
-        {/*  <ContactLink href="tel:+34643219297" style={{ textDecoration: "none" }}>
+          {/*  <ContactLink href="tel:+34643219297" style={{ textDecoration: "none" }}>
           <ContactButton>
             <ContactIcon icon={faPhone} />
             <ContactButtonText>Llama a un gestor</ContactButtonText>
           </ContactButton>
         </ContactLink> */}
-      </GoogleReviewsAndPhoneButtonContainer>
-    </TransferContainer>
+        </GoogleReviewsAndPhoneButtonContainer>
+      </TransferContainer>
+    </>
   );
 }
 
@@ -73,8 +79,26 @@ const TransferContainer = styled.div`
   flex-direction: column;
   align-items: center;
   ${({ $isReferralValid }) =>
-    $isReferralValid ? "gap: 2.2em;" : "font-size: 18px;"}
+    $isReferralValid ? "gap: 2.2em;" : "gap: 1.8em;"}
   ${({ $isReferralValid }) => ($isReferralValid ? "" : "margin-bottom: 1em;")}
+`;
+
+const ReferralMessageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 0.3em;
+  width: 100%;
+  background-color: #fae7c8;
+  border: 2px solid #f78c00;
+  border-radius: 10px;
+  margin-bottom: 1em;
+`;
+
+const ReferralMessageText = styled.p`
+  font-size: 12px;
+  font-weight: 600;
+  color: #f78c00;
+  text-align: center;
 `;
 
 const WhatsappButtonContainer = styled.a`

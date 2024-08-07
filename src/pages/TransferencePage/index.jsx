@@ -32,6 +32,13 @@ export default function TransferencePage() {
 
   return (
     <>
+      {isReferralValid && (
+        <ReferralMessageContainer>
+          <ReferralMessageText>
+            -10€ de descuento si vienes de HistorialVehículo!
+          </ReferralMessageText>
+        </ReferralMessageContainer>
+      )}
       <Wrapper id={TRANSFERENCE_ID}>
         {isMobile ? (
           <TransferMobile isReferralValid={isReferralValid} />
@@ -51,6 +58,24 @@ export default function TransferencePage() {
     </>
   );
 }
+
+const ReferralMessageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 0.3em;
+  width: 100%;
+  background-color: #fae7c8;
+  border: 2px solid #f78c00;
+  border-radius: 10px;
+  margin-bottom: 1em;
+`;
+
+const ReferralMessageText = styled.p`
+  font-size: 12px;
+  font-weight: 600;
+  color: #f78c00;
+  text-align: center;
+`;
 
 const Wrapper = styled.div`
   width: 100%;
