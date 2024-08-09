@@ -3,7 +3,7 @@ import SmartForm from "smartForm/SmartForm";
 import TransferContentDesktop from "./TransferContentDesktop";
 import Drop from "./Drop";
 
-export default function TransferDesktop() {
+export default function TransferDesktop({ isReferralValid }) {
   return (
     <Container>
       <LeftSide>
@@ -11,7 +11,7 @@ export default function TransferDesktop() {
       </LeftSide>
       <RightSide>
         <SmartFormContainer>
-          <SmartForm />
+          <SmartForm isReferralValid={isReferralValid} />
         </SmartFormContainer>
         <Drop />
       </RightSide>
@@ -54,6 +54,5 @@ const SmartFormContainer = styled.div`
   padding: 5px;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2), 2px 0 5px rgba(0, 0, 0, 0.2),
-    -4px 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2), 2px 0 5px rgba(0, 0, 0, 0.2), -4px 0 5px rgba(0, 0, 0, 0.2);
 `;

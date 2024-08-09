@@ -35,7 +35,7 @@ export default function TransferMobile({isReferralValid}) {
       <RightSide ref={smartFormRef}>
         <Title middleLine>Empezar transferencia online</Title>
         <SmartFormContainer>
-          <SmartForm />
+          <SmartForm isReferralValid={isReferralValid} />
         </SmartFormContainer>
         <Drop smartFormHeight={smartFormHeight} />
         <ProsMobile />
