@@ -14,18 +14,15 @@ export const FAQ = [
   },
   {
     question: "¿Es seguro hacer el trámite online?",
-    answer:
-      "Sí, nuestra plataforma utiliza tecnología de encriptación para proteger tus datos y está autorizada por la DGT.",
+    answer: "Sí, nuestra plataforma utiliza tecnología de encriptación para proteger tus datos y está autorizada por la DGT.",
   },
   {
-    question:
-      "¿Cuál es el precio total de la transferencia en Gestoria AutoTrafic?",
+    question: "¿Cuál es el precio total de la transferencia en Gestoria AutoTrafic?",
     answer:
-      "Coches y motos: 119,95€. Ciclomotores: 95€. Si tu vehículo tiene que pagar ITP (Impuesto de Transmisiones Patrimoniales), éste va íntegramente a Hacienda y Gestoria AutoTrafic sólo intermedia el pago sin sobre coste.",
+      "Coches y motos: 129,95€. Ciclomotores: 95€. Si tu vehículo tiene que pagar ITP (Impuesto de Transmisiones Patrimoniales), éste va íntegramente a Hacienda y Gestoria AutoTrafic sólo intermedia el pago sin sobre coste.",
   },
   {
-    question:
-      "¿Cuánto se tarda y cuánto demora en llegar el nuevo permiso de circulación?",
+    question: "¿Cuánto se tarda y cuánto demora en llegar el nuevo permiso de circulación?",
     answer:
       "El proceso completo puede hacerse en 5 minutos. Una vez se presenta la transferencia del vehículo a la DGT, normalmente se demora entre 5 y 14 días, dependiendo de la Comunidad Autónoma.",
   },
@@ -36,8 +33,7 @@ export const FAQ = [
   },
   {
     question: "¿Tengo que enviar la documentación físicamente?",
-    answer:
-      "No, no debes preocuparte de nada. Una foto del documento es válida mientras se aprecie bien la información que contiene.",
+    answer: "No, no debes preocuparte de nada. Una foto del documento es válida mientras se aprecie bien la información que contiene.",
   },
 ];
 

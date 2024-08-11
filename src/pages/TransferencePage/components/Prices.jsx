@@ -8,8 +8,8 @@ import {
 
 export default function Prices() {
   const prices = [
-    { title: "Coche", price: "119,95" },
-    { title: "Moto", price: "119,95" },
+    { title: "Coche", price: "129,95" },
+    { title: "Moto", price: "129,95" },
     { title: "Ciclomotor", price: "94,95" },
   ];
 
