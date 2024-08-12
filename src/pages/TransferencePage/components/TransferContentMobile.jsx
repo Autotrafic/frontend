@@ -12,43 +12,22 @@ import { colors } from "../../../utils/styles";
 export default function TransferContentMobile({ isReferralValid }) {
   return (
     <>
-      
       <TransferContainer $isReferralValid={isReferralValid}>
-        <Title fontSize={"21px"}>
-          Cambia de nombre tu vehículo online en menos de 5 minutos
-        </Title>
+        <Title fontSize={"21px"}>Cambia de nombre tu vehículo online en menos de 5 minutos</Title>
         <TextWrapper>
-          <SubTitle>
-            Gestoría Online especializada en la Transferencia de Vehículos con
-            la DGT
-          </SubTitle>
-          <ExplanationText>
-            NOS ENCARGAMOS DE TODO - MEJOR PRECIO GARANTIZADO
-          </ExplanationText>
+          <SubTitle>Gestoría Online especializada en la Transferencia de Vehículos con la DGT</SubTitle>
+          <ExplanationText>NOS ENCARGAMOS DE TODO - MEJOR PRECIO GARANTIZADO</ExplanationText>
         </TextWrapper>
 
         <BoxesContainer>
-          <img
-            src={colegioImg}
-            alt=""
-            width={125}
-            style={{ borderRadius: "2px" }}
-          />
+          <img src={colegioImg} alt="" width={125} style={{ borderRadius: "2px" }} />
           <img src={dgtLogo} alt="" width={60} />
-          <img
-            src={ministerioImg}
-            alt=""
-            width={90}
-            style={{ borderRadius: "2px" }}
-          />
+          <img src={ministerioImg} alt="" width={90} style={{ borderRadius: "2px" }} />
         </BoxesContainer>
 
         <WhatsContactContainer>
           <WhatsText>Te guiamos por Whatsapp en todo momento</WhatsText>
-          <WhatsappButtonContainer
-            href="https://wa.me/643219297"
-            target="_blank"
-          >
+          <WhatsappButtonContainer href="https://wa.me/34643219297" target="_blank">
             <WhatsLink $isReferralValid={isReferralValid}>
               <WhatsIcon icon={faWhatsapp} size="xl" />
               Habla con un gestor ahora
@@ -78,8 +57,7 @@ const TransferContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  ${({ $isReferralValid }) =>
-    $isReferralValid ? "gap: 2.2em;" : "gap: 1.8em;"}
+  ${({ $isReferralValid }) => ($isReferralValid ? "gap: 2.2em;" : "gap: 1.8em;")}
   ${({ $isReferralValid }) => ($isReferralValid ? "" : "margin-bottom: 1em;")}
 `;
 
@@ -118,14 +96,10 @@ const WhatsLink = styled.a`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
   color: white;
   margin: 0.5rem 0;
-  ${({ $isReferralValid }) =>
-    $isReferralValid ? "margin: 0.3rem 0;" : "margin: 0.5rem 0;"}
-  ${({ $isReferralValid }) =>
-    $isReferralValid ? "padding: 0.4rem 1rem;" : "padding: 0.5rem 1.5rem;"}
-  ${({ $isReferralValid }) =>
-    $isReferralValid ? "font-size: 16px;" : "font-size: 18px;"}
-  ${({ $isReferralValid }) =>
-    $isReferralValid ? "width: 94%;" : "width: 100%;"}
+  ${({ $isReferralValid }) => ($isReferralValid ? "margin: 0.3rem 0;" : "margin: 0.5rem 0;")}
+  ${({ $isReferralValid }) => ($isReferralValid ? "padding: 0.4rem 1rem;" : "padding: 0.5rem 1.5rem;")}
+  ${({ $isReferralValid }) => ($isReferralValid ? "font-size: 16px;" : "font-size: 18px;")}
+  ${({ $isReferralValid }) => ($isReferralValid ? "width: 94%;" : "width: 100%;")}
   width: -moz-fit-content;
   font-weight: 600;
   text-decoration: inherit;
