@@ -24,14 +24,14 @@ export default function UploadedDocsPage() {
 
           <p>
             <strong>
-              ¡Fantástico {order.billData.fullName.split(" ")[0]}! Tus documentos se han subido
+              ¡Fantástico {order.user.fullName.split(" ")[0]}! Tus documentos se han subido
               correctamente
             </strong>
           </p>
 
           <TextContainer>
             <p>
-              Hemos enviado un correo electrónico a la dirección {order.billData.email} con los
+              Hemos enviado un correo electrónico a la dirección {order.user.email} con los
               datos del trámite y los siguientes pasos.
             </p>
 

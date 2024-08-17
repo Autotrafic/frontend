@@ -27,9 +27,9 @@ export default function UploadDocsLaterPage() {
     })();
   }, [orderId]);
 
-  const fullName = order?.billData?.fullName || "";
+  const fullName = order?.user?.fullName || "";
   const firstName = fullName.split(" ")[0];
-  const email = order?.billData?.email || "";
+  const email = order?.user?.email || "";
 
   return (
     <Wrapper>

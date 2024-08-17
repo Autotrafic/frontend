@@ -59,7 +59,7 @@ const ComparativesStyled = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1100px) {
     flex-direction: row;
     align-items: flex-start;
     gap: 3rem;
