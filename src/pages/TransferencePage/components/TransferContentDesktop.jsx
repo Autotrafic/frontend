@@ -95,7 +95,7 @@ export default function TransferContentDesktop() {
           >
             <ContactButton>
               <ContactIcon icon={faPhone} />
-              <ContactButtonText>Teléfono</ContactButtonText>
+              <ContactButtonText>+34 643219297</ContactButtonText>
             </ContactButton>
           </ContactLink>
         </ContactButtonsContainer>
