@@ -13,6 +13,7 @@ import GoogleReviewsCarousel from "../../components/reusable/GoogleReviewsCarous
 import MoreProducts from "./components/MoreProducts";
 import { apiRequest } from "../../utils/request";
 import ReferralPageAlert from "../../components/ReferralPageAlert";
+import ForCompaniesSection from "./components/ForCompanies";
 
 export default function TransferencePage() {
   const { referralId } = useParams();
@@ -23,7 +24,9 @@ export default function TransferencePage() {
   useEffect(() => {
     (async () => {
       if (referralId) {
-        const { isValid } = await apiRequest(`referral/id/validate?id=${referralId}`);
+        const { isValid } = await apiRequest(
+          `referral/id/validate?id=${referralId}`
+        );
         setIsReferralValid(isValid);
       }
     })();
@@ -33,13 +36,18 @@ export default function TransferencePage() {
     <>
       <ReferralPageAlert isReferralValid={isReferralValid} />
       <Wrapper id={TRANSFERENCE_ID} $isReferralValid={isReferralValid}>
-        {isMobile ? <TransferMobile isReferralValid={isReferralValid} /> : <TransferDesktop isReferralValid={isReferralValid} />}
+        {isMobile ? (
+          <TransferMobile isReferralValid={isReferralValid} />
+        ) : (
+          <TransferDesktop isReferralValid={isReferralValid} />
+        )}
       </Wrapper>
       <Sections>
         <Prices />
         <GoogleReviewsCarousel />
         <Comparatives />
         <OrderSteps />
+        <ForCompaniesSection />
         <FrequentAskedQuestions />
         {/* <MoreProducts /> */}
         <ContactForm />
