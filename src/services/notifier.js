@@ -1,7 +1,6 @@
 const slackWebhook = process.env.SLACK_WEBHOOK_URL;
 
 async function notifySlack(message) {
-  console.log("slackkk", slackWebhook);
   try {
     const response = await fetch(slackWebhook, {
       method: "POST",
