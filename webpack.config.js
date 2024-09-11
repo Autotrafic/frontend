@@ -63,7 +63,7 @@ module.exports = (_, argv) => ({
         smartForm:
           argv.mode === "development"
             ? "smartForm@http://localhost:5100/remoteEntry.js"
-            : "smartForm@https://smart-form-rqmr.onrender.com/remoteEntry.js",
+            : "smartForm@https://smart-form-7ewb.onrender.com/remoteEntry.js",
       },
       exposes: {},
       shared: {
