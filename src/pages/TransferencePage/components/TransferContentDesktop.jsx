@@ -95,7 +95,7 @@ export default function TransferContentDesktop() {
           >
             <ContactButton>
               <ContactIcon icon={faPhone} />
-              <ContactButtonText>Teléfono</ContactButtonText>
+              <ContactButtonText>+34 643219297</ContactButtonText>
             </ContactButton>
           </ContactLink>
         </ContactButtonsContainer>
@@ -166,6 +166,12 @@ const AnyQuestionContainer = styled.div`
   margin-top: 45px;
 `;
 
+const ContactButtonsContainer = styled.div`
+  display: flex;
+  gap: 30px;
+  width: 70%;
+`;
+
 const ContactIcon = styled(FontAwesomeIcon)`
   width: 20px;
   height: 20px;
@@ -184,12 +190,6 @@ const ContactButtonText = styled.p`
   margin: 0;
   padding: 10px 10px;
   transition: 0.3s;
-`;
-
-const ContactButtonsContainer = styled.div`
-  display: flex;
-  gap: 30px;
-  width: 70%;
 `;
 
 const ContactButtonWhatsapp = styled.div`
