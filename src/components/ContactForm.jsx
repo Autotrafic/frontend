@@ -5,6 +5,7 @@ import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faSquareWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import LegalCheckbox from "./reusable/LegalCheckbox";
 import { CONTACT_SECTION_ID } from "../utils/constants";
+import { logWhatsappClick } from "../services/logger";
 
 const columnWidth = "480px";
 
@@ -12,6 +13,16 @@ const bigPhoneScreenMedia = "476px";
 const tabletScreenMedia = "1000px";
 
 export default function ContactForm() {
+  const onWhatsappClick = async (e) => {
+    e.preventDefault();
+
+    try {
+      await logWhatsappClick();
+    } catch (error) {}
+
+    window.open('https://wa.me/34643219297', '_blank');
+  };
+
   return (
     <Container id={CONTACT_SECTION_ID}>
       <TitleContainer>
@@ -59,7 +70,7 @@ export default function ContactForm() {
             </SubContactContainerIndividual>
           </TopRightContainer>
 
-          <a href="https://wa.me/34643219297" target="_blank" style={{ textDecoration: "none" }}>
+          <a onClick={onWhatsappClick} style={{ textDecoration: "none" }}>
             <WhatsappContainer>
               <WhatsappIcon icon={faSquareWhatsapp} />
               <ContactText>Whatsapp</ContactText>

@@ -1,16 +1,27 @@
-import styled from "styled-components";
-import whatsappIcon from "../assets/whatsapp-icon-skeleton.svg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import whatsappDialogue from "../assets/vineta-whats.png";
+import styled from 'styled-components';
+import whatsappIcon from '../assets/whatsapp-icon-skeleton.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import whatsappDialogue from '../assets/vineta-whats.png';
+import { logWhatsappClick } from '../services/logger';
 
-const tabletScreenMedia = "1000px";
-const bigPhoneScreenMedia = "476px";
+const tabletScreenMedia = '1000px';
+const bigPhoneScreenMedia = '476px';
 
 export default function FloatingWhatsappIcon() {
   const screenWidth = window.innerWidth;
 
   const isMobile = screenWidth < 415 ? true : false;
+
+  const onWhatsappClick = async (e) => {
+    e.preventDefault();
+
+    try {
+      await logWhatsappClick();
+    } catch (error) {}
+
+    window.open('https://wa.me/34643219297', '_blank');
+  };
 
   return (
     <>
@@ -23,17 +34,9 @@ export default function FloatingWhatsappIcon() {
 
         <WhatsappFloatingText>Respondemos al instante</WhatsappFloatingText>
       </WhatsappFloating>
-      <a
-        href="https://wa.me/34643219297"
-        target="_blank"
-        style={{ textDecoration: "none" }}
-      >
+      <a onClick={onWhatsappClick} style={{ textDecoration: 'none' }}>
         <WhatsappIconContainer>
-          {isMobile ? (
-            <WhatsappIcon icon={faWhatsapp} />
-          ) : (
-            <WhatsappIcon icon={faWhatsapp} />
-          )}
+          {isMobile ? <WhatsappIcon icon={faWhatsapp} /> : <WhatsappIcon icon={faWhatsapp} />}
         </WhatsappIconContainer>
       </a>
     </>

@@ -8,8 +8,19 @@ import GoogleReviewsBox from "../../../components/reusable/GoogleReviewsBox";
 import dgtLogo from "../../../assets/dgt.svg";
 import ministerioImg from "../../../assets/ministerio.svg";
 import colegioImg from "../../../assets/colegio-simple-logo.png";
+import { logWhatsappClick } from "../../../services/logger";
 
 export default function TransferContentDesktop() {
+  const onWhatsappClick = async (e) => {
+    e.preventDefault();
+
+    try {
+      await logWhatsappClick();
+    } catch (error) {}
+
+    window.open('https://wa.me/34643219297', '_blank');
+  };
+
   return (
     <>
       <TransferContainer>
@@ -78,9 +89,7 @@ export default function TransferContentDesktop() {
           o tienes alguna duda, respondemos al instante.
         </ExplanationText>
         <ContactButtonsContainer>
-          <ContactLink
-            href="https://wa.me/643219297"
-            target="_blank"
+          <ContactLink onClick={onWhatsappClick}
             style={{ textDecoration: "none" }}
           >
             <ContactButtonWhatsapp>

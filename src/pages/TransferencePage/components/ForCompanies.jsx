@@ -10,12 +10,23 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faCircleUser } from "@fortawesome/free-regular-svg-icons";
 import { faPhone, faCoins } from "@fortawesome/free-solid-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { logWhatsappClick } from "../../../services/logger";
 
 const bigPhoneScreenMedia = "510px";
 const screenWidth = window.innerWidth;
 const isMobile = screenWidth < 510 ? true : false;
 
 export default function ForCompaniesSection() {
+  const onWhatsappClick = async (e) => {
+    e.preventDefault();
+
+    try {
+      await logWhatsappClick();
+    } catch (error) {}
+
+    window.open('https://wa.me/34643219297', '_blank');
+  };
+
   return (
     <Container id="professional-section">
       <Title middleLine>
@@ -56,8 +67,7 @@ export default function ForCompaniesSection() {
         </CtaText>
         <ContactButtonsContainer>
           <ContactLink
-            href="https://wa.me/643219297"
-            target="_blank"
+             onClick={onWhatsappClick}
             style={{ textDecoration: "none" }}
           >
             <ContactButtonWhatsapp>
