@@ -1,5 +1,8 @@
 import { apiRequest } from '../utils/request';
 
 export const logWhatsappClick = async () => {
-  await apiRequest('logs/whatsapp-click', {}, 'POST');
+  const business = 'AutoTrafic';
+  const accountingType = 'Contacto WhatsApp';
+
+  await apiRequest('logs/accounting', { business, accountingType }, 'POST');
 };
