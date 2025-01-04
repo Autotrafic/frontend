@@ -39,7 +39,7 @@ export default function Prices() {
   return (
     <Container id={PRICES_SECTION_ID}>
       <Title middleLine>
-        Los mejores precios del mercado de {nombreDelMes} 2024
+        Los mejores precios del mercado de {nombreDelMes} 2025
       </Title>
       <PricesContainer>
         {prices.map((price) => (
