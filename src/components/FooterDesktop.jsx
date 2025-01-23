@@ -56,13 +56,7 @@ export default function FooterDesktop() {
         <a href="https://autotrafic.es/aviso-legal/" style={{ textDecoration: 'none' }}>
           <GridText>Aviso Legal</GridText>
         </a>
-        <a href="https://autotrafic.es/politica-de-privacidad/" style={{ textDecoration: 'none' }}>
-          <GridText>Política de privacidad</GridText>
-        </a>
-        <a href="https://autotrafic.es/politica-de-cookies/" style={{ textDecoration: 'none' }}>
-          <GridText>Política de cookies</GridText>
-        </a>
-        <a href="https://autotrafic.es/terminos-generales/" style={{ textDecoration: 'none' }}>
+        <a href="https://autotrafic.es/condiciones/" style={{ textDecoration: 'none' }}>
           <GridText>Términos generales</GridText>
         </a>
       </GridComponent>
