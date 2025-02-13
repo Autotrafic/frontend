@@ -32,8 +32,8 @@ export default function FooterMobile() {
         <SubContainerGroup>
           <GridTitle>Contacto</GridTitle>
           <ContactTextGroup>
-            <a href="tel:+34936096216" style={{ textDecoration: "none" }}>
-              <ContactText>+34 936 09 62 16</ContactText>
+            <a href="tel:+34643219297" style={{ textDecoration: "none" }}>
+              <ContactText>+34 643 21 92 97</ContactText>
             </a>
           </ContactTextGroup>
           <ContactTextGroup>

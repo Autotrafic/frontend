@@ -59,13 +59,13 @@ export default function ContactForm() {
               </a>
             </SubContactContainerIndividual>
             <SubContactContainerIndividual>
-              <a href="tel:+34936096216">
+              <a href="tel:+34643219297">
                 <ContactIcon icon={faPhone} />
               </a>
 
               <ContactTitle>Teléfono</ContactTitle>
-              <a href="tel:+34936096216" style={{ textDecoration: "none" }}>
-                <ContactText>936 09 62 16</ContactText>
+              <a href="tel:+34643219297" style={{ textDecoration: "none" }}>
+                <ContactText>643 21 92 97</ContactText>
               </a>
             </SubContactContainerIndividual>
           </TopRightContainer>
