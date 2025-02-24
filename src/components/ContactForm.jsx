@@ -1,28 +1,18 @@
-import styled from "styled-components";
-import { colors } from "../utils/styles";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
-import { faSquareWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import LegalCheckbox from "./reusable/LegalCheckbox";
-import { CONTACT_SECTION_ID } from "../utils/constants";
-import { logWhatsappClick } from "../services/logger";
+import styled from 'styled-components';
+import { colors } from '../utils/styles';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faSquareWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import LegalCheckbox from './reusable/LegalCheckbox';
+import { CONTACT_SECTION_ID } from '../utils/constants';
+import { onWhatsappClick } from '../utils/funcs';
 
-const columnWidth = "480px";
+const columnWidth = '480px';
 
-const bigPhoneScreenMedia = "476px";
-const tabletScreenMedia = "1000px";
+const bigPhoneScreenMedia = '476px';
+const tabletScreenMedia = '1000px';
 
 export default function ContactForm() {
-  const onWhatsappClick = async (e) => {
-    e.preventDefault();
-
-    try {
-      await logWhatsappClick();
-    } catch (error) {}
-
-    window.open('https://wa.me/34643219297', '_blank');
-  };
-
   return (
     <Container id={CONTACT_SECTION_ID}>
       <TitleContainer>
@@ -41,7 +31,7 @@ export default function ContactForm() {
             <FormInputDescription placeholder="Mensaje" />
           </InputsContainer>
           <SubmitContainer>
-            <LegalCheckbox size={"20px"} />
+            <LegalCheckbox size={'20px'} />
             <SubmitButton type="submit">Enviar</SubmitButton>
           </SubmitContainer>
         </LeftContactFormContainer>
@@ -54,7 +44,7 @@ export default function ContactForm() {
               </a>
 
               <ContactTitle>Correo electrónico</ContactTitle>
-              <a href="mailto:contacto@autotrafic.es" style={{ textDecoration: "none" }}>
+              <a href="mailto:contacto@autotrafic.es" style={{ textDecoration: 'none' }}>
                 <ContactText>contacto@autotrafic.es</ContactText>
               </a>
             </SubContactContainerIndividual>
@@ -64,13 +54,13 @@ export default function ContactForm() {
               </a>
 
               <ContactTitle>Teléfono</ContactTitle>
-              <a href="tel:+34643219297" style={{ textDecoration: "none" }}>
+              <a href="tel:+34643219297" style={{ textDecoration: 'none' }}>
                 <ContactText>643 21 92 97</ContactText>
               </a>
             </SubContactContainerIndividual>
           </TopRightContainer>
 
-          <a onClick={onWhatsappClick} style={{ textDecoration: "none" }}>
+          <a onClick={onWhatsappClick} style={{ textDecoration: 'none' }}>
             <WhatsappContainer>
               <WhatsappIcon icon={faSquareWhatsapp} />
               <ContactText>Whatsapp</ContactText>

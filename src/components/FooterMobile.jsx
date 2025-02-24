@@ -8,21 +8,12 @@ import GoogleReviewsBox from "./reusable/GoogleReviewsBox";
 import dgtLogo from "../assets/dgt.svg";
 import ministerioImg from "../assets/ministerio.svg";
 import { logWhatsappClick } from "../services/logger";
+import { onWhatsappClick } from "../utils/funcs";
 
 const tabletScreenMedia = "1000px";
 const bigPhoneScreenMedia = "476px";
 
 export default function FooterMobile() {
-  const onWhatsappClick = async (e) => {
-    e.preventDefault();
-
-    try {
-      await logWhatsappClick();
-    } catch (error) {}
-
-    window.open('https://wa.me/34643219297', '_blank');
-  };
-
   return (
     <FooterContainer>
       <a href="https://autotrafic.es/" style={{ textDecoration: "none" }}>

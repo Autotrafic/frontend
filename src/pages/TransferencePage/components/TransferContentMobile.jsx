@@ -7,19 +7,9 @@ import dgtLogo from '../../../assets/dgt.svg';
 import ministerioImg from '../../../assets/ministerio.svg';
 import colegioImg from '../../../assets/colegio-simple-logo.png';
 import { colors } from '../../../utils/styles';
-import { logWhatsappClick } from '../../../services/logger';
+import { onWhatsappClick } from '../../../utils/funcs';
 
 export default function TransferContentMobile({ isReferralValid }) {
-  const onWhatsappClick = (e) => {
-    e.preventDefault();
-  
-    window.open('https://wa.me/34643219297', '_blank');
-  
-    logWhatsappClick().catch((error) => {
-      console.error('Failed to log WhatsApp click:', error);
-    });
-  };
-  
   return (
     <>
       <TransferContainer $isReferralValid={isReferralValid}>

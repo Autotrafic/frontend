@@ -9,18 +9,9 @@ import dgtLogo from "../../../assets/dgt.svg";
 import ministerioImg from "../../../assets/ministerio.svg";
 import colegioImg from "../../../assets/colegio-simple-logo.png";
 import { logWhatsappClick } from "../../../services/logger";
+import { onWhatsappClick } from "../../../utils/funcs";
 
 export default function TransferContentDesktop() {
-  const onWhatsappClick = async (e) => {
-    e.preventDefault();
-
-    try {
-      await logWhatsappClick();
-    } catch (error) {}
-
-    window.open('https://wa.me/34643219297', '_blank');
-  };
-
   return (
     <>
       <TransferContainer>

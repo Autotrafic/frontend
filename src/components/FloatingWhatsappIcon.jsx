@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import whatsappDialogue from '../assets/vineta-whats.png';
 import { logWhatsappClick } from '../services/logger';
+import { onWhatsappClick } from '../utils/funcs';
 
 const tabletScreenMedia = '1000px';
 const bigPhoneScreenMedia = '476px';
@@ -12,16 +13,6 @@ export default function FloatingWhatsappIcon() {
   const screenWidth = window.innerWidth;
 
   const isMobile = screenWidth < 415 ? true : false;
-
-  const onWhatsappClick = async (e) => {
-    e.preventDefault();
-
-    try {
-      await logWhatsappClick();
-    } catch (error) {}
-
-    window.open('https://wa.me/34643219297', '_blank');
-  };
 
   return (
     <>
