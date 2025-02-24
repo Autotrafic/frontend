@@ -10,14 +10,14 @@ import { colors } from '../../../utils/styles';
 import { logWhatsappClick } from '../../../services/logger';
 
 export default function TransferContentMobile({ isReferralValid }) {
-  const onWhatsappClick = async (e) => {
+  const onWhatsappClick = (e) => {
     e.preventDefault();
-
-    try {
-      await logWhatsappClick();
-    } catch (error) {}
-
+  
     window.open('https://wa.me/34643219297', '_blank');
+  
+    logWhatsappClick().catch((error) => {
+      console.error('Failed to log WhatsApp click:', error);
+    });
   };
   
   return (
