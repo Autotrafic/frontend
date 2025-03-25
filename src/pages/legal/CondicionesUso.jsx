@@ -50,13 +50,21 @@ export default function CondicionesUso() {
             sitio web, correo electrónico, teléfono u otras soluciones electrónicas o de software compatibles con AutoTrafic
             Gestoría. Una vez recibida la solicitud, AutoTrafic Gestoría comprobará la viabilidad de la solicitud.
           </Paragraph>
+
           <Paragraph>
-            3.3 AutoTrafic Gestoría se encarga de recoger la documentación oficial necesaria para la tramitación en la
+            3.3 Al calcular el precio del trámite, se toma en cuenta el valor fiscal del vehículo. En caso de un valor mayor
+            en el contrato de compra-venta, a éste se le tendrá que aplicar el porcentaje del ITP correspondiente a cada
+            Comunidad Autonoma.
+          </Paragraph>
+
+          <Paragraph>
+            3.4 AutoTrafic Gestoría se encarga de recoger la documentación oficial necesaria para la tramitación en la
             dirección proporcionada por el cliente. Esta recogida incluye dos intentos, si en ninguno de éstos se logra
             recoger los documentos, deberá ser el cliente quien asuma los costes del envío de dicha documentación.
           </Paragraph>
+
           <Paragraph>
-            3.4 AutoTrafic Gestoría se encarga de realizar el envío de la documentación oficial gestionada durante el
+            3.5 AutoTrafic Gestoría se encarga de realizar el envío de la documentación oficial gestionada durante el
             servicio. Ésta se envía en la dirección proporcionada por el cliente. Si éste no se encuentra en el momento de la
             entrega, él será el responsable de recoger dicha documentación en la dirección de recogida que proporcione el
             servicio de mensajería.
