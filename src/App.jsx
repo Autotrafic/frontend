@@ -1,5 +1,5 @@
 import './styles/App.css';
-import { initGA } from './analytics';
+import { initGA } from './config/analytics';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import TransferencePage from './pages/TransferencePage';
