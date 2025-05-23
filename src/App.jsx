@@ -1,4 +1,5 @@
 import './styles/App.css';
+import { initGA } from './analytics';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import TransferencePage from './pages/TransferencePage';
@@ -12,6 +13,10 @@ import AvisoLegal from './pages/legal/AvisoLegal';
 import CondicionesUso from './pages/legal/CondicionesUso';
 
 function App() {
+  useEffect(() => {
+    initGA();
+  }, []);
+
   return (
     <>
       <NavbarContainer />
