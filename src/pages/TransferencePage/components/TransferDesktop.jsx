@@ -1,9 +1,14 @@
-import styled from "styled-components";
-import SmartForm from "smartForm/SmartForm";
-import TransferContentDesktop from "./TransferContentDesktop";
-import Drop from "./Drop";
+import styled from 'styled-components';
+import SmartForm from 'smartForm/SmartForm';
+import TransferContentDesktop from './TransferContentDesktop';
+import Drop from './Drop';
+import { trackPaidStep } from '../../../config/analytics';
 
 export default function TransferDesktop({ isReferralValid }) {
+   const trackPayment = () => {
+    trackPaidStep();
+  };
+
   return (
     <Container>
       <LeftSide>
@@ -11,7 +16,7 @@ export default function TransferDesktop({ isReferralValid }) {
       </LeftSide>
       <RightSide>
         <SmartFormContainer>
-          <SmartForm isReferralValid={isReferralValid} />
+          <SmartForm isReferralValid={isReferralValid} trackPayment={trackPayment} />
         </SmartFormContainer>
         <Drop />
       </RightSide>

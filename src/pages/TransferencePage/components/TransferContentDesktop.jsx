@@ -43,8 +43,7 @@ export default function TransferContentDesktop() {
             <AdvantageListItem>
               ✅
               <ListTextBold>
-                Te damos el permiso provisional al momento para que puedas
-                circular
+                Obtendrás el permiso provisional al momento para poder circular
               </ListTextBold>
             </AdvantageListItem>
             <ListText>

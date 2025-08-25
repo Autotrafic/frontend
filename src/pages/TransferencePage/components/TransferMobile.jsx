@@ -1,11 +1,12 @@
-import { useEffect, useRef, useState } from "react";
-import styled from "styled-components";
-import SmartForm from "smartForm/SmartForm";
-import TransferContentMobile from "./TransferContentMobile";
-import ProsMobile from "./ProsMobile";
-import Drop from "./Drop";
+import { useEffect, useRef, useState } from 'react';
+import styled from 'styled-components';
+import SmartForm from 'smartForm/SmartForm';
+import TransferContentMobile from './TransferContentMobile';
+import ProsMobile from './ProsMobile';
+import Drop from './Drop';
+import { trackPaidStep } from '../../../config/analytics';
 
-export default function TransferMobile({isReferralValid}) {
+export default function TransferMobile({ isReferralValid }) {
   const [smartFormHeight, setSmartFormHeight] = useState(0);
   const smartFormRef = useRef(null);
 
@@ -27,15 +28,19 @@ export default function TransferMobile({isReferralValid}) {
     };
   }, [smartFormRef]);
 
+  const trackPayment = () => {
+    trackPaidStep();
+  };
+
   return (
     <Container>
       <LeftSide>
-        <TransferContentMobile isReferralValid={isReferralValid}/>
+        <TransferContentMobile isReferralValid={isReferralValid} />
       </LeftSide>
       <RightSide ref={smartFormRef}>
         <Title middleLine>Empezar transferencia online</Title>
         <SmartFormContainer>
-          <SmartForm isReferralValid={isReferralValid} />
+          <SmartForm isReferralValid={isReferralValid} trackPayment={trackPayment} />
         </SmartFormContainer>
         <Drop smartFormHeight={smartFormHeight} />
         <ProsMobile />
@@ -90,6 +95,5 @@ const SmartFormContainer = styled.div`
   padding: 5px;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2), 2px 0 5px rgba(0, 0, 0, 0.2),
-    -4px 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2), 2px 0 5px rgba(0, 0, 0, 0.2), -4px 0 5px rgba(0, 0, 0, 0.2);
 `;

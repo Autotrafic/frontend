@@ -5,9 +5,11 @@ export const initGA = () => {
 };
 
 export const trackPaidStep = () => {
-  ReactGA.event({
-    category: 'Checkout',
-    action: 'Purchase Completed',
-    label: 'Paid Step',
-  });
+  ReactGA.set({ debug_mode: true });
+  ReactGA.event('purchase_completed', {
+  category: 'Checkout',
+  label: 'Paid Step'
+});
+
+  console.info('GA Event: Paid Step');
 };
