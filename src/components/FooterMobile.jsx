@@ -1,34 +1,34 @@
-import styled from "styled-components";
-import { colors } from "../utils/styles";
-import autotraficLogo from "../components/Navbar/logo/logo.svg";
-import colegioLogo from "../assets/colegio-logo.png";
-import whatsappIcon from "../assets/whatsapp-icon.svg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import GoogleReviewsBox from "./reusable/GoogleReviewsBox";
-import dgtLogo from "../assets/dgt.svg";
-import ministerioImg from "../assets/ministerio.svg";
-import { logWhatsappClick } from "../services/logger";
-import { onWhatsappClick } from "../utils/funcs";
+import styled from 'styled-components';
+import { colors } from '../utils/styles';
+import autotraficLogo from '../components/Navbar/logo/logo.svg';
+import colegioLogo from '../assets/colegio-logo.png';
+import whatsappIcon from '../assets/whatsapp-icon.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import GoogleReviewsBox from './reusable/GoogleReviewsBox';
+import dgtLogo from '../assets/dgt.svg';
+import ministerioImg from '../assets/ministerio.svg';
+import { onWhatsappClick } from '../utils/funcs';
+import { Link } from 'react-router-dom';
 
-const tabletScreenMedia = "1000px";
-const bigPhoneScreenMedia = "476px";
+const tabletScreenMedia = '1000px';
+const bigPhoneScreenMedia = '476px';
 
 export default function FooterMobile() {
   return (
     <FooterContainer>
-      <a href="https://autotrafic.es/" style={{ textDecoration: "none" }}>
+      <a href="https://autotrafic.es/" style={{ textDecoration: 'none' }}>
         <AutotraficLogo src={autotraficLogo} alt="autotraficLogo" />
       </a>
       <SubContainer>
         <SubContainerGroup>
           <GridTitle>Contacto</GridTitle>
           <ContactTextGroup>
-            <a href="tel:+34643219297" style={{ textDecoration: "none" }}>
+            <a href="tel:+34643219297" style={{ textDecoration: 'none' }}>
               <ContactText>+34 643 21 92 97</ContactText>
             </a>
           </ContactTextGroup>
           <ContactTextGroup>
-            <a href="mailto:contacto@autotrafic.es" style={{ textDecoration: "none" }}>
+            <a href="mailto:contacto@autotrafic.es" style={{ textDecoration: 'none' }}>
               <ContactText>contacto@autotrafic.es</ContactText>
             </a>
           </ContactTextGroup>
@@ -36,19 +36,19 @@ export default function FooterMobile() {
             <a onClick={onWhatsappClick}>
               <WhatsappIcon src={whatsappIcon} alt="colegioLogo" />
             </a>
-            <a onClick={onWhatsappClick} style={{ textDecoration: "none" }}>
+            <a onClick={onWhatsappClick} style={{ textDecoration: 'none' }}>
               <GridText>¡Escríbenos!</GridText>
             </a>
           </WhatsappContainer>
         </SubContainerGroup>
         <SubContainerGroup>
           <GridTitle>Legal</GridTitle>
-          <a href="https://autotrafic.es/aviso-legal/" style={{ textDecoration: "none" }}>
+          <Link to="/aviso-legal" style={{ textDecoration: 'none' }}>
             <GridText>Aviso Legal</GridText>
-          </a>
-          <a href="https://autotrafic.es/condiciones/" style={{ textDecoration: "none" }}>
+          </Link>
+          <Link to="/condiciones" style={{ textDecoration: 'none' }}>
             <GridText>Términos generales</GridText>
-          </a>
+          </Link>
         </SubContainerGroup>
       </SubContainer>
       <SubContainerGroup>

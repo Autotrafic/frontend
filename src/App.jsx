@@ -12,6 +12,7 @@ import FooterContainer from './containers/FooterContainer';
 import UploadedDocsPage from './pages/messages/UploadedDocsPage';
 import AvisoLegal from './pages/legal/AvisoLegal';
 import CondicionesUso from './pages/legal/CondicionesUso';
+import ScrollToTop from './config/ScrollToTop';
 
 function App() {
   useEffect(() => {
@@ -48,6 +49,7 @@ function Router() {
 
 ReactDOM.render(
   <BrowserRouter>
+    <ScrollToTop />
     <App />
   </BrowserRouter>,
   document.getElementById('app')

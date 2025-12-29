@@ -9,6 +9,7 @@ import dgtLogo from '../assets/dgt.svg';
 import ministerioImg from '../assets/ministerio.svg';
 import { logWhatsappClick } from '../services/logger';
 import { onWhatsappClick } from '../utils/funcs';
+import { Link } from 'react-router-dom';
 
 const tabletScreenMedia = '1000px';
 const bigPhoneScreenMedia = '476px';
@@ -44,12 +45,12 @@ export default function FooterDesktop() {
       </GridComponent>
       <GridComponent>
         <GridTitle>Legal</GridTitle>
-        <a href="https://autotrafic.es/aviso-legal/" style={{ textDecoration: 'none' }}>
+        <Link to='/aviso-legal' style={{ textDecoration: 'none' }}>
           <GridText>Aviso Legal</GridText>
-        </a>
-        <a href="https://autotrafic.es/condiciones/" style={{ textDecoration: 'none' }}>
+        </Link>
+        <Link to='/condiciones' style={{ textDecoration: 'none' }}>
           <GridText>Términos generales</GridText>
-        </a>
+        </Link>
       </GridComponent>
       <GridComponent>
         <IconsContainer>
