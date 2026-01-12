@@ -10,7 +10,7 @@ export default function CondicionesUso() {
           <Paragraph>
             Las presentes disposiciones determinan los términos y condiciones generales de contratación del servicio
             titularidad de la persona física autónoma Ovidiu Sebastian Ilie (NIF:X3879058Q), en adelante AutoTrafic Gestoría,
-            con domicilio social en Camí dels Tamarius, 88, 08800 Vilanova i la Geltrú, Barcelona.
+            con domicilio social en Calle Riu Gaià 18, 08800 Vilanova i la Geltrú, Barcelona.
           </Paragraph>
         </Condition>
 

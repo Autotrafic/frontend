@@ -65,6 +65,13 @@ export default function FooterMobile() {
           </IconsGroupContainer>
         </IconsContainer>
       </SubContainerGroup>
+
+      <CompanyData>
+        <CompanyText>
+          Ovidiu Sebastian Ilie · NIF: X3879058Q · Calle Riu Gaià 18, 08800 Vilanova i la Geltrú · contacto@autotrafic.es ·
+        </CompanyText>
+        <CompanyText>Todos los derechos reservados &copy; 2026</CompanyText>
+      </CompanyData>
     </FooterContainer>
   );
 }
@@ -245,4 +252,18 @@ const IconsGroupContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 15px;
+`;
+
+const CompanyData = styled.div`
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+`;
+
+const CompanyText = styled.p`
+  margin: 0;
+  font-size: 11px;
+  color: #777;
+  line-height: 1.35;
+  padding: 0 10px;
 `;

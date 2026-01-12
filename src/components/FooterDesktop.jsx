@@ -45,10 +45,10 @@ export default function FooterDesktop() {
       </GridComponent>
       <GridComponent>
         <GridTitle>Legal</GridTitle>
-        <Link to='/aviso-legal' style={{ textDecoration: 'none' }}>
+        <Link to="/aviso-legal" style={{ textDecoration: 'none' }}>
           <GridText>Aviso Legal</GridText>
         </Link>
-        <Link to='/condiciones' style={{ textDecoration: 'none' }}>
+        <Link to="/condiciones" style={{ textDecoration: 'none' }}>
           <GridText>Términos generales</GridText>
         </Link>
       </GridComponent>
@@ -66,6 +66,13 @@ export default function FooterDesktop() {
           </IconsGroupContainer>
         </IconsContainer>
       </GridComponent>
+
+      <CompanyData>
+        <CompanyText>
+          Ovidiu Sebastian Ilie · NIF: X3879058Q · Calle Riu Gaià 18, 08800 Vilanova i la Geltrú · contacto@autotrafic.es ·
+          Todos los derechos reservados &copy; 2026
+        </CompanyText>
+      </CompanyData>
     </FooterContainer>
   );
 }
@@ -250,4 +257,20 @@ const IconsGroupContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 15px;
+`;
+
+const CompanyData = styled.div`
+  grid-column: 1 / -1;
+  margin-top: 40px;
+  text-align: center;
+`;
+
+const CompanyText = styled.p`
+  margin: 0;
+  font-size: 12px;
+  color: #777;
+
+  @media (max-width: 475px) {
+    font-size: 10px;
+  }
 `;
