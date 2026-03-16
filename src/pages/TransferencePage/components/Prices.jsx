@@ -29,17 +29,22 @@ export default function Prices() {
   ];
 
   function obtenerNombreDelMes(fecha) {
-    const mes = fecha.getMonth();
-    return meses[mes];
-  }
+  const mes = fecha.getMonth();
+  return meses[mes];
+}
 
-  const fecha = new Date();
-  const nombreDelMes = obtenerNombreDelMes(fecha);
+function obtenerAnio(fecha) {
+  return fecha.getFullYear();
+}
+
+const fecha = new Date();
+const nombreDelMes = obtenerNombreDelMes(fecha);
+const anio = obtenerAnio(fecha);
 
   return (
     <Container id={PRICES_SECTION_ID}>
       <Title middleLine>
-        Los mejores precios del mercado de {nombreDelMes} 2025
+        Los mejores precios del mercado de {nombreDelMes} {anio}
       </Title>
       <PricesContainer>
         {prices.map((price) => (
