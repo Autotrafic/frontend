@@ -1,19 +1,17 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
-const Dotenv = require("dotenv-webpack");
-const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
-const deps = require("./package.json").dependencies;
+const deps = require('./package.json').dependencies;
 module.exports = (_, argv) => ({
   output: {
-    publicPath:
-      argv.mode === "development"
-        ? "http://localhost:5200/"
-        : "https://frontend-1byj.onrender.com/",
+    publicPath: argv.mode === 'development' ? 'http://localhost:5200/' : 'https://frontend-1byj.onrender.com/',
   },
 
   resolve: {
-    extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
+    extensions: ['.tsx', '.ts', '.jsx', '.js', '.json'],
   },
 
   devServer: {
@@ -25,31 +23,31 @@ module.exports = (_, argv) => ({
     rules: [
       {
         test: /\.m?js/,
-        type: "javascript/auto",
+        type: 'javascript/auto',
         resolve: {
           fullySpecified: false,
         },
       },
       {
         test: /\.(css|s[ac]ss)$/i,
-        use: ["style-loader", "css-loader", "postcss-loader"],
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
       {
         test: /\.(ts|tsx|js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
         },
       },
       {
         test: /\.json$/,
-        loader: "json-loader",
+        loader: 'json-loader',
       },
       {
         test: /\.(png|svg|gif|ico)$/,
-        loader: "file-loader",
+        loader: 'file-loader',
         options: {
-          name: "[name].[ext]",
+          name: '[name].[ext]',
         },
       },
     ],
@@ -57,13 +55,13 @@ module.exports = (_, argv) => ({
 
   plugins: [
     new ModuleFederationPlugin({
-      name: "autotraficFrontend",
-      filename: "remoteEntry.js",
+      name: 'autotraficFrontend',
+      filename: 'remoteEntry.js',
       remotes: {
         smartForm:
-          argv.mode === "development"
-            ? "smartForm@http://localhost:5100/remoteEntry.js"
-            : "smartForm@https://smart-form-7ewb.onrender.com/remoteEntry.js",
+          argv.mode === 'development'
+            ? 'smartForm@http://localhost:5100/remoteEntry.js'
+            : 'smartForm@https://smart-form-7ewb.onrender.com/remoteEntry.js',
       },
       exposes: {},
       shared: {
@@ -72,16 +70,19 @@ module.exports = (_, argv) => ({
           singleton: true,
           requiredVersion: deps.react,
         },
-        "react-dom": {
+        'react-dom': {
           singleton: true,
-          requiredVersion: deps["react-dom"],
+          requiredVersion: deps['react-dom'],
         },
       },
     }),
     new HtmlWebPackPlugin({
-      template: "./index.html",
+      template: './index.html',
+    }),
+    new CopyWebpackPlugin({
+      patterns: [{ from: 'robots.txt', to: '' }, { from: 'sitemap.xml', to: '' }],
     }),
     new Dotenv({ systemvars: true }),
-    new FaviconsWebpackPlugin("./src/assets/favicon.png"),
+    new FaviconsWebpackPlugin('./src/assets/favicon.png'),
   ],
 });

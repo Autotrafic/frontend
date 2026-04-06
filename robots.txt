@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+User-agent: GPTBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: GoogleOther
+Allow: /
+Sitemap: https://autotrafic.es/sitemap.xml
