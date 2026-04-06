@@ -40,9 +40,10 @@ export default function Prices() {
 
   return (
     <Container id={PRICES_SECTION_ID}>
-      <Title middleLine>
-        Los mejores precios del mercado de {nombreDelMes} {anio}
-      </Title>
+      <Title middleLine>¿Cuánto cuesta una transferencia de vehículo online?</Title>
+      <ExplanationText>
+        Aprovéchate de los mejores precios del mercado de {nombreDelMes} {anio}
+      </ExplanationText>
       <PricesContainer>
         {prices.map((price) => (
           <PriceContainer>
@@ -118,4 +119,11 @@ const Incluiding = styled.span`
 
 const Condition = styled.span`
   font-size: 14px;
+`;
+
+const ExplanationText = styled.p`
+  font-size: 16px;
+  margin: 0;
+  line-height: 22px;
+  text-align: center;
 `;

@@ -13,7 +13,7 @@ export default function Title({ children, lineWidth, middleLine, fontSize }) {
 export function TitleH1({ children, lineWidth, middleLine, fontSize }) {
   return (
     <Container $middleLine={middleLine}>
-      <Text $fontSize={fontSize}>{children}</Text>
+      <TextH1 $fontSize={fontSize}>{children}</TextH1>
       <Line $lineWidth={lineWidth} />
     </Container>
   );
