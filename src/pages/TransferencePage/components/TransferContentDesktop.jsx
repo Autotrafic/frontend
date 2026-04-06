@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Title from "../../../components/reusable/Title";
+import Title, { TitleH1 } from "../../../components/reusable/Title";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
@@ -15,7 +15,7 @@ export default function TransferContentDesktop() {
   return (
     <>
       <TransferContainer>
-        <Title>Cambia de nombre tu vehículo online en menos de 5 minutos</Title>
+        <TitleH1>Transferencia de Vehículos Online</TitleH1>
         <div>
           <SubTitle>
             Gestoría Online especializada en la Transferencia de Vehículos con

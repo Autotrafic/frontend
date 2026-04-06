@@ -15,7 +15,7 @@ const bigPhoneScreenMedia = "476px";
 export default function OrderSteps() {
   return (
     <Container id={PROCESS_SECTION_ID}>
-      <Title middleLine>Paso a paso para cambiar de nombre tu vehículo</Title>
+      <Title middleLine>¿Cómo hacer transferencia de vehículo online?</Title>
 
       <StepsGroupContainer>
         <StepContainer>

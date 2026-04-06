@@ -7,7 +7,7 @@ import { sectionPadding } from "../../../utils/constants";
 export default function Comparatives() {
   return (
     <Container>
-      <Title middleLine>Razones para tramitar con nosotros</Title>
+      <Title middleLine>Qué incluye la transferencia de vehículo online con AutoTrafic</Title>
       <ComparativesStyled>
         <ComparativeBox />
         <ComparativeBox isQuality />

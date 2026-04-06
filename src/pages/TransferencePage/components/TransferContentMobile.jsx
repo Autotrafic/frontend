@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Title from '../../../components/reusable/Title';
+import Title, { TitleH1 } from '../../../components/reusable/Title';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import GoogleReviewsBox from '../../../components/reusable/GoogleReviewsBox';
@@ -13,7 +13,7 @@ export default function TransferContentMobile({ isReferralValid }) {
   return (
     <>
       <TransferContainer $isReferralValid={isReferralValid}>
-        <Title fontSize={'21px'}>Cambia de nombre tu vehículo online en menos de 5 minutos</Title>
+        <TitleH1 fontSize={'21px'}>Transferencia de Vehículos Online</TitleH1>
         <TextWrapper>
           <SubTitle>Gestoría Online especializada en la Transferencia de Vehículos con la DGT</SubTitle>
           <ExplanationText>NOS ENCARGAMOS DE TODO - MEJOR PRECIO GARANTIZADO</ExplanationText>

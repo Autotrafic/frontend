@@ -30,13 +30,13 @@ export default function FrequentAskedQuestions() {
               onClick={() => toggleFaq(index)}
             >
               <div className="title">
-                <h1
+                <h3
                   className={`item-question ${
                     isClicked === index ? "show-item-question" : ""
                   }`}
                 >
                   {item.question}
-                </h1>
+                </h3>
                 {isClicked === index ? (
                   <FontAwesomeIcon
                     icon={faMinus}

@@ -1,45 +1,42 @@
-import styled from "styled-components";
-import Title from "../../../components/reusable/Title";
-import { colors } from "../../../utils/styles";
-import {
-  PRICES_SECTION_ID,
-  sectionPadding,
-} from "../../../utils/constants";
+import styled from 'styled-components';
+import Title from '../../../components/reusable/Title';
+import { colors } from '../../../utils/styles';
+import { PRICES_SECTION_ID, sectionPadding } from '../../../utils/constants';
 
 export default function Prices() {
   const prices = [
-    { title: "Coche", price: "129,95" },
-    { title: "Moto", price: "129,95" },
-    { title: "Ciclomotor", price: "94,95" },
+    { title: 'Coche', price: '129,95' },
+    { title: 'Moto', price: '129,95' },
+    { title: 'Ciclomotor', price: '94,95' },
   ];
 
   const meses = [
-    "Enero",
-    "Febrero",
-    "Marzo",
-    "Abril",
-    "Mayo",
-    "Junio",
-    "Julio",
-    "Agosto",
-    "Septiembre",
-    "Octubre",
-    "Noviembre",
-    "Diciembre",
+    'Enero',
+    'Febrero',
+    'Marzo',
+    'Abril',
+    'Mayo',
+    'Junio',
+    'Julio',
+    'Agosto',
+    'Septiembre',
+    'Octubre',
+    'Noviembre',
+    'Diciembre',
   ];
 
   function obtenerNombreDelMes(fecha) {
-  const mes = fecha.getMonth();
-  return meses[mes];
-}
+    const mes = fecha.getMonth();
+    return meses[mes];
+  }
 
-function obtenerAnio(fecha) {
-  return fecha.getFullYear();
-}
+  function obtenerAnio(fecha) {
+    return fecha.getFullYear();
+  }
 
-const fecha = new Date();
-const nombreDelMes = obtenerNombreDelMes(fecha);
-const anio = obtenerAnio(fecha);
+  const fecha = new Date();
+  const nombreDelMes = obtenerNombreDelMes(fecha);
+  const anio = obtenerAnio(fecha);
 
   return (
     <Container id={PRICES_SECTION_ID}>
@@ -96,7 +93,7 @@ const PriceContainer = styled.div`
   gap: 1em;
 `;
 
-const PriceTitle = styled.h2`
+const PriceTitle = styled.h3`
   font-weight: 600;
   font-size: 18px;
   margin: 0;

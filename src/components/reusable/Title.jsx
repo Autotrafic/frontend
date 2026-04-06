@@ -10,6 +10,15 @@ export default function Title({ children, lineWidth, middleLine, fontSize }) {
   );
 }
 
+export function TitleH1({ children, lineWidth, middleLine, fontSize }) {
+  return (
+    <Container $middleLine={middleLine}>
+      <Text $fontSize={fontSize}>{children}</Text>
+      <Line $lineWidth={lineWidth} />
+    </Container>
+  );
+}
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -21,7 +30,18 @@ const Container = styled.div`
   }
 `;
 
-const Text = styled.h1`
+const Text = styled.h2`
+  color: ${colors.black} !important;
+  font-size: ${({ $fontSize }) => ($fontSize ? $fontSize : "22px")};
+  font-weight: 600 !important;
+  margin: 0;
+
+  @media (max-width: 1000px) {
+    text-align: center;
+  }
+`;
+
+const TextH1 = styled.h1`
   color: ${colors.black} !important;
   font-size: ${({ $fontSize }) => ($fontSize ? $fontSize : "22px")};
   font-weight: 600 !important;
