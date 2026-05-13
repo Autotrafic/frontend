@@ -31,7 +31,7 @@ export default function NewPhoneAlert() {
 }
 
 const AlertWrapper = styled.div`
-  position: absolute;
+  position: fixed;
   top: 40px;
   left: 0;
   width: 100%;
@@ -110,13 +110,13 @@ const CloseButton = styled.button`
   height: 28px;
   border: none;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
+  background: #e53935;
   color: white;
   cursor: pointer;
   font-size: 14px;
   transition: 0.2s;
 
   &:hover {
-    background: rgba(255, 255, 255, 0.16);
+    background: #c62828;
   }
 `;
