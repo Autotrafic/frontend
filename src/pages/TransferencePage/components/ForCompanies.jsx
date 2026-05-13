@@ -68,12 +68,12 @@ export default function ForCompaniesSection() {
           </ContactLink>
 
           <ContactLink
-            href="tel:+34643219297"
+            href="tel:+34743022112"
             style={{ textDecoration: "none" }}
           >
             <ContactButton>
               <ContactIcon icon={faPhone} />
-              <ContactButtonText>+34 643219297</ContactButtonText>
+              <ContactButtonText>+34 743022112</ContactButtonText>
             </ContactButton>
           </ContactLink>
         </ContactButtonsContainer>
