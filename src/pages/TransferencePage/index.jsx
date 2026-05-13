@@ -14,6 +14,7 @@ import MoreProducts from "./components/MoreProducts";
 import { apiRequest } from "../../utils/request";
 import ReferralPageAlert from "../../components/ReferralPageAlert";
 import ForCompaniesSection from "./components/ForCompanies";
+import NewPhoneAlert from "../../components/NewPhoneAlert";
 
 export default function TransferencePage() {
   const { referralId } = useParams();
@@ -34,6 +35,7 @@ export default function TransferencePage() {
 
   return (
     <>
+    <NewPhoneAlert />
       <ReferralPageAlert isReferralValid={isReferralValid} />
       <Wrapper id={TRANSFERENCE_ID} $isReferralValid={isReferralValid}>
         {isMobile ? (
