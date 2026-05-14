@@ -18,7 +18,7 @@ export default function NewPhoneAlert() {
           <Message>
             Por problemas técnicos, nuestro nuevo número de WhatsApp es{" "}
             <PhoneLink href="https://wa.me/34614653426" target="_blank">
-              +34 743 022 112
+              +34 614 65 34 26
             </PhoneLink>
             . Disculpa las molestias.
           </Message>
