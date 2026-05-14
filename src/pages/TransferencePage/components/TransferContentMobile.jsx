@@ -39,7 +39,7 @@ export default function TransferContentMobile({ isReferralValid }) {
         <GoogleReviewsAndPhoneButtonContainer>
           {isReferralValid ? '' : <GoogleReviewsBox />}
 
-          {/*  <ContactLink href="tel:+34643219297" style={{ textDecoration: "none" }}>
+          {/*  <ContactLink href="tel:+34614653426" style={{ textDecoration: "none" }}>
           <ContactButton>
             <ContactIcon icon={faPhone} />
             <ContactButtonText>Llama a un gestor</ContactButtonText>

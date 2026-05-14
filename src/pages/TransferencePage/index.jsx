@@ -35,7 +35,7 @@ export default function TransferencePage() {
 
   return (
     <>
-    {/* <NewPhoneAlert /> */}
+    <NewPhoneAlert />
       <ReferralPageAlert isReferralValid={isReferralValid} />
       <Wrapper id={TRANSFERENCE_ID} $isReferralValid={isReferralValid}>
         {isMobile ? (
