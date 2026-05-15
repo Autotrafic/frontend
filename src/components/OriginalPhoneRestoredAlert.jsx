@@ -1,8 +1,8 @@
-// components/NewPhoneAlert.jsx
+// components/OriginalPhoneRestoredAlert.jsx
 import { useState } from "react";
 import styled from "styled-components";
 
-export default function NewPhoneAlert() {
+export default function OriginalPhoneRestoredAlert() {
   const [isVisible, setIsVisible] = useState(true);
 
   if (!isVisible) return null;
@@ -10,17 +10,18 @@ export default function NewPhoneAlert() {
   return (
     <AlertWrapper>
       <AlertContainer>
-        <Icon>📢</Icon>
+        <Icon>✅</Icon>
 
         <TextContent>
-          <Title>Nuevo número de WhatsApp</Title>
+          <Title>Número original restablecido</Title>
 
           <Message>
-            Por problemas técnicos, nuestro nuevo número de WhatsApp es{" "}
+            Ya hemos restablecido nuestro número original de WhatsApp. 
+            Volvemos a la normalidad 😊 Gracias por vuestra paciencia.
+            Puedes contactarnos de nuevo en{" "}
             <PhoneLink href="https://wa.me/34643219297" target="_blank">
               +34 643 21 92 97
             </PhoneLink>
-            . Disculpa las molestias.
           </Message>
         </TextContent>
 
@@ -44,16 +45,21 @@ const AlertWrapper = styled.div`
 const AlertContainer = styled.div`
   width: calc(100% - 2em);
   max-width: 950px;
-  background: rgba(20, 20, 20, 0.92);
+  background: linear-gradient(
+    135deg,
+    rgba(15, 76, 129, 0.96),
+    rgba(23, 120, 187, 0.96)
+  );
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 35px rgba(0, 72, 140, 0.35);
   border-radius: 18px;
   padding: 1em 1.2em;
   display: flex;
   align-items: center;
   gap: 1em;
   pointer-events: all;
+  position: relative;
 
   @media (max-width: 700px) {
     align-items: flex-start;
@@ -86,19 +92,19 @@ const Title = styled.p`
 
 const Message = styled.p`
   margin: 0;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.92);
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 1.5;
   font-weight: 500;
 `;
 
 const PhoneLink = styled.a`
-  color: #4da6ff;
+  color: #ffffff;
   font-weight: 800;
-  text-decoration: none;
+  text-decoration: underline;
 
   &:hover {
-    text-decoration: underline;
+    opacity: 0.9;
   }
 `;
 
@@ -110,13 +116,13 @@ const CloseButton = styled.button`
   height: 28px;
   border: none;
   border-radius: 50%;
-  background: #e53935;
+  background: rgba(255, 255, 255, 0.18);
   color: white;
   cursor: pointer;
   font-size: 14px;
   transition: 0.2s;
 
   &:hover {
-    background: #c62828;
+    background: rgba(255, 255, 255, 0.28);
   }
 `;
