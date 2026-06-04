@@ -16,7 +16,7 @@ export default function TransferDesktop({ isReferralValid }) {
       </LeftSide>
       <RightSide>
         <SmartFormContainer>
-          <SmartForm isReferralValid={isReferralValid} trackPayment={trackPayment} />
+          <SmartForm isReferralValid={isReferralValid} source="AutoTrafic" trackPayment={trackPayment} />
         </SmartFormContainer>
         <Drop />
       </RightSide>

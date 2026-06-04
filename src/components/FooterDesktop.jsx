@@ -61,7 +61,7 @@ export default function FooterDesktop() {
             </DgtLogoBackground>
           </IconsGroupContainer>
           <IconsGroupContainer>
-            <ColegioLogo src={colegioLogo} alt="colegioLogo" />
+            <ColegioLogo src={colegioLogo} alt="colegioLogo"  />
             <img src={ministerioImg} alt="" width={150} />
           </IconsGroupContainer>
         </IconsContainer>
